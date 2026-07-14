@@ -426,7 +426,7 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
 
     function updateStickyStack() {
       stackFrame = 0;
-      const stickyLayoutActive = !carouselReducedMotion && !body.classList.contains('tekstGroot') && window.innerWidth >= 1024 && window.innerHeight >= 680;
+      const stickyLayoutActive = !carouselReducedMotion && !body.classList.contains('tekstGroot');
 
       panels.forEach((panel, index) => {
         if (!stickyLayoutActive || index === panels.length - 1) {

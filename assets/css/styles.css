@@ -450,6 +450,16 @@ body.hoogContrast .homeHeroScrollMediaLabel { border: 2px solid #000; background
   }
 }
 .homeSectGecertificeerdeInstallateursMetVakmanschapKaarten.layoutFeatures { padding-block-start: var(--sectieRuimte); }
+@media (max-width: 767px) {
+  .homeSectGecertificeerdeInstallateursMetVakmanschapKaarten .homeSectGecertificeerdeInstallateursMetVakmanschapLijst { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; gap: clamp(10px, 3vw, 16px); margin-block-start: 24px; }
+  .homeSectGecertificeerdeInstallateursMetVakmanschapLijst > .kaartLijstItem { height: auto; min-height: 0; aspect-ratio: 1; overflow: hidden; }
+  .homeSectGecertificeerdeInstallateursMetVakmanschapKaart { display: flex; min-width: 0; flex-direction: column; justify-content: center; padding: clamp(9px, 3.2vw, 16px); }
+  .homeSectGecertificeerdeInstallateursMetVakmanschapKaart h3 { font-size: clamp(.8rem, 3.6vw, 1.05rem); line-height: 1.14; overflow-wrap: anywhere; text-wrap: balance; }
+  .homeSectGecertificeerdeInstallateursMetVakmanschapKaart p { margin-block-start: clamp(6px, 1.8vw, 9px); font-size: clamp(.67rem, 2.75vw, .84rem); line-height: 1.28; overflow-wrap: anywhere; }
+  body.tekstGroot .homeSectGecertificeerdeInstallateursMetVakmanschapLijst > .kaartLijstItem { aspect-ratio: auto; min-height: calc((100vw - 58px) / 2); }
+  body.tekstGroot .homeSectGecertificeerdeInstallateursMetVakmanschapKaart h3,
+  body.tekstGroot .homeSectGecertificeerdeInstallateursMetVakmanschapKaart p { font-size: inherit; }
+}
 .kaartLijst, .dienstLijst, .procesLijst, .testimonialLijst, .contactKaarten { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 18px; }
 .kaartLijst { grid-auto-rows: 1fr; align-items: stretch; }
 .kaartLijstItem { min-width: 0; height: 100%; }
@@ -466,6 +476,14 @@ body.hoogContrast .homeHeroScrollMediaLabel { border: 2px solid #000; background
 .homeSectWatWijVoorUInstallerenEnOnderhoudenKnop { margin-block-start: clamp(20px, 3vw, 28px); }
 .homeSectWatWijVoorUInstallerenEnOnderhoudenMedia { min-width: 0; min-height: 220px; margin: 0; overflow: hidden; border-radius: 0 0 10px 10px; background: var(--sparkyLichtGrijs); }
 .homeSectWatWijVoorUInstallerenEnOnderhoudenAfbeelding { display: block; width: 100%; height: 100%; min-height: 220px; object-fit: cover; }
+@media (max-width: 767px) {
+  .homeSectWatWijVoorUInstallerenEnOnderhouden .homeSectWatWijVoorUInstallerenEnOnderhoudenDienstKaart { grid-template-areas: "media" "inhoud"; }
+  .homeSectWatWijVoorUInstallerenEnOnderhoudenDienstInhoud { grid-area: inhoud; align-items: center; text-align: center; }
+  .homeSectWatWijVoorUInstallerenEnOnderhoudenDienstInhoud h3,
+  .homeSectWatWijVoorUInstallerenEnOnderhoudenDienstInhoud p { margin-inline: auto; }
+  .homeSectWatWijVoorUInstallerenEnOnderhoudenMedia { grid-area: media; border-radius: 10px 10px 0 0; }
+  .homeSectWatWijVoorUInstallerenEnOnderhoudenKnop { align-self: center; margin-inline: auto; text-align: center; }
+}
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhoudenMedia { background: #fff; }
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhoudenAfbeelding { filter: grayscale(1) contrast(1.35); }
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhouden .homeSectWatWijVoorUInstallerenEnOnderhoudenDienstKaart { border: 0; border-radius: 10px; box-shadow: none; }
@@ -941,9 +959,9 @@ body.hoogContrast .thuisbatterijEmsKaartAfbeelding { filter: grayscale(1) contra
   .thuisbatterijEmsScrollKaart:nth-child(even) .thuisbatterijEmsKaartInhoud { order: 2; }
   .thuisbatterijEmsScrollKaart:nth-child(even) .thuisbatterijEmsKaartMedia { order: 1; }
 }
-@media (min-width: 1024px) and (min-height: 680px) {
+@media (prefers-reduced-motion: no-preference) {
   .thuisbatterijEmsKaartLijst { display: block; }
-  .thuisbatterijEmsScrollKaart { position: sticky; top: clamp(96px, 12vh, 132px); margin-block-end: 10vh; }
+  .thuisbatterijEmsScrollKaart { position: sticky; top: clamp(112px, 14vh, 148px); margin-block-end: 10vh; }
   .thuisbatterijEmsScrollKaart:last-child { margin-block-end: 0; }
   .thuisbatterijEmsScrollKaart:nth-child(1) { z-index: 1; }
   .thuisbatterijEmsScrollKaart:nth-child(2) { z-index: 2; }
@@ -979,9 +997,9 @@ body.hoogContrast .zonnepanelenOpslagKaartAfbeelding { filter: grayscale(1) cont
   .zonnepanelenOpslagScrollKaart:nth-child(even) .zonnepanelenOpslagKaartInhoud { order: 2; }
   .zonnepanelenOpslagScrollKaart:nth-child(even) .zonnepanelenOpslagKaartMedia { order: 1; }
 }
-@media (min-width: 1024px) and (min-height: 680px) {
+@media (prefers-reduced-motion: no-preference) {
   .zonnepanelenOpslagKaartLijst { display: block; }
-  .zonnepanelenOpslagScrollKaart { position: sticky; top: clamp(96px, 12vh, 132px); margin-block-end: 10vh; }
+  .zonnepanelenOpslagScrollKaart { position: sticky; top: clamp(112px, 14vh, 148px); margin-block-end: 10vh; }
   .zonnepanelenOpslagScrollKaart:last-child { margin-block-end: 0; }
   .zonnepanelenOpslagScrollKaart:nth-child(1) { z-index: 1; }
   .zonnepanelenOpslagScrollKaart:nth-child(2) { z-index: 2; }
@@ -1115,9 +1133,9 @@ body.hoogContrast .laadpalenSectSlimLadenVeiligVoordeligEnEfficientKop .sectieLe
   .laadpalenSlimLadenScrollKaart:nth-child(even) .laadpalenSlimLadenKaartInhoud { order: 2; }
   .laadpalenSlimLadenScrollKaart:nth-child(even) .laadpalenSlimLadenKaartMedia { order: 1; }
 }
-@media (min-width: 1024px) and (min-height: 680px) {
+@media (prefers-reduced-motion: no-preference) {
   .laadpalenSlimLadenKaartLijst { display: block; }
-  .laadpalenSlimLadenScrollKaart { position: sticky; top: clamp(96px, 12vh, 132px); margin-block-end: 10vh; }
+  .laadpalenSlimLadenScrollKaart { position: sticky; top: clamp(112px, 14vh, 148px); margin-block-end: 10vh; }
   .laadpalenSlimLadenScrollKaart:last-child { margin-block-end: 0; }
   .laadpalenSlimLadenScrollKaart:nth-child(1) { z-index: 1; }
   .laadpalenSlimLadenScrollKaart:nth-child(2) { z-index: 2; }
@@ -1156,9 +1174,9 @@ body.hoogContrast .elektrotechnischeRenovatiesGasKaartAfbeelding { filter: grays
   .elektrotechnischeRenovatiesGasScrollKaart:nth-child(even) .elektrotechnischeRenovatiesGasKaartInhoud { order: 2; }
   .elektrotechnischeRenovatiesGasScrollKaart:nth-child(even) .elektrotechnischeRenovatiesGasKaartMedia { order: 1; }
 }
-@media (min-width: 1024px) and (min-height: 680px) {
+@media (prefers-reduced-motion: no-preference) {
   .elektrotechnischeRenovatiesGasKaartLijst { display: block; }
-  .elektrotechnischeRenovatiesGasScrollKaart { position: sticky; top: clamp(96px, 12vh, 132px); margin-block-end: 10vh; }
+  .elektrotechnischeRenovatiesGasScrollKaart { position: sticky; top: clamp(112px, 14vh, 148px); margin-block-end: 10vh; }
   .elektrotechnischeRenovatiesGasScrollKaart:last-child { margin-block-end: 0; }
   .elektrotechnischeRenovatiesGasScrollKaart:nth-child(1) { z-index: 1; }
   .elektrotechnischeRenovatiesGasScrollKaart:nth-child(2) { z-index: 2; }
@@ -1446,12 +1464,82 @@ body.tekstGroot .footerBedrijf { grid-column: 1; grid-row: 1 / span 2; }
 body.tekstGroot .footerCertificeringen { grid-column: 1 / -1; grid-row: 3; }
 body.tekstGroot .footerLocatie { grid-column: 2; grid-row: 1; }
 body.tekstGroot .footerSitemap { grid-column: 2; grid-row: 2; }
+@media (max-width: 1023px) {
+  .footerKolommen,
+  body.tekstGroot .footerKolommen { grid-template-columns: minmax(0, 1fr); gap: clamp(36px, 10vw, 52px); text-align: center; }
+  .footerSitemap,
+  body.tekstGroot .footerSitemap { grid-column: 1; grid-row: 1; }
+  .footerBedrijf,
+  body.tekstGroot .footerBedrijf { grid-column: 1; grid-row: 2; }
+  .footerCertificeringen,
+  body.tekstGroot .footerCertificeringen { grid-column: 1; grid-row: 3; }
+  .footerLocatie,
+  body.tekstGroot .footerLocatie { grid-column: 1; grid-row: 4; }
+  .footerSitemap h2,
+  .footerLogoLink { margin-inline: auto; }
+  .footerNavigatieLijst,
+  .footerBedrijfsgegevens { justify-items: center; }
+  .footerBedrijfsgegevens a { width: auto; }
+  .footerCertificeringen { width: 100%; }
+  .footerCertificeringLijst { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(8px, 3vw, 16px); }
+  .footerCertificeringLijst li { min-height: 84px; padding: 8px; }
+  .footerCertificeringLogo { width: min(96px, 100%); height: 64px; }
+  .footerLocatie { width: 100%; }
+  .footerKaart { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+}
+
 @media (max-width: 767px) {
-  body.tekstGroot .footerKolommen { grid-template-columns: minmax(0, 1fr); }
-  body.tekstGroot .footerBedrijf,
-  body.tekstGroot .footerCertificeringen,
-  body.tekstGroot .footerLocatie,
-  body.tekstGroot .footerSitemap { grid-column: 1; grid-row: auto; }
+  .siteHeader,
+  .mainContent,
+  .siteFooter { text-align: center; }
+  .primaireNavigatieLijst a,
+  .primaireNavigatieLijst button,
+  .toegankelijkheidSubmenu button { text-align: center; }
+  .mainContent .sectieKop,
+  .mainContent .kaart,
+  .mainContent .dienstKaartInhoud,
+  .mainContent .homeSectRecentWerkProjectInhoud,
+  .mainContent .layoutEmailCta > .sectieKop { margin-inline: auto; text-align: center; }
+  .mainContent .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKop .sectieTitel,
+  .mainContent .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKop .sectieIntro,
+  .mainContent .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKop .sectieTitel,
+  .mainContent .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKop .sectieIntro,
+  .mainContent .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKop .sectieTitel,
+  .mainContent .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKop .sectieIntro,
+  .mainContent .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop .sectieTitel,
+  .mainContent .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop .sectieIntro { margin-inline: auto; text-align: center; }
+  .mainContent h1,
+  .mainContent h2,
+  .mainContent h3,
+  .mainContent h4,
+  .mainContent h5,
+  .mainContent h6,
+  .mainContent p { margin-inline: auto; text-align: center; }
+  .mainContent .sectionActies,
+  .mainContent .scrollKnoppen,
+  .mainContent .tagLijst,
+  .mainContent .checkLijst { justify-content: center; }
+  .mainContent .homeSectRecentWerkProjectInhoud,
+  .mainContent .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKaart,
+  .mainContent .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKaart,
+  .mainContent .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKaart,
+  .mainContent .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKaart { align-items: center; }
+  .mainContent .kaart .siteBtn { align-self: center; text-align: center; }
+  .mainContent form .siteBtn,
+  .mainContent .contactOfferteFormulier > .siteBtn,
+  .mainContent .layoutEmailCta .emailCtaFormulier .siteBtn { justify-self: center; }
+  .mainContent label,
+  .mainContent legend,
+  .mainContent input,
+  .mainContent select,
+  .mainContent textarea,
+  .mainContent output { text-align: center; }
+  .mainContent .checkboxLabel,
+  .mainContent .contactKeuzeOptie { justify-content: center; text-align: center; }
+  .mainContent .faqItem summary { justify-content: center; text-align: center; }
+  .mainContent .contactOfferteGegevens { justify-items: center; text-align: center; }
+  .mainContent .contactOfferteGegevens a,
+  .mainContent .contactOfferteGegevens p { width: 100%; justify-content: center; margin-inline: auto; text-align: center; }
 }
 
 @media (min-width: 480px) {
