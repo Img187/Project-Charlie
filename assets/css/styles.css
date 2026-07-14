@@ -122,7 +122,7 @@ html { color-scheme: light; scroll-behavior: smooth; }
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; font-family: var(--fontTekst); font-size: var(--basisTekst); font-weight: 300; line-height: var(--regelHoogte); color: var(--kleurTekst); background: var(--kleurAchtergrond); text-rendering: optimizeLegibility; }
 body.tekstGroot { --basisTekst: clamp(1.15rem, 1rem + 0.65vw, 1.42rem); --regelHoogte: 1.85; }
-body.hoogContrast { color-scheme: dark; --kleurTekst: var(--sparkyLichtGrijs); --kleurAchtergrond: #000; --kleurKaart: #090b0d; --kleurVlak: #090b0d; --kleurRand: rgba(243, 246, 248, .72); --kleurFocus: var(--sparkyOranje); --sparkyDonkerBlauw: var(--sparkyLichtGrijs); --sparkyLichtBlauw: #1E88E5; --sparkyLichtGrijs: #F3F6F8; --sparkyOranje: #F9A825; --sparkyDonker: var(--sparkyLichtGrijs); --schaduwZacht: 0 12px 32px rgba(243, 246, 248, .18), 0 3px 10px rgba(243, 246, 248, .12); }
+body.hoogContrast { color-scheme: dark; --kleurTekst: var(--sparkyLichtGrijs); --kleurAchtergrond: #000; --kleurKaart: #090b0d; --kleurVlak: #090b0d; --kleurRand: rgba(243, 246, 248, .72); --kleurFocus: var(--sparkyOranje); --sparkyDonkerBlauw: var(--sparkyLichtGrijs); --sparkyLichtBlauw: #1E88E5; --sparkyLichtGrijs: #F3F6F8; --sparkyOranje: #F9A825; --sparkyDonker: var(--sparkyLichtGrijs); --schaduwZacht: none; }
 img, svg { max-width: 100%; height: auto; }
 a { color: inherit; text-underline-offset: 0.22em; }
 a:hover { color: var(--sparkyLichtBlauw); }
@@ -1918,13 +1918,40 @@ body.hoogContrast *,
 body.hoogContrast *::before,
 body.hoogContrast *::after {
   border-color: transparent !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
 
 body.hoogContrast .siteHeader,
-body.hoogContrast .primaireNavigatieSubmenu,
-body.hoogContrast .toegankelijkheidSubmenu,
 body.hoogContrast .siteFooter,
 body.hoogContrast .footerCopyright,
 body.hoogContrast .siteFaq .faqItem {
   border-color: var(--sparkyLichtGrijs) !important;
+}
+
+/* Tekstlagen boven sectie-afbeeldingen blijven transparant. */
+body.hoogContrast .overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart,
+body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf .thuisbatterijSplitKaart,
+body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf .thuisbatterijSplitKaartInhoud,
+body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatie .zonnepanelenSplitKaart,
+body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatie .zonnepanelenSplitKaartInhoud,
+body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie .laadpalenSplitKaart,
+body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie .laadpalenSplitKaartInhoud {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf,
+body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf .thuisbatterijSplitKaart,
+body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatie,
+body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatie .zonnepanelenSplitKaart,
+body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie,
+body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie .laadpalenSplitKaart {
+  min-height: clamp(320px, 31vw, 410px) !important;
+}
+
+body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijfMedia .thuisbatterijMediaPlaceholderAfbeelding,
+body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatieMedia .zonnepanelenSectieMediaAfbeelding,
+body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieMedia .laadpalenSectieMediaAfbeelding {
+  filter: brightness(.42) saturate(.9) !important;
 }
