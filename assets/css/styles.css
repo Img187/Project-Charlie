@@ -1960,3 +1960,19 @@ body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatieMedia .zonn
 body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieMedia .laadpalenSectieMediaAfbeelding {
   filter: brightness(.42) saturate(.9) !important;
 }
+
+body.hoogContrast
+.overOnsSectWatWijDoenLink:hover,
+body.hoogContrast
+.overOnsSectWatWijDoenLink:focus-visible {
+  color: var(--sparkyOranje) !important;
+}
+
+body.hoogContrast
+.overOnsSectWatWijDoenLink:hover
+h3,
+body.hoogContrast
+.overOnsSectWatWijDoenLink:focus-visible
+h3 {
+  color: var(--sparkyOranje) !important;
+}
