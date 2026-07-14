@@ -97,6 +97,7 @@ De lokale fontbestanden staan in /assets/fonts/.
   --sparkyLichtBlauw: #1E88E5;
   --sparkyLichtGrijs: #F3F6F8;
   --sparkyOranje: #F9A825;
+  --sparkyDonkerGrijs: #2E2E2E;
   --sparkyDonker: #2E2E2E;
   --kleurTekst: var(--sparkyDonker);
   --kleurAchtergrond: var(--sparkyLichtGrijs);
@@ -121,7 +122,7 @@ html { color-scheme: light; scroll-behavior: smooth; }
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; font-family: var(--fontTekst); font-size: var(--basisTekst); font-weight: 300; line-height: var(--regelHoogte); color: var(--kleurTekst); background: var(--kleurAchtergrond); text-rendering: optimizeLegibility; }
 body.tekstGroot { --basisTekst: clamp(1.15rem, 1rem + 0.65vw, 1.42rem); --regelHoogte: 1.85; }
-body.hoogContrast { --kleurTekst: #000; --kleurAchtergrond: #fff; --kleurKaart: #fff; --kleurVlak: #fff; --kleurRand: #000; --kleurFocus: #000; --sparkyDonkerBlauw: #000; --sparkyLichtBlauw: #004b87; --sparkyLichtGrijs: #fff; --sparkyOranje: #ffb000; --sparkyDonker: #000; --schaduwZacht: none; }
+body.hoogContrast { color-scheme: dark; --kleurTekst: var(--sparkyLichtGrijs); --kleurAchtergrond: #000; --kleurKaart: #090b0d; --kleurVlak: #090b0d; --kleurRand: rgba(243, 246, 248, .72); --kleurFocus: var(--sparkyOranje); --sparkyDonkerBlauw: var(--sparkyLichtGrijs); --sparkyLichtBlauw: #1E88E5; --sparkyLichtGrijs: #F3F6F8; --sparkyOranje: #F9A825; --sparkyDonker: var(--sparkyLichtGrijs); --schaduwZacht: 0 12px 32px rgba(243, 246, 248, .18), 0 3px 10px rgba(243, 246, 248, .12); }
 img, svg { max-width: 100%; height: auto; }
 a { color: inherit; text-underline-offset: 0.22em; }
 a:hover { color: var(--sparkyLichtBlauw); }
@@ -1605,3 +1606,325 @@ table { width: 100%; border-collapse: collapse; margin-block-start: 32px; overfl
 th, td { border: 1px solid var(--kleurRand); padding: 10px; text-align: left; vertical-align: top; }
 caption { font-family: var(--fontKop); font-size: 1.4rem; font-weight: 700; text-align: left; margin-block-end: 10px; }
 code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .92em; }
+
+/* Nachtmodus: wordt geactiveerd via de bestaande knop "Hoog contrast". */
+body.hoogContrast {
+  background: #000;
+  color: var(--sparkyLichtGrijs);
+}
+
+body.hoogContrast .siteHeader,
+body.hoogContrast .primaireNavigatieSubmenu,
+body.hoogContrast .toegankelijkheidSubmenu {
+  border-color: var(--kleurRand);
+  background: rgba(0, 0, 0, .96);
+  color: var(--sparkyLichtGrijs);
+  box-shadow: var(--schaduwZacht);
+}
+
+body.hoogContrast h1,
+body.hoogContrast h2,
+body.hoogContrast h3,
+body.hoogContrast h4,
+body.hoogContrast h5,
+body.hoogContrast h6,
+body.hoogContrast p,
+body.hoogContrast label,
+body.hoogContrast legend,
+body.hoogContrast summary,
+body.hoogContrast address,
+body.hoogContrast .sectieIntro,
+body.hoogContrast .sectieLead,
+body.hoogContrast .contentParagraaf,
+body.hoogContrast .contactKeuzeUitleg,
+body.hoogContrast .contactKeuzeOptie,
+body.hoogContrast .contactOfferteGegevens a,
+body.hoogContrast .footerBedrijfsgegevens,
+body.hoogContrast .footerBedrijfsgegevens strong,
+body.hoogContrast .footerBedrijfsgegevens a,
+body.hoogContrast .footerSitemap h2,
+body.hoogContrast .footerNavigatieLijst a,
+body.hoogContrast .footerCopyright {
+  color: var(--sparkyLichtGrijs) !important;
+}
+
+body.hoogContrast a:not(.siteBtn):not(.hoofdNavigatieContact):not(.backNaarBovenKnop):hover {
+  color: var(--sparkyLichtBlauw) !important;
+}
+
+body.hoogContrast :focus-visible {
+  outline: 3px solid var(--sparkyOranje);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px #000;
+}
+
+body.hoogContrast img,
+body.hoogContrast .siteLogoAfbeelding,
+body.hoogContrast .footerKaart {
+  filter: none !important;
+}
+
+body.hoogContrast .primaireNavigatieLijst a,
+body.hoogContrast .primaireNavigatieLijst button,
+body.hoogContrast .toegankelijkheidToggle,
+body.hoogContrast .toegankelijkheidKnop {
+  border-color: var(--kleurRand);
+  background: #090b0d;
+  color: var(--sparkyLichtGrijs);
+}
+
+body.hoogContrast .primaireNavigatieLijst a[aria-current="page"],
+body.hoogContrast .primaireNavigatieLijst a:hover,
+body.hoogContrast .primaireNavigatieLijst button:hover,
+body.hoogContrast .primaireNavigatieLijst button:focus-visible,
+body.hoogContrast .toegankelijkheidToggle:hover,
+body.hoogContrast .toegankelijkheidToggle:focus-visible {
+  background: #151b20;
+  color: var(--sparkyLichtGrijs);
+  filter: brightness(1.18);
+}
+
+body.hoogContrast .siteBtnPrimary,
+body.hoogContrast .hoofdNavigatieContact,
+body.hoogContrast .hoofdNavigatieContact[aria-current="page"],
+body.hoogContrast .backNaarBovenKnop {
+  border-color: var(--sparkyOranje);
+  background: var(--sparkyOranje);
+  color: #fff;
+}
+
+body.hoogContrast .siteBtnSecondary,
+body.hoogContrast .siteBtnLink,
+body.hoogContrast .navigatieMenuKnop,
+body.hoogContrast .toegankelijkheidKnop[aria-pressed="true"] {
+  border-color: var(--sparkyLichtBlauw);
+  background: var(--sparkyLichtBlauw);
+  color: var(--sparkyLichtGrijs);
+}
+
+body.hoogContrast .siteBtn,
+body.hoogContrast .hoofdNavigatieContact,
+body.hoogContrast .backNaarBovenKnop,
+body.hoogContrast .navigatieMenuKnop,
+body.hoogContrast .toegankelijkheidToggle,
+body.hoogContrast .toegankelijkheidKnop {
+  transition: filter .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+
+body.hoogContrast .siteBtn:hover,
+body.hoogContrast .siteBtn:focus-visible,
+body.hoogContrast .hoofdNavigatieContact:hover,
+body.hoogContrast .hoofdNavigatieContact:focus-visible,
+body.hoogContrast .backNaarBovenKnop:hover,
+body.hoogContrast .backNaarBovenKnop:focus-visible,
+body.hoogContrast .navigatieMenuKnop:hover,
+body.hoogContrast .navigatieMenuKnop:focus-visible,
+body.hoogContrast .toegankelijkheidKnop:hover,
+body.hoogContrast .toegankelijkheidKnop:focus-visible {
+  color: #fff;
+  filter: brightness(1.16) saturate(1.08);
+  box-shadow: 0 0 0 2px var(--sparkyLichtGrijs), 0 0 18px rgba(243, 246, 248, .3);
+  text-decoration: none;
+  transform: none;
+}
+
+body.hoogContrast .siteBtnSecondary:hover,
+body.hoogContrast .siteBtnSecondary:focus-visible,
+body.hoogContrast .siteBtnLink:hover,
+body.hoogContrast .siteBtnLink:focus-visible {
+  color: var(--sparkyLichtGrijs);
+}
+
+body.hoogContrast .hoofdNavigatieContact,
+body.hoogContrast .hoofdNavigatieContact:hover,
+body.hoogContrast .hoofdNavigatieContact:focus-visible {
+  font-size: inherit;
+}
+
+body.hoogContrast input:not([type="checkbox"]):not([type="radio"]),
+body.hoogContrast select,
+body.hoogContrast textarea {
+  border: 2px solid var(--sparkyLichtGrijs);
+  background: var(--sparkyLichtGrijs);
+  color: var(--sparkyDonkerGrijs);
+  caret-color: var(--sparkyDonkerGrijs);
+  box-shadow: none;
+}
+
+body.hoogContrast input::placeholder,
+body.hoogContrast textarea::placeholder {
+  color: var(--sparkyDonkerGrijs);
+  opacity: .82;
+}
+
+body.hoogContrast select option {
+  background: var(--sparkyLichtGrijs);
+  color: var(--sparkyDonkerGrijs);
+}
+
+body.hoogContrast input[type="checkbox"],
+body.hoogContrast input[type="radio"] {
+  border: 2px solid var(--sparkyLichtGrijs);
+  background: #000;
+  accent-color: var(--sparkyOranje);
+  box-shadow: none;
+}
+
+body.hoogContrast .kaart,
+body.hoogContrast .mediaNotitie,
+body.hoogContrast .faqItem,
+body.hoogContrast fieldset,
+body.hoogContrast .homeSectGecertificeerdeInstallateursMetVakmanschapKaart,
+body.hoogContrast .homeSectRecentWerkProjectKaart,
+body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhoudenDienstKaart,
+body.hoogContrast .testimonialKaart,
+body.hoogContrast .overOnsSectWatWijDoenItem,
+body.hoogContrast .overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart,
+body.hoogContrast .thuisbatterijHeroSplitKaart,
+body.hoogContrast .thuisbatterijSplitKaart,
+body.hoogContrast .thuisbatterijEmsKaart,
+body.hoogContrast .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKaart,
+body.hoogContrast .zonnepanelenHeroSplitKaart,
+body.hoogContrast .zonnepanelenSplitKaart,
+body.hoogContrast .zonnepanelenOpslagKaart,
+body.hoogContrast .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKaart,
+body.hoogContrast .laadpalenStandardSplitKaart,
+body.hoogContrast .laadpalenSplitKaart,
+body.hoogContrast .laadpalenSlimLadenKaart,
+body.hoogContrast .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKaart,
+body.hoogContrast .elektrotechnischeRenovatiesGasKaart,
+body.hoogContrast .elektrotechnischeRenovatiesHeroSplitKaart,
+body.hoogContrast .elektrotechnischeRenovatiesSplitKaart,
+body.hoogContrast .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKaart,
+body.hoogContrast .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKaart,
+body.hoogContrast .contactHeroSplitKaart,
+body.hoogContrast .contactSplitKaart {
+  border-color: transparent !important;
+  background: #090b0d !important;
+  color: var(--sparkyLichtGrijs) !important;
+  box-shadow: var(--schaduwZacht) !important;
+}
+
+body.hoogContrast .thuisbatterijSplitKaartInhoud,
+body.hoogContrast .zonnepanelenSplitKaartInhoud,
+body.hoogContrast .laadpalenSplitKaartInhoud,
+body.hoogContrast .elektrotechnischeRenovatiesSplitKaartInhoud,
+body.hoogContrast .contactSplitKaartInhoud,
+body.hoogContrast .overOnsGecentreerdeTekst,
+body.hoogContrast .overOnsSectWerkenVolgensNormenEnFabrikantsrichtlijnen,
+body.hoogContrast .layoutImageCta,
+body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf,
+body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatie,
+body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie,
+body.hoogContrast .contactSectLatenWeBeginnen {
+  background: #000 !important;
+  color: var(--sparkyLichtGrijs) !important;
+}
+
+body.hoogContrast .overOnsHeroVolledigeBreedte::after,
+body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte::after {
+  background: rgba(0, 0, 0, .82);
+}
+
+body.hoogContrast .layoutImageCta {
+  background-color: #000 !important;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/zonnepanelen-installatie-achtergrond.jpg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf .thuisbatterijSectVoorWoningEnBedrijfMedia,
+body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatie .zonnepanelenSectEenInstallatieDiePastBijUwSituatieMedia,
+body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieMedia {
+  display: block !important;
+}
+
+body.hoogContrast .thuisbatterijMediaPlaceholder,
+body.hoogContrast .zonnepanelenSectieMedia,
+body.hoogContrast .laadpalenSectieMedia,
+body.hoogContrast .elektrotechnischeRenovatiesSectieMedia,
+body.hoogContrast .contactSectieMedia,
+body.hoogContrast .thuisbatterijEmsKaartMedia,
+body.hoogContrast .zonnepanelenOpslagKaartMedia,
+body.hoogContrast .laadpalenSlimLadenKaartMedia,
+body.hoogContrast .elektrotechnischeRenovatiesGasKaartMedia,
+body.hoogContrast .elektrotechnischeRenovatiesGroepenkastMedia,
+body.hoogContrast .elektrotechnischeRenovatiesExtraElektraMedia {
+  border-color: transparent !important;
+  background: #090b0d !important;
+}
+
+body.hoogContrast .kaartIcoon,
+body.hoogContrast .thuisbatterijSectZoWerkenWijStapIcoon,
+body.hoogContrast .zonnepanelenSectZoWerkenWijStapIcoon,
+body.hoogContrast .laadpalenSectZoWerkenWijStapIcoon,
+body.hoogContrast .elektrotechnischeRenovatiesSectZoWerkenWijStapIcoon,
+body.hoogContrast .elektrotechnischeRenovatiesGroepenkastIcoon,
+body.hoogContrast .elektrotechnischeRenovatiesExtraElektraIcoon {
+  border-color: var(--sparkyOranje) !important;
+  background: var(--sparkyOranje) !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 8px #000 !important;
+}
+
+body.hoogContrast .thuisbatterijSectZoWerkenWijTijdlijnSpoor,
+body.hoogContrast .zonnepanelenSectZoWerkenWijTijdlijnSpoor,
+body.hoogContrast .laadpalenSectZoWerkenWijTijdlijnSpoor,
+body.hoogContrast .elektrotechnischeRenovatiesSectZoWerkenWijTijdlijnSpoor {
+  background: rgba(243, 246, 248, .35);
+}
+
+body.hoogContrast .thuisbatterijSectZoWerkenWijTijdlijnVoortgang,
+body.hoogContrast .zonnepanelenSectZoWerkenWijTijdlijnVoortgang,
+body.hoogContrast .laadpalenSectZoWerkenWijTijdlijnVoortgang,
+body.hoogContrast .elektrotechnischeRenovatiesSectZoWerkenWijTijdlijnVoortgang {
+  background: var(--sparkyLichtBlauw);
+}
+
+body.hoogContrast .formulierNotitie,
+body.hoogContrast .berekeningResultaat,
+body.hoogContrast .privacyNotitie {
+  border-color: var(--sparkyLichtGrijs);
+  background: #090b0d;
+  color: var(--sparkyLichtGrijs);
+  box-shadow: var(--schaduwZacht);
+}
+
+body.hoogContrast .formulierNotitie[data-status="success"]::after {
+  border-color: var(--sparkyOranje);
+  background: var(--sparkyOranje);
+  color: #fff;
+}
+
+body.hoogContrast .siteFooter {
+  border-block-start-color: var(--sparkyLichtGrijs);
+  background: #000;
+  color: var(--sparkyLichtGrijs);
+}
+
+body.hoogContrast .footerCertificeringLijst li {
+  border-color: transparent;
+  background: var(--sparkyLichtGrijs);
+  box-shadow: var(--schaduwZacht);
+}
+
+body.hoogContrast .footerKaart {
+  border-color: var(--sparkyLichtGrijs);
+  box-shadow: var(--schaduwZacht);
+}
+
+body.hoogContrast *,
+body.hoogContrast *::before,
+body.hoogContrast *::after {
+  border-color: transparent !important;
+}
+
+body.hoogContrast .siteHeader,
+body.hoogContrast .primaireNavigatieSubmenu,
+body.hoogContrast .toegankelijkheidSubmenu,
+body.hoogContrast .siteFooter,
+body.hoogContrast .footerCopyright,
+body.hoogContrast .siteFaq .faqItem {
+  border-color: var(--sparkyLichtGrijs) !important;
+}
