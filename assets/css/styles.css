@@ -327,7 +327,7 @@ body.tekstGroot .backNaarBovenKnop { min-height: 58px; padding: 12px 18px; white
 .layoutHero, .layoutSplit { display: grid; gap: 32px; align-items: center; }
 .layoutHero { min-height: min(760px, calc(100svh - 76px)); }
 .overOnsHeroVolledigeBreedte { position: relative; isolation: isolate; display: grid; width: 100%; min-height: min(760px, calc(100svh - 76px)); place-items: center; overflow: hidden; padding-inline: max(5vw, calc((100vw - 1320px) / 2)); }
-.overOnsHeroVolledigeBreedte::after { position: absolute; z-index: 1; inset: 0; background: rgba(244, 246, 247, .76); content: ""; }
+.overOnsHeroVolledigeBreedte::after { display: none; }
 .overOnsHeroAchtergrond { position: absolute; z-index: 0; inset: 0; margin: 0; overflow: hidden; background: var(--sparkyLichtGrijs); }
 .overOnsHeroAchtergrondAfbeelding { display: block; width: 100%; height: 100%; object-fit: cover; }
 .overOnsHeroAchtergrondLabel { position: absolute; z-index: 1; inset: auto 20px 20px auto; margin: 0; padding: 8px 12px; border-radius: 10px; background: var(--sparkyOranje); color: #111; font-family: var(--fontKop); font-size: .9rem; font-weight: 700; line-height: 1; }
@@ -342,14 +342,18 @@ body.tekstGroot .backNaarBovenKnop { min-height: 58px; padding: 12px 18px; white
 .overOnsGecentreerdeTekstInhoud { display: grid; gap: clamp(18px, 3vw, 28px); margin-block-start: clamp(24px, 4vw, 40px); }
 .overOnsGecentreerdeTekstInhoud p { max-width: 72ch; margin: 0 auto; }
 .overOnsGecentreerdeTekst .sectionActies { justify-content: center; }
-body.hoogContrast .overOnsHeroVolledigeBreedte::after { background: rgba(255, 255, 255, .9); }
-body.hoogContrast .overOnsHeroAchtergrondAfbeelding { filter: grayscale(1) contrast(1.35); }
+body.hoogContrast .overOnsHeroVolledigeBreedte::after { display: none; }
+body.hoogContrast .overOnsHeroAchtergrond { background: #000; }
+body.hoogContrast .overOnsHeroAchtergrondAfbeelding { filter: grayscale(1) contrast(1.35) brightness(.5); }
 body.hoogContrast .overOnsHeroAchtergrondLabel { border: 2px solid #000; color: #000; }
+body.hoogContrast .overOnsHeroVolledigeBreedte .sectieTitel,
+body.hoogContrast .overOnsHeroVolledigeBreedte .sectieIntro,
+body.hoogContrast .overOnsHeroVolledigeBreedte .sectieKop { color: #fff; text-shadow: 0 2px 8px rgba(0, 0, 0, .9); }
 body.hoogContrast .overOnsGecentreerdeTekst { background: #fff; }
 body.tekstGroot .overOnsHeroVolledigeBreedte { min-height: auto; }
 .overOnsSectRotterdamseMentaliteitLandelijkeService { border: 0; background: transparent; box-shadow: none; }
 .overOnsAchtergrondSectieVolledigeBreedte { position: relative; isolation: isolate; width: 100%; overflow: hidden; padding-inline: max(5vw, calc((100vw - 1320px) / 2)); }
-.overOnsAchtergrondSectieVolledigeBreedte::after { position: absolute; z-index: 1; inset: 0; background: rgba(244, 246, 247, .76); content: ""; }
+.overOnsAchtergrondSectieVolledigeBreedte::after { display: none; }
 .overOnsAchtergrondSectieVolledigeBreedte > :not(.overOnsHeroAchtergrond) { position: relative; z-index: 2; }
 .overOnsSectRotterdamseMentaliteitLandelijkeServiceKop { display: grid; width: 100%; max-width: none; grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 4vw, 40px); align-items: start; }
 .overOnsSectRotterdamseMentaliteitLandelijkeServiceKop .sectieTitel,
@@ -363,7 +367,13 @@ body.tekstGroot .overOnsHeroVolledigeBreedte { min-height: auto; }
 .overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart p { max-width: 38ch; margin-block-start: clamp(12px, 2vw, 16px); }
 body.hoogContrast .overOnsSectRotterdamseMentaliteitLandelijkeService,
 body.hoogContrast .overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart { border: 0; background: transparent; box-shadow: none; }
-body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte::after { background: rgba(255, 255, 255, .9); }
+body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte::after { display: none; }
+body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .overOnsHeroAchtergrond { background: #000; }
+body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .overOnsHeroAchtergrondAfbeelding { filter: grayscale(1) contrast(1.35) brightness(.5); }
+body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .sectieTitel,
+body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .sectieIntro,
+body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart h3,
+body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart p { color: #fff; text-shadow: 0 2px 8px rgba(0, 0, 0, .9); }
 @media (min-width: 600px) {
   .overOnsSectRotterdamseMentaliteitLandelijkeServiceLijst { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
