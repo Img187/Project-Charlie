@@ -896,7 +896,12 @@ input, select, textarea { width: 100%; min-height: 48px; border: 2px solid var(-
 textarea { resize: vertical; min-height: 140px; }
 .checkboxLabel { display: flex; gap: 12px; align-items: flex-start; min-height: 48px; }
 .checkboxLabel input { width: 22px; min-height: 22px; margin-top: 5px; flex: none; }
+.formulierHoneypot { position: absolute !important; inset-inline-start: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; opacity: 0 !important; pointer-events: none !important; }
 .formulierNotitie, .berekeningResultaat, .privacyNotitie { padding: 14px 16px; border-inline-start: 5px solid var(--sparkyOranje); background: #fff7e0; color: #3d2a00; border-radius: 12px; }
+.formulierNotitie[data-status="success"] { border-inline-start-color: #18864b; background: #edf9f2; color: #0d4b2a; }
+.formulierNotitie[data-status="error"] { border-inline-start-color: #b42318; background: #fff0ee; color: #721c14; }
+.formulierNotitie[data-status="pending"] { border-inline-start-color: var(--sparkyDonkerBlauw); background: #eef5fa; color: var(--sparkyDonkerBlauw); }
+form [type="submit"]:disabled { cursor: wait; opacity: .72; }
 .berekeningResultaat { display: block; min-height: 64px; }
 body.hoogContrast .kaart,
 body.hoogContrast .mediaNotitie,

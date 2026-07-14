@@ -65,7 +65,10 @@
         <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6 7-12a7 7 0 1 0-14 0c0 6 7 12 7 12Zm0-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" /></svg><span>Rotterdam, Nederland</span></p>
       </address>
     </div>
-    <form id="contactSectLatenWeBeginnenFormulier" class="contactFormulier contactOfferteFormulier" action="#formulierNogNietGekoppeld" method="post" data-validate-form aria-describedby="contactSectLatenWeBeginnenFormulierNotitie">
+    <form id="contactSectLatenWeBeginnenFormulier" class="contactFormulier contactOfferteFormulier" action="https://formspree.io/f/xnjenvqd" method="post" data-formspree-form aria-describedby="contactSectLatenWeBeginnenFormulierNotitie">
+      <input type="hidden" name="_subject" value="Nieuwe offerteaanvraag via het contactformulier" />
+      <input type="hidden" name="bron" value="Contactpagina – Uitgebreid offerteformulier" />
+      <div class="formulierHoneypot" aria-hidden="true"><label for="contactSectLatenWeBeginnenWebsite">Laat dit veld leeg</label><input id="contactSectLatenWeBeginnenWebsite" name="_gotcha" type="text" tabindex="-1" autocomplete="off" /></div>
       <div class="contactFormulierRij">
         <div class="contactFormulierVeld"><label for="contactSectLatenWeBeginnenNaam">Naam</label><input id="contactSectLatenWeBeginnenNaam" name="naam" type="text" autocomplete="name" required /></div>
         <div class="contactFormulierVeld"><label for="contactSectLatenWeBeginnenBedrijfsnaam">Bedrijfsnaam</label><input id="contactSectLatenWeBeginnenBedrijfsnaam" name="bedrijfsnaam" type="text" autocomplete="organization" /></div>
@@ -89,7 +92,7 @@
       </fieldset>
       <div class="contactFormulierVeld"><label for="contactSectLatenWeBeginnenOmschrijving">Omschrijving</label><textarea id="contactSectLatenWeBeginnenOmschrijving" name="omschrijving" rows="7" placeholder="Vertel ons meer over uw situatie" required></textarea></div>
       <label class="checkboxLabel contactVoorwaarden" for="contactSectLatenWeBeginnenAkkoord"><input id="contactSectLatenWeBeginnenAkkoord" name="akkoord" type="checkbox" required /><span>Ik ga akkoord met de voorwaarden.</span></label>
-      <button id="contactSectLatenWeBeginnenBtn01Versturen" class="siteBtn siteBtnPrimary" type="submit" data-button-page="Contact" data-button-section="Laten we beginnen" data-link-type="formulier-backend-todo" data-link-note="Koppel dit formulier later aan e-mail, CRM of backend.">Versturen</button>
+      <button id="contactSectLatenWeBeginnenBtn01Versturen" class="siteBtn siteBtnPrimary" type="submit" data-button-page="Contact" data-button-section="Laten we beginnen" data-link-type="formulier-versturen">Versturen</button>
       <p id="contactSectLatenWeBeginnenFormulierNotitie" class="formulierNotitie" aria-live="polite" hidden></p>
     </form>
   </div>

@@ -650,22 +650,69 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
     });
   });
 
-  // Algemene formulier-validatie. Backend/e-mailservice later koppelen.
-  document.querySelectorAll('form[data-validate-form]').forEach((form) => {
-    form.addEventListener('submit', (event) => {
+  // Verstuur aanvragen via Formspree zonder de bezoeker van de website weg te sturen.
+  document.querySelectorAll('form[data-formspree-form]').forEach((form) => {
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
+
       const note = form.querySelector('.formulierNotitie');
+      const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
+
       if (!form.checkValidity()) {
         form.reportValidity();
         if (note) {
           note.hidden = false;
+          note.dataset.status = 'error';
           note.textContent = 'Controleer de verplichte velden.';
         }
         return;
       }
+
+      if (submitButton) {
+        submitButton.dataset.originalText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.setAttribute('aria-busy', 'true');
+        submitButton.textContent = 'Versturen…';
+      }
+
       if (note) {
         note.hidden = false;
-        note.textContent = 'Formulier gevalideerd. Koppel hier later backend, e-mailservice of CRM aan.';
+        note.dataset.status = 'pending';
+        note.textContent = 'Uw aanvraag wordt verstuurd…';
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+          const formspreeMessage = Array.isArray(result.errors)
+            ? result.errors.map((error) => error.message).filter(Boolean).join(' ')
+            : '';
+          throw new Error(formspreeMessage || 'De aanvraag kon niet worden verstuurd.');
+        }
+
+        form.reset();
+        if (note) {
+          note.dataset.status = 'success';
+          note.textContent = 'Bedankt! Uw aanvraag is verstuurd. Wij nemen zo snel mogelijk contact met u op.';
+        }
+      } catch (error) {
+        if (note) {
+          note.dataset.status = 'error';
+          note.textContent = `${error.message || 'Er ging iets mis bij het versturen.'} Probeer het opnieuw of mail naar info@sparkyenergies.com.`;
+        }
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.removeAttribute('aria-busy');
+          submitButton.textContent = submitButton.dataset.originalText || 'Versturen';
+          delete submitButton.dataset.originalText;
+        }
       }
     });
   });

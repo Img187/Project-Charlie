@@ -340,11 +340,14 @@
   <h2 id="laadpalenSectWelkeLaadpaalPastBijUH2" class="sectieTitel">Welke laadpaal past bij u?</h2>
   <p id="laadpalenSectWelkeLaadpaalPastBijUP01" class="sectieIntro">Laat ons weten wat u nodig hebt. Wij adviseren u vrijblijvend welke oplossing het beste aansluit.</p>
 </header>
-<form id="laadpalenSectWelkeLaadpaalPastBijUFormulier" class="emailCtaFormulier" action="contact.html#contactSectLatenWeBeginnen" method="get" aria-describedby="laadpalenSectWelkeLaadpaalPastBijUFormulierNotitie">
+<form id="laadpalenSectWelkeLaadpaalPastBijUFormulier" class="emailCtaFormulier" action="https://formspree.io/f/xnjenvqd" method="post" data-formspree-form aria-describedby="laadpalenSectWelkeLaadpaalPastBijUFormulierNotitie">
+  <input type="hidden" name="_subject" value="Nieuwe laadpaalaanvraag" />
+  <input type="hidden" name="bron" value="Laadpalen – Welke laadpaal past bij u?" />
+  <div class="formulierHoneypot" aria-hidden="true"><label for="laadpalenSectWelkeLaadpaalPastBijUWebsite">Laat dit veld leeg</label><input id="laadpalenSectWelkeLaadpaalPastBijUWebsite" name="_gotcha" type="text" tabindex="-1" autocomplete="off" /></div>
   <label for="laadpalenSectWelkeLaadpaalPastBijUEmailInput">E-mailadres</label>
   <input id="laadpalenSectWelkeLaadpaalPastBijUEmailInput" name="email" type="email" autocomplete="email" placeholder="uw@email.nl" required />
-  <button id="laadpalenSectWelkeLaadpaalPastBijUBtn01Aanvragen" class="siteBtn siteBtnPrimary laadpalenSectWelkeLaadpaalPastBijUKnop" type="submit" data-button-page="Laadpalen" data-button-section="Welke laadpaal past bij u?" data-link-type="formulier-doorsturen" data-target-page="Contact" data-target-section="contactSectLatenWeBeginnen">Aanvragen</button>
-  <p id="laadpalenSectWelkeLaadpaalPastBijUFormulierNotitie" class="formulierNotitie">NOTITIE: dit formulier stuurt nu door naar de contactpagina. Koppel later aan CRM, e-mailservice of backend.</p>
+  <button id="laadpalenSectWelkeLaadpaalPastBijUBtn01Aanvragen" class="siteBtn siteBtnPrimary laadpalenSectWelkeLaadpaalPastBijUKnop" type="submit" data-button-page="Laadpalen" data-button-section="Welke laadpaal past bij u?" data-link-type="formulier-versturen">Aanvragen</button>
+  <p id="laadpalenSectWelkeLaadpaalPastBijUFormulierNotitie" class="formulierNotitie" aria-live="polite" hidden></p>
 </form>
 <p id="laadpalenSectWelkeLaadpaalPastBijUP02" class="privacyNotitie">Wij behandelen uw gegevens vertrouwelijk en nemen snel contact op.</p>
 </section>
