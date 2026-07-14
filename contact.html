@@ -78,16 +78,16 @@
         <div class="contactFormulierVeld"><label for="contactSectLatenWeBeginnenTelefoon">Telefoonnummer</label><input id="contactSectLatenWeBeginnenTelefoon" name="telefoon" type="tel" autocomplete="tel" required /></div>
       </div>
       <div class="contactFormulierVeld"><label for="contactSectLatenWeBeginnenAanvraagtype">Wat zoekt u?</label><select id="contactSectLatenWeBeginnenAanvraagtype" name="aanvraagtype" required><option value="">Kies een optie</option><option value="offerte">Offerte</option><option value="advies">Advies</option><option value="inspectie">Inspectie</option><option value="onderhoud">Onderhoud of service</option></select></div>
-      <fieldset class="contactSituatieKeuzes">
-        <legend>Wat beschrijft uw situatie?</legend>
+      <fieldset class="contactSituatieKeuzes" data-required-checkbox-group>
+        <legend>Wat beschrijft uw situatie? <span class="contactKeuzeUitleg">Kies één of meerdere opties.</span></legend>
         <div class="contactKeuzeRaster">
-          <label class="contactKeuzeOptie"><input type="radio" name="situatie" value="thuisbatterij" required /><span>Thuisbatterij</span></label>
-          <label class="contactKeuzeOptie"><input type="radio" name="situatie" value="zonnepanelen" /><span>Zonnepanelen</span></label>
-          <label class="contactKeuzeOptie"><input type="radio" name="situatie" value="laadpaal" /><span>Laadpaal</span></label>
-          <label class="contactKeuzeOptie"><input type="radio" name="situatie" value="warmtepomp" /><span>Warmtepomp</span></label>
-          <label class="contactKeuzeOptie"><input type="radio" name="situatie" value="elektrotechnische-renovatie" /><span>Elektrotechnische renovatie</span></label>
-          <label class="contactKeuzeOptie"><input type="radio" name="situatie" value="inspectie-onderhoud" /><span>Inspectie en onderhoud</span></label>
-          <label class="contactKeuzeOptie"><input type="radio" name="situatie" value="anders" /><span>Anders</span></label>
+          <label class="contactKeuzeOptie"><input type="checkbox" name="situatie" value="thuisbatterij" /><span>Thuisbatterij</span></label>
+          <label class="contactKeuzeOptie"><input type="checkbox" name="situatie" value="zonnepanelen" /><span>Zonnepanelen</span></label>
+          <label class="contactKeuzeOptie"><input type="checkbox" name="situatie" value="laadpaal" /><span>Laadpaal</span></label>
+          <label class="contactKeuzeOptie"><input type="checkbox" name="situatie" value="warmtepomp" /><span>Warmtepomp</span></label>
+          <label class="contactKeuzeOptie"><input type="checkbox" name="situatie" value="elektrotechnische-renovatie" /><span>Elektrotechnische renovatie</span></label>
+          <label class="contactKeuzeOptie"><input type="checkbox" name="situatie" value="inspectie-onderhoud" /><span>Inspectie en onderhoud</span></label>
+          <label class="contactKeuzeOptie"><input type="checkbox" name="situatie" value="anders" /><span>Anders</span></label>
         </div>
       </fieldset>
       <div class="contactFormulierVeld"><label for="contactSectLatenWeBeginnenOmschrijving">Omschrijving</label><textarea id="contactSectLatenWeBeginnenOmschrijving" name="omschrijving" rows="7" placeholder="Vertel ons meer over uw situatie" required></textarea></div>

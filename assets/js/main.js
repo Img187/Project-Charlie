@@ -652,11 +652,29 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
 
   // Verstuur aanvragen via Formspree zonder de bezoeker van de website weg te sturen.
   document.querySelectorAll('form[data-formspree-form]').forEach((form) => {
+    const requiredCheckboxGroups = form.querySelectorAll('[data-required-checkbox-group]');
+
+    const validateCheckboxGroup = (group) => {
+      const checkboxes = Array.from(group.querySelectorAll('input[type="checkbox"]'));
+      const firstCheckbox = checkboxes[0];
+      if (!firstCheckbox) return;
+      const hasSelection = checkboxes.some((checkbox) => checkbox.checked);
+      firstCheckbox.setCustomValidity(hasSelection ? '' : 'Kies minimaal één optie.');
+    };
+
+    requiredCheckboxGroups.forEach((group) => {
+      group.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener('change', () => validateCheckboxGroup(group));
+      });
+    });
+
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
 
       const note = form.querySelector('.formulierNotitie');
       const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
+
+      requiredCheckboxGroups.forEach(validateCheckboxGroup);
 
       if (!form.checkValidity()) {
         form.reportValidity();
