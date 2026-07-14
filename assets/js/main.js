@@ -699,7 +699,7 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
         form.reset();
         if (note) {
           note.dataset.status = 'success';
-          note.textContent = 'Bedankt! Uw aanvraag is verstuurd. Wij nemen zo snel mogelijk contact met u op.';
+          note.textContent = 'Bedankt voor uw inzending! We nemen zo spoedig mogelijk contact met u op.';
         }
       } catch (error) {
         if (note) {

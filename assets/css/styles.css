@@ -898,7 +898,8 @@ textarea { resize: vertical; min-height: 140px; }
 .checkboxLabel input { width: 22px; min-height: 22px; margin-top: 5px; flex: none; }
 .formulierHoneypot { position: absolute !important; inset-inline-start: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; opacity: 0 !important; pointer-events: none !important; }
 .formulierNotitie, .berekeningResultaat, .privacyNotitie { padding: 14px 16px; border-inline-start: 5px solid var(--sparkyOranje); background: #fff7e0; color: #3d2a00; border-radius: 12px; }
-.formulierNotitie[data-status="success"] { border-inline-start-color: #18864b; background: #edf9f2; color: #0d4b2a; }
+.formulierNotitie[data-status="success"] { border-inline-start-color: #18864b; background: #edf9f2; color: #0d4b2a; text-align: center; }
+.formulierNotitie[data-status="success"]::after { content: "✓"; display: grid; width: 48px; height: 48px; margin: 14px auto 0; place-items: center; border-radius: 50%; background: #18864b; color: #fff; font-family: Arial, sans-serif; font-size: 2rem; font-weight: 800; line-height: 1; }
 .formulierNotitie[data-status="error"] { border-inline-start-color: #b42318; background: #fff0ee; color: #721c14; }
 .formulierNotitie[data-status="pending"] { border-inline-start-color: var(--sparkyDonkerBlauw); background: #eef5fa; color: var(--sparkyDonkerBlauw); }
 form [type="submit"]:disabled { cursor: wait; opacity: .72; }
@@ -913,6 +914,7 @@ body.hoogContrast textarea { background: #fff; color: #000; border: 2px solid #0
 body.hoogContrast .formulierNotitie,
 body.hoogContrast .berekeningResultaat,
 body.hoogContrast .privacyNotitie { background: #fff; color: #000; border: 2px solid #000; border-inline-start-width: 6px; }
+body.hoogContrast .formulierNotitie[data-status="success"]::after { border: 2px solid #000; background: #fff; color: #000; }
 .siteFaq > .sectieKop { width: 100%; max-width: 760px; margin-inline: auto; text-align: center; }
 .siteFaq .sectieTitel,
 .siteFaq .sectieIntro { margin-inline: auto; }
