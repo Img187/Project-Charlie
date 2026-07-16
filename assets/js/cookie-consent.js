@@ -10,7 +10,9 @@
 
   let currentChoice = readChoice();
   let consentLayer;
-  let preferencesButton;
+  let preferencesLink;
+  let returnFocusElement;
+  let lockedPageElements = [];
 
   function readChoice() {
     try {
@@ -100,7 +102,7 @@
     const placeholder = document.createElement('div');
     placeholder.className = 'footerKaartToestemming';
     placeholder.dataset.cookieMapPlaceholder = '';
-    placeholder.innerHTML = '<p>De kaart is beschikbaar met volledige toestemming.</p><button class="cookieKaartVoorkeurenKnop" type="button">Cookievoorkeuren</button>';
+    placeholder.innerHTML = '<p>De kaart is beschikbaar met volledige toestemming.</p><button class="cookieKaartVoorkeurenKnop" type="button">Cookie Voorkeuren</button>';
     placeholder.querySelector('button').addEventListener('click', () => showConsentLayer(true));
     frame.insertAdjacentElement('beforebegin', placeholder);
   }
@@ -123,12 +125,58 @@
     });
   }
 
+  function setPageLocked(locked) {
+    if (locked) {
+      document.body.classList.add('cookieKeuzeOpen');
+      lockedPageElements = Array.from(document.body.children).filter((element) => {
+        return element !== consentLayer && element.tagName !== 'SCRIPT';
+      });
+      lockedPageElements.forEach((element) => {
+        if (!element.inert) {
+          element.dataset.cookieConsentInert = '';
+          element.inert = true;
+        }
+      });
+      return;
+    }
+
+    document.body.classList.remove('cookieKeuzeOpen');
+    lockedPageElements.forEach((element) => {
+      if (element.hasAttribute('data-cookie-consent-inert')) {
+        element.inert = false;
+        delete element.dataset.cookieConsentInert;
+      }
+    });
+    lockedPageElements = [];
+  }
+
+  function focusPageAfterChoice() {
+    const target = returnFocusElement && returnFocusElement.isConnected
+      ? returnFocusElement
+      : document.getElementById('mainContent');
+
+    returnFocusElement = null;
+    if (!target) return;
+
+    const needsTemporaryTabindex = !target.hasAttribute('tabindex') && target.id === 'mainContent';
+    if (needsTemporaryTabindex) target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+    if (needsTemporaryTabindex) {
+      target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
+    }
+  }
+
   function closeConsentLayer() {
     consentLayer.hidden = true;
+    setPageLocked(false);
+    focusPageAfterChoice();
   }
 
   function showConsentLayer(moveFocus) {
+    const activeElement = document.activeElement;
+    returnFocusElement = activeElement && activeElement !== document.body ? activeElement : null;
     consentLayer.hidden = false;
+    setPageLocked(true);
     if (moveFocus) {
       window.requestAnimationFrame(() => {
         document.getElementById('cookieToestemmingVolledig').focus({ preventScroll: true });
@@ -141,7 +189,6 @@
     loadGoogleAnalytics();
     updateGoogleMaps(true);
     closeConsentLayer();
-    preferencesButton.focus({ preventScroll: true });
   }
 
   function chooseFunctionalOnly() {
@@ -149,7 +196,6 @@
     disableGoogleAnalytics();
     updateGoogleMaps(false);
     closeConsentLayer();
-    preferencesButton.focus({ preventScroll: true });
   }
 
   function createConsentLayer() {
@@ -157,7 +203,7 @@
     consentLayer.id = 'cookieToestemmingLaag';
     consentLayer.className = 'cookieToestemmingLaag';
     consentLayer.setAttribute('role', 'dialog');
-    consentLayer.setAttribute('aria-modal', 'false');
+    consentLayer.setAttribute('aria-modal', 'true');
     consentLayer.setAttribute('aria-labelledby', 'cookieToestemmingTitel');
     consentLayer.setAttribute('aria-describedby', 'cookieToestemmingUitleg');
     consentLayer.hidden = true;
@@ -165,7 +211,8 @@
       '<div class="cookieToestemmingInhoud">',
       '  <div class="cookieToestemmingTekst">',
       '    <h2 id="cookieToestemmingTitel">Uw cookiekeuze</h2>',
-      '    <p id="cookieToestemmingUitleg">Volledig staat functionele cookies, Google Analytics en Google Maps toe. Weigeren gebruikt alleen functionele cookies.</p>',
+      '    <p id="cookieToestemmingUitleg"><strong>Volledig:</strong> functionele cookies, Google Analytics en Google Maps. <strong>Weigeren:</strong> alleen functionele cookies.</p>',
+      '    <a class="cookiePrivacyLink" href="assets/documenten/privacy-en-cookieverklaring-sparky-energies.pdf" download="privacy-en-cookieverklaring-sparky-energies.pdf">Privacy verklaring</a>',
       '  </div>',
       '  <div class="cookieToestemmingActies">',
       '    <button id="cookieToestemmingVolledig" class="cookieToestemmingKnop cookieToestemmingVolledig" type="button" aria-label="Volledig: alle cookies toestaan">Volledig</button>',
@@ -181,28 +228,54 @@
     consentLayer.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && currentChoice) {
         closeConsentLayer();
-        preferencesButton.focus({ preventScroll: true });
+        return;
+      }
+
+      if (event.key === 'Tab') {
+        const focusableElements = Array.from(consentLayer.querySelectorAll('a[href], button:not([disabled])'));
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (event.shiftKey && document.activeElement === firstElement) {
+          event.preventDefault();
+          lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+          event.preventDefault();
+          firstElement.focus();
+        }
       }
     });
   }
 
-  function createPreferencesButton() {
-    preferencesButton = document.createElement('button');
-    preferencesButton.className = 'cookieVoorkeurenKnop';
-    preferencesButton.type = 'button';
-    preferencesButton.textContent = 'Cookievoorkeuren';
-    preferencesButton.addEventListener('click', () => showConsentLayer(true));
+  function createPreferencesLink() {
+    preferencesLink = document.createElement('a');
+    preferencesLink.className = 'cookieVoorkeurenLink';
+    preferencesLink.href = '#cookieToestemmingLaag';
+    preferencesLink.textContent = 'Cookie Voorkeuren';
+    preferencesLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      showConsentLayer(true);
+    });
+
+    const footerNavigation = document.querySelector('.footerNavigatieLijst');
+    if (footerNavigation) {
+      const navigationItem = document.createElement('li');
+      navigationItem.appendChild(preferencesLink);
+      const legalItem = footerNavigation.querySelector('[data-terms-download], [data-privacy-download]')?.closest('li');
+      footerNavigation.insertBefore(navigationItem, legalItem || null);
+      return;
+    }
 
     const copyright = document.querySelector('.footerCopyright');
     if (copyright) {
-      copyright.insertAdjacentElement('beforebegin', preferencesButton);
+      copyright.insertAdjacentElement('beforebegin', preferencesLink);
     } else {
-      document.body.appendChild(preferencesButton);
+      document.body.appendChild(preferencesLink);
     }
   }
 
   function initializeCookieConsent() {
-    createPreferencesButton();
+    createPreferencesLink();
     createConsentLayer();
 
     if (currentChoice === CHOICE_FULL) {

@@ -909,6 +909,8 @@ textarea { resize: vertical; min-height: 140px; }
 .checkboxLabel input { width: 22px; min-height: 22px; margin-top: 5px; flex: none; }
 .formulierHoneypot { position: absolute !important; inset-inline-start: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; opacity: 0 !important; pointer-events: none !important; }
 .formulierNotitie, .berekeningResultaat, .privacyNotitie { padding: 14px 16px; border-inline-start: 5px solid var(--sparkyOranje); background: #fff7e0; color: #3d2a00; border-radius: 12px; }
+.privacyNotitie a,
+.contactVoorwaarden a { color: inherit; font-weight: 800; text-decoration-thickness: 2px; text-underline-offset: 2px; }
 .formulierNotitie[data-status="success"] { border-inline-start-color: #18864b; background: #edf9f2; color: #0d4b2a; text-align: center; }
 .formulierNotitie[data-status="success"]::after { content: "✓"; display: grid; width: 48px; height: 48px; margin: 14px auto 0; place-items: center; border-radius: 50%; background: #18864b; color: #fff; font-family: Arial, sans-serif; font-size: 2rem; font-weight: 800; line-height: 1; }
 .formulierNotitie[data-status="error"] { border-inline-start-color: #b42318; background: #fff0ee; color: #721c14; }
@@ -1986,48 +1988,48 @@ h3 {
 }
 
 /* Eenvoudige tweekeuze-laag voor functionele of volledige toestemming. */
+body.cookieKeuzeOpen > :not(.cookieToestemmingLaag):not(script) { pointer-events: none; user-select: none; }
 .cookieToestemmingLaag {
   position: fixed;
   z-index: 1200;
-  inset: auto 0 0;
-  padding: 18px max(20px, env(safe-area-inset-right)) max(18px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
-  border-block-start: 2px solid var(--sparkyDonkerBlauw);
-  background: #fff;
-  color: var(--sparkyDonker);
-  box-shadow: 0 -10px 32px rgba(5, 28, 45, .18);
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: max(20px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+  background: transparent;
+  pointer-events: none;
 }
 
 .cookieToestemmingLaag[hidden] { display: none; }
-.cookieToestemmingInhoud { display: grid; width: min(1180px, 100%); margin-inline: auto; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 20px 32px; }
+.cookieToestemmingInhoud { display: grid; width: min(760px, 100%); max-height: calc(100dvh - 40px); margin: 0; overflow-y: auto; grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 28px; border: 2px solid var(--sparkyDonkerBlauw); border-radius: 8px; background: #fff; color: var(--sparkyDonker); box-shadow: 0 18px 54px rgba(0, 0, 0, .3); pointer-events: auto; }
 .cookieToestemmingTekst h2 { margin: 0 0 6px; font-size: 1.25rem; }
 .cookieToestemmingTekst p { max-width: 760px; margin: 0; }
+.cookiePrivacyLink { width: fit-content; color: var(--sparkyDonkerBlauw); font-weight: 800; text-underline-offset: 3px; }
 .cookieToestemmingActies { display: grid; grid-template-columns: repeat(2, minmax(120px, 1fr)); gap: 10px; }
 .cookieToestemmingKnop,
-.cookieKaartVoorkeurenKnop,
-.cookieVoorkeurenKnop { min-height: 44px; border: 2px solid var(--sparkyDonkerBlauw); border-radius: 6px; font: inherit; font-weight: 800; cursor: pointer; }
+.cookieKaartVoorkeurenKnop { min-height: 44px; border: 2px solid var(--sparkyDonkerBlauw); border-radius: 6px; font: inherit; font-weight: 800; cursor: pointer; }
 .cookieToestemmingKnop { min-width: 120px; padding: 10px 18px; }
 .cookieToestemmingVolledig { border-color: var(--sparkyOranje); background: var(--sparkyOranje); color: #111; }
 .cookieToestemmingWeigeren { background: #fff; color: var(--sparkyDonkerBlauw); }
 .cookieToestemmingKnop:hover,
-.cookieKaartVoorkeurenKnop:hover,
-.cookieVoorkeurenKnop:hover { filter: brightness(.88); }
-.cookieVoorkeurenKnop { display: block; margin: 8px auto 18px; padding: 8px 14px; border-color: #fff; background: transparent; color: #fff; }
+.cookieKaartVoorkeurenKnop:hover { filter: brightness(.88); }
 .footerKaartToestemming { display: grid; width: min(240px, 100%); min-height: 320px; place-content: center; gap: 14px; margin-inline: auto; padding: 20px; border: 2px solid rgba(255,255,255,.7); border-radius: 6px; text-align: center; }
 .footerKaartToestemming p { margin: 0; }
 .cookieKaartVoorkeurenKnop { padding: 8px 12px; border-color: var(--sparkyOranje); background: var(--sparkyOranje); color: #111; }
 
-body.hoogContrast .cookieToestemmingLaag { border-color: #fff !important; background: #000 !important; color: #fff !important; }
+body.hoogContrast .cookieToestemmingLaag { background: transparent !important; }
+body.hoogContrast .cookieToestemmingInhoud { border-color: #fff !important; background: #000 !important; color: #fff !important; }
+body.hoogContrast .cookiePrivacyLink { color: var(--sparkyOranje) !important; }
 body.hoogContrast .cookieToestemmingVolledig,
 body.hoogContrast .cookieKaartVoorkeurenKnop { border-color: var(--sparkyOranje) !important; background: var(--sparkyOranje) !important; color: #000 !important; }
-body.hoogContrast .cookieToestemmingWeigeren,
-body.hoogContrast .cookieVoorkeurenKnop { border-color: #fff !important; background: #000 !important; color: #fff !important; }
+body.hoogContrast .cookieToestemmingWeigeren { border-color: #fff !important; background: #000 !important; color: #fff !important; }
 body.hoogContrast .footerKaartToestemming { border-color: #fff !important; background: #000 !important; color: #fff !important; }
 body.hoogContrast .cookieToestemmingKnop:focus-visible,
-body.hoogContrast .cookieKaartVoorkeurenKnop:focus-visible,
-body.hoogContrast .cookieVoorkeurenKnop:focus-visible { outline-color: var(--sparkyOranje) !important; }
+body.hoogContrast .cookieKaartVoorkeurenKnop:focus-visible { outline-color: var(--sparkyOranje) !important; }
 
 @media (max-width: 767px) {
-  .cookieToestemmingInhoud { grid-template-columns: 1fr; gap: 14px; }
+  .cookieToestemmingInhoud { gap: 18px; padding: 22px 18px; }
   .cookieToestemmingActies { grid-template-columns: 1fr; }
   .cookieToestemmingKnop { width: 100%; }
 }

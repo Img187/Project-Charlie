@@ -17,6 +17,9 @@ Open deze map in VS Code en start bijvoorbeeld Live Server op `index.html`.
 - `contact.html`
 - `assets/css/styles.css`
 - `assets/js/main.js`
+- `assets/js/cookie-consent.js`
+- `assets/documenten/algemene-voorwaarden-sparky-energies-vof.pdf`
+- `assets/documenten/privacy-en-cookieverklaring-sparky-energies.pdf`
 - `assets/fonts/README.md`
 - `SECTION-INDEX.md`
 - `section-index.html`
@@ -80,7 +83,7 @@ De zeven openbare pagina's gebruiken de Google-tag voor de GA4-webstream van Spa
 - `Volledig`: functionele opslag, Google Analytics en de Google Maps-iframe worden geladen.
 - `Weigeren`: alleen de functionele toestemmingsvoorkeur wordt lokaal bewaard; Analytics en Maps worden niet geladen.
 
-De bezoeker kan de keuze via `Cookievoorkeuren` in de footer opnieuw openen. De interne `section-index.html` heeft `noindex` en wordt niet gemeten.
+Bij het eerste bezoek staat de modale keuzelaag met transparante achtergrond vast onderaan het scherm. De bezoeker kan de pagina bekijken en scrollen, maar niet klikken, tekst selecteren of toetsenbordfocus buiten de laag verplaatsen. Na een keuze wordt de website volledig vrijgegeven. Onder `Sitemap` staan achtereenvolgens `Contact`, de hyperlink `Cookie Voorkeuren`, de downloadbare `Algemene voorwaarden` en de downloadbare `Privacy verklaring`. Beide juridische downloads staan bij de aanvraagformulieren; de privacy-download staat ook in de cookielaag. De interne `section-index.html` heeft `noindex` en wordt niet gemeten.
 
 ## Button-notities
 
