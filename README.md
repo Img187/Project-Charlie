@@ -26,6 +26,13 @@ Open deze map in VS Code en start bijvoorbeeld Live Server op `index.html`.
 
 Het definitieve Sparky Energies-logo en de achtergrondfoto `zonnepanelen-installatie-achtergrond.jpg` staan in `assets/img/`. Voor overige media zijn bewust geen tijdelijke afbeeldingen toegevoegd; de HTML gebruikt `NOTITIE MEDIA`-blokken totdat echte afbeeldingen of video’s beschikbaar zijn.
 
+### Responsive afbeeldingsafspraken
+
+- Foto's, placeholders en decoratieve sectiebeelden die hun vlak volledig moeten vullen gebruiken `width: 100%`, `height: 100%` en `object-fit: cover`.
+- CSS-achtergrondafbeeldingen gebruiken `background-size: cover`, `background-position: center` en `background-repeat: no-repeat`.
+- Logo's en certificeringsbeelden mogen niet worden afgesneden en gebruiken daarom `object-fit: contain`.
+- Hoog contrast mag filters en overlays veranderen, maar niet het responsive vulgedrag van een afbeelding.
+
 ## Kleuren
 
 Gebruikt uit de aangeleverde huisstijl:
@@ -51,6 +58,11 @@ Lopende tekst gebruikt standaard Open Sans Light; elementen met een zwaarder `fo
 De header bevat knoppen voor grotere tekst, hoog contrast, voorlezen en stoppen met voorlezen. Daarnaast zijn semantische elementen gebruikt: `header`, `nav`, `main`, `section`, `article`, `footer`, `h1/h2/h3`, `p`, `ul/li`, `ol/li`, `form`, `fieldset`, `legend`, `label`, `button` en duidelijke focus-states.
 
 De website gebruikt altijd de lichte weergave als standaard: witte achtergronden, donkerblauwe koppen en donkere lopende tekst. Hoog contrast wordt uitsluitend geactiveerd via de toegankelijkheidsknop en wordt in `localStorage` bewaard.
+
+### Afspraken voor hoog contrast
+
+- Hoog contrast verandert kleuren, randen en schaduwen, maar schakelt animaties niet uit. Bewegingsreductie blijft gekoppeld aan `prefers-reduced-motion`.
+- Geef open split-card- en mediavlakken die vanaf tabletbreedte de pagina-achtergrond moeten tonen de class `hoogContrastTransparantVlak`. Plaats de class zowel op de kaart als op het mediavlak; de mobiele weergave blijft daardoor ongewijzigd.
 
 ## Rekenformulier
 

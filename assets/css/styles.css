@@ -455,9 +455,9 @@ body.hoogContrast .homeHeroScrollMediaLabel { border: 2px solid #000; background
 }
 @supports (clip-path: inset(0 0 0 50%)) {
   @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
-    body:not(.hoogContrast):not(.tekstGroot) .homeHeroReferentieGrid.isScrollAfbeeldingActief { position: relative; isolation: isolate; overflow: visible; }
-    body:not(.hoogContrast):not(.tekstGroot) .homeHeroReferentieGrid.isScrollAfbeeldingActief .homeHeroScrollInhoud { position: relative; z-index: 1; grid-column: 1; grid-row: 1; }
-    body:not(.hoogContrast):not(.tekstGroot) .homeHeroReferentieGrid.isScrollAfbeeldingActief .homeHeroScrollMedia { position: absolute; z-index: 2; grid-column: 1 / -1; grid-row: 1; inset-block: 0; inset-inline-start: var(--scroll-volledige-breedte-offset-links, 0); width: var(--scroll-volledige-breedte, 100%); height: 100%; min-height: 100%; border-radius: 0; clip-path: inset(0 var(--scroll-afbeelding-inset-rechts, 50%) 0 var(--scroll-afbeelding-inset-links, 0) round var(--scroll-afbeelding-radius, 10px)); will-change: clip-path; }
+    body:not(.tekstGroot) .homeHeroReferentieGrid.isScrollAfbeeldingActief { position: relative; isolation: isolate; overflow: visible; }
+    body:not(.tekstGroot) .homeHeroReferentieGrid.isScrollAfbeeldingActief .homeHeroScrollInhoud { position: relative; z-index: 1; grid-column: 1; grid-row: 1; }
+    body:not(.tekstGroot) .homeHeroReferentieGrid.isScrollAfbeeldingActief .homeHeroScrollMedia { position: absolute; z-index: 2; grid-column: 1 / -1; grid-row: 1; inset-block: 0; inset-inline-start: var(--scroll-volledige-breedte-offset-links, 0); width: var(--scroll-volledige-breedte, 100%); height: 100%; min-height: 100%; border-radius: 0; clip-path: inset(0 var(--scroll-afbeelding-inset-rechts, 50%) 0 var(--scroll-afbeelding-inset-links, 0) round var(--scroll-afbeelding-radius, 10px)); will-change: clip-path; }
   }
 }
 .homeSectGecertificeerdeInstallateursMetVakmanschapKaarten.layoutFeatures { padding-block-start: var(--sectieRuimte); }
@@ -498,7 +498,7 @@ body.hoogContrast .homeHeroScrollMediaLabel { border: 2px solid #000; background
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhoudenMedia { background: #fff; }
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhoudenAfbeelding { filter: grayscale(1) contrast(1.35); }
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhouden .homeSectWatWijVoorUInstallerenEnOnderhoudenDienstKaart { border: 0; border-radius: 10px; box-shadow: none; }
-.layoutImageCta { display: grid; width: 100%; max-width: none; min-height: 350px; margin-inline: 0; place-items: center; padding-inline: clamp(20px, 6vw, 80px); overflow: hidden; background-color: var(--sparkyDonkerBlauw); background-image: linear-gradient(135deg, rgba(5, 28, 45, .68), rgba(11, 60, 93, .52)), url("../img/zonnepanelen-installatie-achtergrond.jpg"); background-position: center; background-repeat: no-repeat; background-size: 100% auto; }
+.layoutImageCta { display: grid; width: 100%; max-width: none; min-height: 350px; margin-inline: 0; place-items: center; padding-inline: clamp(20px, 6vw, 80px); overflow: hidden; background-color: var(--sparkyDonkerBlauw); background-image: linear-gradient(135deg, rgba(5, 28, 45, .68), rgba(11, 60, 93, .52)), url("../img/zonnepanelen-installatie-achtergrond.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; }
 .layoutImageCtaInhoud { display: flex; width: min(960px, 100%); flex-direction: column; align-items: center; text-align: center; }
 .layoutImageCta .sectieKop { width: 100%; max-width: 960px; }
 .layoutImageCta h2,
@@ -514,7 +514,7 @@ body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhouden .homeSectWatWijVo
 .layoutImageCta .siteBtn { margin-block-start: clamp(26px, 4vw, 40px); }
 .layoutImageCta .sectionActies { justify-content: center; margin-block-start: clamp(26px, 4vw, 40px); }
 .layoutImageCta .sectionActies .siteBtn { margin-block-start: 0; }
-body.hoogContrast .layoutImageCta { background-color: var(--sparkyDonkerBlauw); background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/zonnepanelen-installatie-achtergrond.jpg"); background-size: 100% auto; }
+body.hoogContrast .layoutImageCta { background-color: var(--sparkyDonkerBlauw); background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/zonnepanelen-installatie-achtergrond.jpg"); background-size: cover; }
 body.hoogContrast .layoutImageCta h2,
 body.hoogContrast .layoutImageCta h4,
 body.hoogContrast .layoutImageCta .sectieIntro { color: #000; text-shadow: none; }
@@ -1835,7 +1835,7 @@ body.hoogContrast .layoutImageCta {
   background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/zonnepanelen-installatie-achtergrond.jpg") !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-size: 100% auto !important;
+  background-size: cover !important;
   color: var(--sparkyLichtGrijs) !important;
 }
 
@@ -1858,6 +1858,14 @@ body.hoogContrast .elektrotechnischeRenovatiesGroepenkastMedia,
 body.hoogContrast .elektrotechnischeRenovatiesExtraElektraMedia {
   border-color: transparent !important;
   background: transparent !important;
+}
+
+/* Open split layouts keep the page background visible outside mobile mode. */
+@media (min-width: 768px) {
+  body.hoogContrast .hoogContrastTransparantVlak {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
 }
 
 body.hoogContrast .kaartIcoon,

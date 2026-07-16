@@ -515,7 +515,6 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
       const animationActive = clipPathSupported
         && !reducedMotionQuery.matches
         && !body.classList.contains('tekstGroot')
-        && !body.classList.contains('hoogContrast')
         && window.innerWidth >= 1024;
 
       if (!animationActive) {
