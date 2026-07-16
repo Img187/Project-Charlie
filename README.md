@@ -68,6 +68,20 @@ De website gebruikt altijd de lichte weergave als standaard: witte achtergronden
 
 De contactpagina bevat sectie `contactSectVragenformulierVoorBesparingEnInstallatiekosten`. De velden en JS-hooks staan klaar voor een toekomstige berekening van besparing, prijsindicatie en installatieconfiguratie. De definitieve formules staan bewust als TODO in `assets/js/main.js`.
 
+## Google Analytics
+
+De zeven openbare pagina's gebruiken de Google-tag voor de GA4-webstream van Sparky Energies:
+
+- Stream-ID: `15270749702`
+- Measurement ID: `G-HKTJECPX2Z`
+
+`assets/js/cookie-consent.js` biedt twee keuzes:
+
+- `Volledig`: functionele opslag, Google Analytics en de Google Maps-iframe worden geladen.
+- `Weigeren`: alleen de functionele toestemmingsvoorkeur wordt lokaal bewaard; Analytics en Maps worden niet geladen.
+
+De bezoeker kan de keuze via `Cookievoorkeuren` in de footer opnieuw openen. De interne `section-index.html` heeft `noindex` en wordt niet gemeten.
+
 ## Button-notities
 
 Iedere knop heeft een eigen ID en data-attributen zoals `data-button-page`, `data-button-section`, `data-link-type`, `data-target-page`, `data-target-section` en waar nodig `data-link-note`. Zie `SECTION-INDEX.md`.
