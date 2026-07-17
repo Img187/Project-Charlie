@@ -5,8 +5,9 @@
   const STORAGE_KEY = 'sparky-cookie-toestemming';
   const CHOICE_FULL = 'volledig';
   const CHOICE_FUNCTIONAL = 'functioneel';
-  const MEASUREMENT_ID = 'G-HKTJECPX2Z';
-  const GOOGLE_TAG_ID = 'googleAnalyticsTag';
+  const MEASUREMENT_ID = 'G-B8QNYQR8CY';
+  const GOOGLE_TAG_ID = 'GT-PL9T2DJM';
+  const GOOGLE_TAG_SCRIPT_ID = 'googleAnalyticsTag';
 
   let currentChoice = readChoice();
   let consentLayer;
@@ -53,7 +54,7 @@
     window['ga-disable-' + MEASUREMENT_ID] = false;
     ensureGtag();
 
-    if (document.getElementById(GOOGLE_TAG_ID)) {
+    if (document.getElementById(GOOGLE_TAG_SCRIPT_ID)) {
       window.gtag('consent', 'update', consentSettings(CHOICE_FULL));
       return;
     }
@@ -63,7 +64,8 @@
     window.gtag('config', MEASUREMENT_ID);
 
     const script = document.createElement('script');
-    script.id = GOOGLE_TAG_ID;
+    script.id = GOOGLE_TAG_SCRIPT_ID;
+    script.dataset.googleTagId = GOOGLE_TAG_ID;
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(MEASUREMENT_ID);
     document.head.appendChild(script);
