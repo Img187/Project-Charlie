@@ -1409,7 +1409,7 @@ body.hoogContrast .contactSectLatenWeBeginnen { border: 0; background: #fff; box
 body.hoogContrast .contactOfferteGegevens a,
 body.hoogContrast .contactOfferteGegevens p,
 body.hoogContrast .contactKeuzeOptie { color: #000; }
-body.hoogContrast .contactOfferteGegevens svg { stroke: #000; }
+body.hoogContrast .contactOfferteGegevens svg { stroke: currentColor; }
 body.hoogContrast .contactSituatieKeuzes { border: 0; }
 @media (min-width: 600px) {
   .contactFormulierRij,
