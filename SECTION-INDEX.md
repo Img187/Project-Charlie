@@ -1,421 +1,272 @@
-# Sparky Energies – sectie-index
-Deze index koppelt iedere pagina, sectie, heading, paragraaf, formulier en knop aan de HTML/CSS/JS-structuur.
-Naamgeving volgt het patroon: `homeSectEersteHeadingVanSectie`, `thuisbatterijSectEersteHeadingVanSectie`, enzovoort.
-## Secties
-### Pagina 1 – Home – sectie 1
-- Bestand: `index.html`
-- Section ID: `homeSectGecertificeerdeInstallateursMetVakmanschap`
-- Section class: `homeSectGecertificeerdeInstallateursMetVakmanschap`
-- Heading ID: `homeSectGecertificeerdeInstallateursMetVakmanschapH1`
-- Heading tekst: Energie van nu, zekerheid voor morgen.
-- Type: `hero`
-### Pagina 1 – Home – sectie 2
-- Bestand: `index.html`
-- Section ID: `homeSectWatWijVoorUInstallerenEnOnderhouden`
-- Section class: `homeSectWatWijVoorUInstallerenEnOnderhouden`
-- Heading ID: `homeSectWatWijVoorUInstallerenEnOnderhoudenH2`
-- Heading tekst: Wat wij voor u installeren en onderhouden
-- Type: `services`
-### Pagina 1 – Home – sectie 3
-- Bestand: `index.html`
-- Section ID: `homeSectVanIdeeTotInstallatieVanVonkTotVermogen`
-- Section class: `homeSectVanIdeeTotInstallatieVanVonkTotVermogen`
-- Heading ID: `homeSectVanIdeeTotInstallatieVanVonkTotVermogenH4`
-- Heading tekst: Van idee tot installatie, van vonk tot vermogen.
-- Type: `image_cta`
-### Pagina 1 – Home – sectie 4
-- Bestand: `index.html`
-- Section ID: `homeSectTwijfeltUOfUwInstallatieGeschiktIs`
-- Section class: `homeSectTwijfeltUOfUwInstallatieGeschiktIs`
-- Heading ID: `homeSectTwijfeltUOfUwInstallatieGeschiktIsH2`
-- Heading tekst: Twijfelt u of uw installatie geschikt is?
-- Type: `text`
-### Pagina 1 – Home – sectie 5
-- Bestand: `index.html`
-- Section ID: `homeSectRecentWerk`
-- Section class: `homeSectRecentWerk`
-- Heading ID: `homeSectRecentWerkH2`
-- Heading tekst: Recent werk
-- Type: `portfolio`
-### Pagina 1 – Home – sectie 6
-- Bestand: `index.html`
-- Section ID: `homeSectWatKlantenOverOnsZeggen`
-- Section class: `homeSectWatKlantenOverOnsZeggen`
-- Heading ID: `homeSectWatKlantenOverOnsZeggenH2`
-- Heading tekst: Wat klanten over ons zeggen
-- Type: `testimonials`
-### Pagina 1 – Home – sectie 7
-- Bestand: `index.html`
-- Section ID: `homeSectKlaarOmUwWoningToekomstbestendigTeMaken`
-- Section class: `homeSectKlaarOmUwWoningToekomstbestendigTeMaken`
-- Heading ID: `homeSectKlaarOmUwWoningToekomstbestendigTeMakenH2`
-- Heading tekst: Klaar om uw woning toekomstbestendig te maken?
-- Type: `email_cta`
-### Pagina 2 – Thuisbatterijen – sectie 1
-- Bestand: `thuisbatterijen.html`
-- Section ID: `thuisbatterijSectThuisbatterijLatenInstalleren`
-- Section class: `thuisbatterijSectThuisbatterijLatenInstalleren`
-- Heading ID: `thuisbatterijSectThuisbatterijLatenInstallerenH1`
-- Heading tekst: Thuisbatterij laten installeren
-- Type: `split_card`
-### Pagina 2 – Thuisbatterijen – sectie 2
-- Bestand: `thuisbatterijen.html`
-- Section ID: `thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen`
-- Section class: `thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen`
-- Heading ID: `thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenH2`
-- Heading tekst: Slim opslaan, slim gebruiken en slim besparen
-- Type: `features`
-### Pagina 2 – Thuisbatterijen – sectie 3
-- Bestand: `thuisbatterijen.html`
-- Section ID: `thuisbatterijSectVoorWoningEnBedrijf`
-- Section class: `thuisbatterijSectVoorWoningEnBedrijf`
-- Heading ID: `thuisbatterijSectVoorWoningEnBedrijfH2`
-- Heading tekst: Voor woning en bedrijf
-- Type: `split_card`
-### Pagina 2 – Thuisbatterijen – sectie 4
-- Bestand: `thuisbatterijen.html`
-- Section ID: `thuisbatterijSectHoeWerktEenThuisbatterij`
-- Section class: `thuisbatterijSectHoeWerktEenThuisbatterij`
-- Heading ID: `thuisbatterijSectHoeWerktEenThuisbatterijH2`
-- Heading tekst: Hoe werkt een thuisbatterij?
-- Type: `split_card`
-### Pagina 2 – Thuisbatterijen – sectie 5
-- Bestand: `thuisbatterijen.html`
-- Section ID: `thuisbatterijSectSlimEnergiebeheerMetEMSEnAISturing`
-- Section class: `thuisbatterijSectSlimEnergiebeheerMetEMSEnAISturing`
-- Heading ID: `thuisbatterijSectSlimEnergiebeheerMetEMSEnAISturingH2`
-- Heading tekst: Sla overtollige energie op voor gebruik wanneer de zon niet schijnt.
-- Type: `sticky_split_cards`
-### Pagina 2 – Thuisbatterijen – sectie 6
-- Bestand: `thuisbatterijen.html`
-- Section ID: `thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren`
-- Section class: `thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren`
-- Heading ID: `thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleverenH2`
-- Heading tekst: Wilt u weten wat een thuisbatterij-installatie voor u kunt opleveren?
-- Type: `image_cta`
-### Pagina 2 – Thuisbatterijen – sectie 7
-- Bestand: `thuisbatterijen.html`
-- Section ID: `thuisbatterijSectZoWerkenWij`
-- Section class: `thuisbatterijSectZoWerkenWij`
-- Heading ID: `thuisbatterijSectZoWerkenWijH2`
-- Heading tekst: Sparky Energies helpt u met een passend advies, veilige installatie en duidelijke uitleg. Wij kijken niet alleen naar de batterij, maar naar de volledige elektrische installatie.
-- Type: `timeline_process`
-### Pagina 2 – Thuisbatterijen – sectie 8
-- Bestand: `thuisbatterijen.html`
-- Section ID: `thuisbatterijSectVeelGesteldeVragenOverThuisbatterijenInstallatieEnVoordelen`
-- Section class: `thuisbatterijSectVeelGesteldeVragenOverThuisbatterijenInstallatieEnVoordelen`
-- Heading ID: `thuisbatterijSectVeelGesteldeVragenOverThuisbatterijenInstallatieEnVoordelenH2`
-- Heading tekst: Vragen
-- Type: `faq`
-### Pagina 2 – Thuisbatterijen – sectie 9
-- Bestand: `thuisbatterijen.html`
-- Section ID: `thuisbatterijSectOntdekWelkeBatterijPastBijU`
-- Section class: `thuisbatterijSectOntdekWelkeBatterijPastBijU`
-- Heading ID: `thuisbatterijSectOntdekWelkeBatterijPastBijUH2`
-- Heading tekst: Ontdek welke batterij bij u past
-- Type: `email_cta`
-### Pagina 3 – Zonnepanelen – sectie 1
-- Bestand: `zonnepanelen.html`
-- Section ID: `zonnepanelenSectZonnepanelenLatenInstalleren`
-- Section class: `zonnepanelenSectZonnepanelenLatenInstalleren`
-- Heading ID: `zonnepanelenSectZonnepanelenLatenInstallerenH1`
-- Heading tekst: Zonnepanelen laten installeren
-- Type: `hero`
-### Pagina 3 – Zonnepanelen – sectie 2
-- Bestand: `zonnepanelen.html`
-- Section ID: `zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDak`
-- Section class: `zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDak`
-- Heading ID: `zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakH2`
-- Heading tekst: Profiteer van duurzame energie uit eigen dak
-- Type: `features`
-### Pagina 3 – Zonnepanelen – sectie 3
-- Bestand: `zonnepanelen.html`
-- Section ID: `zonnepanelenSectEenInstallatieDiePastBijUwSituatie`
-- Section class: `zonnepanelenSectEenInstallatieDiePastBijUwSituatie`
-- Heading ID: `zonnepanelenSectEenInstallatieDiePastBijUwSituatieH2`
-- Heading tekst: Een installatie die past bij uw situatie
-- Type: `split`
-### Pagina 3 – Zonnepanelen – sectie 4
-- Bestand: `zonnepanelen.html`
-- Section ID: `zonnepanelenSectHoeWerkenZonnepanelen`
-- Section class: `zonnepanelenSectHoeWerkenZonnepanelen`
-- Heading ID: `zonnepanelenSectHoeWerkenZonnepanelenH2`
-- Heading tekst: Hoe werken zonnepanelen?
-- Type: `split`
-### Pagina 3 – Zonnepanelen – sectie 5
-- Bestand: `zonnepanelen.html`
-- Section ID: `zonnepanelenSectSlaOvertolligeStroomOp`
-- Section class: `zonnepanelenSectSlaOvertolligeStroomOp`
-- Heading ID: `zonnepanelenSectSlaOvertolligeStroomOpH2`
-- Heading tekst: Sla overtollige stroom op
-- Type: `scroll_cards`
-### Pagina 3 – Zonnepanelen – sectie 6
-- Bestand: `zonnepanelen.html`
-- Section ID: `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren`
-- Section class: `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren`
-- Heading ID: `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleverenH2`
-- Heading tekst: Wilt u weten wat zonnepanelen voor u kunnen opleveren?
-- Type: `split`
-### Pagina 3 – Zonnepanelen – sectie 7
-- Bestand: `zonnepanelen.html`
-- Section ID: `zonnepanelenSectZoWerkenWij`
-- Section class: `zonnepanelenSectZoWerkenWij`
-- Heading ID: `zonnepanelenSectZoWerkenWijH2`
-- Heading tekst: Zo werken wij
-- Type: `process`
-### Pagina 3 – Zonnepanelen – sectie 8
-- Bestand: `zonnepanelen.html`
-- Section ID: `zonnepanelenSectAntwoordenOpDeMeestGesteldeVragenOverZonnepanelen`
-- Section class: `zonnepanelenSectAntwoordenOpDeMeestGesteldeVragenOverZonnepanelen`
-- Heading ID: `zonnepanelenSectAntwoordenOpDeMeestGesteldeVragenOverZonnepanelenH2`
-- Heading tekst: Antwoorden op de meest gestelde vragen over zonnepanelen.
-- Type: `faq`
-### Pagina 3 – Zonnepanelen – sectie 9
-- Bestand: `zonnepanelen.html`
-- Section ID: `zonnepanelenSectBenieuwdHoeveelUKuntBesparen`
-- Section class: `zonnepanelenSectBenieuwdHoeveelUKuntBesparen`
-- Heading ID: `zonnepanelenSectBenieuwdHoeveelUKuntBesparenH2`
-- Heading tekst: Benieuwd hoeveel u kunt besparen?
-- Type: `cta`
-### Pagina 4 – Laadpalen – sectie 1
-- Bestand: `laadpalen.html`
-- Section ID: `laadpalenSectLaadpaalLatenInstalleren`
-- Section class: `laadpalenSectLaadpaalLatenInstalleren`
-- Heading ID: `laadpalenSectLaadpaalLatenInstallerenH1`
-- Heading tekst: Laadpaal laten installeren
-- Type: `hero`
-### Pagina 4 – Laadpalen – sectie 2
-- Bestand: `laadpalen.html`
-- Section ID: `laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatie`
-- Section class: `laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatie`
-- Heading ID: `laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieH2`
-- Heading tekst: Laad uw elektrische auto veilig en gemakkelijk op eigen locatie
-- Type: `features`
-### Pagina 4 – Laadpalen – sectie 3
-- Bestand: `laadpalen.html`
-- Section ID: `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie`
-- Section class: `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie`
-- Heading ID: `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieH2`
-- Heading tekst: Slim, veilig en goedkoop laden op eigen locatie
-- Type: `split`
-### Pagina 4 – Laadpalen – sectie 4
-- Bestand: `laadpalen.html`
-- Section ID: `laadpalenSectSlimLadenVeiligVoordeligEnEfficient`
-- Section class: `laadpalenSectSlimLadenVeiligVoordeligEnEfficient`
-- Heading ID: `laadpalenSectSlimLadenVeiligVoordeligEnEfficientH2`
-- Heading tekst: Slim laden: veilig, voordelig en efficiënt
-- Type: `scroll_cards`
-### Pagina 4 – Laadpalen – sectie 5
-- Bestand: `laadpalen.html`
-- Section ID: `laadpalenSectZoWerkenWij`
-- Section class: `laadpalenSectZoWerkenWij`
-- Heading ID: `laadpalenSectZoWerkenWijH2`
-- Heading tekst: Zo werken wij
-- Type: `process`
-### Pagina 4 – Laadpalen – sectie 6
-- Bestand: `laadpalen.html`
-- Section ID: `laadpalenSectAntwoordenOpDeMeestGesteldeVragenOverLaadpalen`
-- Section class: `laadpalenSectAntwoordenOpDeMeestGesteldeVragenOverLaadpalen`
-- Heading ID: `laadpalenSectAntwoordenOpDeMeestGesteldeVragenOverLaadpalenH2`
-- Heading tekst: Antwoorden op de meest gestelde vragen over laadpalen.
-- Type: `faq`
-### Pagina 4 – Laadpalen – sectie 7
-- Bestand: `laadpalen.html`
-- Section ID: `laadpalenSectWelkeLaadpaalPastBijU`
-- Section class: `laadpalenSectWelkeLaadpaalPastBijU`
-- Heading ID: `laadpalenSectWelkeLaadpaalPastBijUH2`
-- Heading tekst: Welke laadpaal past bij u?
-- Type: `cta`
-### Pagina 5 – Elektrotechnische renovaties – sectie 1
-- Bestand: `elektrotechnische-renovaties.html`
-- Section ID: `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovaties`
-- Section class: `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovaties`
-- Heading ID: `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovatiesH1`
-- Heading tekst: Groepenkast en elektrotechnische renovaties
-- Type: `hero`
-### Pagina 5 – Elektrotechnische renovaties – sectie 2
-- Bestand: `elektrotechnische-renovaties.html`
-- Section ID: `elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomst`
-- Section class: `elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomst`
-- Heading ID: `elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstH2`
-- Heading tekst: Zorgeloos voorbereid op een duurzame toekomst
-- Type: `features`
-### Pagina 5 – Elektrotechnische renovaties – sectie 3
-- Bestand: `elektrotechnische-renovaties.html`
-- Section ID: `elektrotechnischeRenovatiesSectVanHetGasAfWijBereidenUwInstallatieVoor`
-- Section class: `elektrotechnischeRenovatiesSectVanHetGasAfWijBereidenUwInstallatieVoor`
-- Heading ID: `elektrotechnischeRenovatiesSectVanHetGasAfWijBereidenUwInstallatieVoorH2`
-- Heading tekst: Van het gas af? Wij bereiden uw installatie voor
-- Type: `scroll_cards`
-### Pagina 5 – Elektrotechnische renovaties – sectie 4
-- Bestand: `elektrotechnische-renovaties.html`
-- Section ID: `elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoning`
-- Section class: `elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoning`
-- Heading ID: `elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoningH2`
-- Heading tekst: Groepenkast: het hart van uw woning
-- Type: `features`
-### Pagina 5 – Elektrotechnische renovaties – sectie 5
-- Bestand: `elektrotechnische-renovaties.html`
-- Section ID: `elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeft`
-- Section class: `elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeft`
-- Heading ID: `elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeftH2`
-- Heading tekst: Extra elektra waar u het nodig heeft
-- Type: `features`
-### Pagina 5 – Elektrotechnische renovaties – sectie 6
-- Bestand: `elektrotechnische-renovaties.html`
-- Section ID: `elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden`
-- Section class: `elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden`
-- Heading ID: `elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenH2`
-- Heading tekst: Elektra voor bedrijfspanden
-- Type: `features`
-### Pagina 5 – Elektrotechnische renovaties – sectie 7
-- Bestand: `elektrotechnische-renovaties.html`
-- Section ID: `elektrotechnischeRenovatiesSectZoWerkenWij`
-- Section class: `elektrotechnischeRenovatiesSectZoWerkenWij`
-- Heading ID: `elektrotechnischeRenovatiesSectZoWerkenWijH2`
-- Heading tekst: Zo werken wij
-- Type: `process`
-### Pagina 5 – Elektrotechnische renovaties – sectie 8
-- Bestand: `elektrotechnische-renovaties.html`
-- Section ID: `elektrotechnischeRenovatiesSectAllesWatUWetenMoetOverElektrotechnischeAanpassingen`
-- Section class: `elektrotechnischeRenovatiesSectAllesWatUWetenMoetOverElektrotechnischeAanpassingen`
-- Heading ID: `elektrotechnischeRenovatiesSectAllesWatUWetenMoetOverElektrotechnischeAanpassingenH2`
-- Heading tekst: Alles wat u weten moet over elektrotechnische aanpassingen
-- Type: `faq`
-### Pagina 5 – Elektrotechnische renovaties – sectie 9
-- Bestand: `elektrotechnische-renovaties.html`
-- Section ID: `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen`
-- Section class: `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen`
-- Heading ID: `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassenH2`
-- Heading tekst: Wilt u uw elektra veilig laten aanpassen?
-- Type: `cta`
-### Pagina 6 – Over ons – sectie 1
-- Bestand: `over-ons.html`
-- Section ID: `overOnsSectJongGedrevenEnGebouwdOpVakmanschap`
-- Section class: `overOnsSectJongGedrevenEnGebouwdOpVakmanschap`
-- Heading ID: `overOnsSectJongGedrevenEnGebouwdOpVakmanschapH1`
-- Heading tekst: Jong, gedreven en gebouwd op vakmanschap
-- Type: `hero`
-### Pagina 6 – Over ons – sectie 2
-- Bestand: `over-ons.html`
-- Section ID: `overOnsSectTweeVriendenEenDoel`
-- Section class: `overOnsSectTweeVriendenEenDoel`
-- Heading ID: `overOnsSectTweeVriendenEenDoelH2`
-- Heading tekst: Twee vrienden, één doel
-- Type: `split`
-### Pagina 6 – Over ons – sectie 3
-- Bestand: `over-ons.html`
-- Section ID: `overOnsSectRotterdamseMentaliteitLandelijkeService`
-- Section class: `overOnsSectRotterdamseMentaliteitLandelijkeService`
-- Heading ID: `overOnsSectRotterdamseMentaliteitLandelijkeServiceH2`
-- Heading tekst: Rotterdamse mentaliteit, landelijke service.
-- Type: `features`
-### Pagina 6 – Over ons – sectie 4
-- Bestand: `over-ons.html`
-- Section ID: `overOnsSectPersoonlijkContactEnSnelleService`
-- Section class: `overOnsSectPersoonlijkContactEnSnelleService`
-- Heading ID: `overOnsSectPersoonlijkContactEnSnelleServiceH2`
-- Heading tekst: Persoonlijk contact en snelle service
-- Type: `split`
-### Pagina 6 – Over ons – sectie 5
-- Bestand: `over-ons.html`
-- Section ID: `overOnsSectWatWijDoen`
-- Section class: `overOnsSectWatWijDoen`
-- Heading ID: `overOnsSectWatWijDoenH2`
-- Heading tekst: Wat wij doen
-- Type: `checklist`
-### Pagina 6 – Over ons – sectie 6
-- Bestand: `over-ons.html`
-- Section ID: `overOnsSectWerkenVolgensNormenEnFabrikantsrichtlijnen`
-- Section class: `overOnsSectWerkenVolgensNormenEnFabrikantsrichtlijnen`
-- Heading ID: `overOnsSectWerkenVolgensNormenEnFabrikantsrichtlijnenH2`
-- Heading tekst: Werken volgens normen en fabrikantsrichtlijnen
-- Type: `text`
-### Pagina 6 – Over ons – sectie 7
-- Bestand: `over-ons.html`
-- Section ID: `overOnsSectSamenBouwenAanDeEnergieVanMorgen`
-- Section class: `overOnsSectSamenBouwenAanDeEnergieVanMorgen`
-- Heading ID: `overOnsSectSamenBouwenAanDeEnergieVanMorgenH2`
-- Heading tekst: Samen bouwen aan de energie van morgen
-- Type: `text`
-### Pagina 6 – Over ons – sectie 8
-- Bestand: `over-ons.html`
-- Section ID: `overOnsSectKlaarVoorDeVolgendeStap`
-- Section class: `overOnsSectKlaarVoorDeVolgendeStap`
-- Heading ID: `overOnsSectKlaarVoorDeVolgendeStapH2`
-- Heading tekst: Klaar voor de volgende stap?
-- Type: `cta`
-### Pagina 7 – Contact – sectie 1
-- Bestand: `contact.html`
-- Section ID: `contactSectVraagVrijblijvendEenOfferteAan`
-- Section class: `contactSectVraagVrijblijvendEenOfferteAan`
-- Heading ID: `contactSectVraagVrijblijvendEenOfferteAanH1`
-- Heading tekst: Vraag vrijblijvend een offerte aan
-- Type: `hero`
-### Pagina 7 – Contact – sectie 2
-- Bestand: `contact.html`
-- Section ID: `contactSectLatenWeBeginnen`
-- Section class: `contactSectLatenWeBeginnen`
-- Heading ID: `contactSectLatenWeBeginnenH2`
-- Heading tekst: Laten we beginnen
-- Type: `contact_form`
+# Sparky Energies – developer section index
+
+> Gegenereerd op **2026-07-17** uit de zeven actuele publieke HTML-pagina’s. De JSON-bron is [`data/section-index.json`](data/section-index.json); de visuele versie staat in [`section-index.html`](section-index.html).
+
+## Snelle samenvatting
+
+| Nr. | Pagina | Bestand | Primaire secties | Ondersteunend | Buttons | Formulieren |
+|---:|---|---|---:|---:|---:|---:|
+| 1 | [Home](index.html) | `index.html` | 7 | 1 | 12 | 1 |
+| 2 | [Thuisbatterijen](thuisbatterijen.html) | `thuisbatterijen.html` | 9 | 1 | 7 | 1 |
+| 3 | [Zonnepanelen](zonnepanelen.html) | `zonnepanelen.html` | 9 | 1 | 6 | 1 |
+| 4 | [Laadpalen](laadpalen.html) | `laadpalen.html` | 8 | 1 | 9 | 1 |
+| 5 | [Elektrotechnische renovaties](elektrotechnische-renovaties.html) | `elektrotechnische-renovaties.html` | 9 | 1 | 8 | 1 |
+| 6 | [Over ons](over-ons.html) | `over-ons.html` | 8 | 0 | 13 | 1 |
+| 7 | [Contact](contact.html) | `contact.html` | 2 | 0 | 3 | 1 |
+
+**Totaal:** 52 primaire secties, 5 ondersteunende main-secties, 58 buttons/hyperlinks, 7 formulieren en 209 paragrafen met een ID.
+
+### Hoe deze index gelezen wordt
+
+- **Section ID** is de stabiele selector en ankerwaarde voor development.
+- **Data-titel** komt uit `data-section-title` en beschrijft de technische sectienaam.
+- **Zichtbare heading** komt uit het element dat via `aria-labelledby` gekoppeld is.
+- **Ondersteunende secties** staan binnen `main`, maar hebben geen eigen `data-section-number`.
+- Bij een submit-button is **Bestemming** de actuele `action` van het bovenliggende formulier.
+
+## Google-tagconfiguratie
+
+- Measurement ID: `G-B8QNYQR8CY`
+- Google Tag ID: `GT-PL9T2DJM`
+- Stream ID: `15270728473`
+
+| Pagina | Script in `head` | Config-ID | Consent-default in `head` |
+|---|---|---|---|
+| Home | Ja | `G-B8QNYQR8CY` | Ja |
+| Thuisbatterijen | Ja | `G-B8QNYQR8CY` | Ja |
+| Zonnepanelen | Ja | `G-B8QNYQR8CY` | Ja |
+| Laadpalen | Ja | `G-B8QNYQR8CY` | Ja |
+| Elektrotechnische renovaties | Ja | `G-B8QNYQR8CY` | Ja |
+| Over ons | Ja | `G-B8QNYQR8CY` | Ja |
+| Contact | Ja | `G-B8QNYQR8CY` | Ja |
+
+## Primaire secties
+
+### 1. Home — `index.html`
+
+| Nr. | Data-titel | Zichtbare heading | Section ID | Heading ID | Layout/shared classes |
+|---:|---|---|---|---|---|
+| 1 | Energie van nu, zekerheid voor morgen | H1: Energie van nu, zekerheid voor morgen. | `homeSectGecertificeerdeInstallateursMetVakmanschap` | `homeSectGecertificeerdeInstallateursMetVakmanschapH1` | — |
+| 2 | Wat wij voor u installeren en onderhouden | H2: Onze diensten | `homeSectWatWijVoorUInstallerenEnOnderhouden` | `homeSectWatWijVoorUInstallerenEnOnderhoudenH2` | `layoutServices` |
+| 3 | Van idee tot installatie, van vonk tot vermogen | H4: Van idee tot installatie, van vonk tot vermogen. | `homeSectVanIdeeTotInstallatieVanVonkTotVermogen` | `homeSectVanIdeeTotInstallatieVanVonkTotVermogenH4` | `layoutImageCta` |
+| 4 | Twijfelt u of uw installatie geschikt is? | H2: Twijfelt u of uw installatie geschikt is? | `homeSectTwijfeltUOfUwInstallatieGeschiktIs` | `homeSectTwijfeltUOfUwInstallatieGeschiktIsH2` | `layoutText` |
+| 5 | Recent werk | H2: Recent werk | `homeSectRecentWerk` | `homeSectRecentWerkH2` | `layoutPortfolio` |
+| 6 | Wat klanten over ons zeggen | H2: Wat klanten over ons zeggen | `homeSectWatKlantenOverOnsZeggen` | `homeSectWatKlantenOverOnsZeggenH2` | `layoutTestimonials` |
+| 7 | Klaar om uw woning toekomstbestendig te maken? | H2: Klaar om uw woning toekomstbestendig te maken? | `homeSectKlaarOmUwWoningToekomstbestendigTeMaken` | `homeSectKlaarOmUwWoningToekomstbestendigTeMakenH2` | `layoutEmailCta` |
+
+### 2. Thuisbatterijen — `thuisbatterijen.html`
+
+| Nr. | Data-titel | Zichtbare heading | Section ID | Heading ID | Layout/shared classes |
+|---:|---|---|---|---|---|
+| 1 | Thuisbatterij laten installeren | H1: Thuisbatterij laten installeren | `thuisbatterijSectThuisbatterijLatenInstalleren` | `thuisbatterijSectThuisbatterijLatenInstallerenH1` | `layoutSplitCard` |
+| 2 | Slim opslaan, slim gebruiken en slim besparen | H2: Slim opslaan, slim gebruiken en slim besparen | `thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen` | `thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenH2` | `layoutFeatures` |
+| 3 | Voor woning en bedrijf | H2: Voor woning en bedrijf | `thuisbatterijSectVoorWoningEnBedrijf` | `thuisbatterijSectVoorWoningEnBedrijfH2` | `layoutSplitCard` |
+| 4 | Hoe werkt een thuisbatterij? | H2: Hoe werkt een thuisbatterij? | `thuisbatterijSectHoeWerktEenThuisbatterij` | `thuisbatterijSectHoeWerktEenThuisbatterijH2` | `layoutSplitCard` |
+| 5 | Sla overtollige energie op voor gebruik wanneer de zon niet schijnt. | H2: Sla overtollige energie op voor gebruik wanneer de zon niet schijnt. | `thuisbatterijSectSlimEnergiebeheerMetEMSEnAISturing` | `thuisbatterijSectSlimEnergiebeheerMetEMSEnAISturingH2` | `layoutStickySplitCards` |
+| 6 | Wilt u weten wat een thuisbatterij-installatie voor u kunt opleveren? | H2: Wilt u weten wat een thuisbatterij-installatie voor u kunt opleveren? | `thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren` | `thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleverenH2` | `layoutImageCta` |
+| 7 | Sparky Energies helpt u met een passend advies, veilige installatie en duidelijke uitleg. Wij kijken niet alleen naar de batterij, maar naar de volledige elektrische installatie. | H2: Sparky Energies helpt u met een passend advies, veilige installatie en duidelijke uitleg. Wij kijken niet alleen naar de batterij, maar naar de volledige elektrische installatie. | `thuisbatterijSectZoWerkenWij` | `thuisbatterijSectZoWerkenWijH2` | `layoutProcessTimeline` |
+| 8 | Vragen | H2: Veelgestelde vragen over thuisbatterijen, installatie en voordelen | `thuisbatterijSectVeelGesteldeVragenOverThuisbatterijenInstallatieEnVoordelen` | `thuisbatterijSectVeelGesteldeVragenOverThuisbatterijenInstallatieEnVoordelenH2` | `layoutFaq` |
+| 9 | Ontdek welke batterij bij u past | H2: Ontdek welke batterij bij u past | `thuisbatterijSectOntdekWelkeBatterijPastBijU` | `thuisbatterijSectOntdekWelkeBatterijPastBijUH2` | `layoutEmailCta` |
+
+### 3. Zonnepanelen — `zonnepanelen.html`
+
+| Nr. | Data-titel | Zichtbare heading | Section ID | Heading ID | Layout/shared classes |
+|---:|---|---|---|---|---|
+| 1 | Zonnepanelen laten installeren | H1: Zonnepanelen laten installeren | `zonnepanelenSectZonnepanelenLatenInstalleren` | `zonnepanelenSectZonnepanelenLatenInstallerenH1` | `layoutSplitCard` |
+| 2 | Profiteer van duurzame energie uit eigen dak | H2: Profiteer van duurzame energie uit eigen dak | `zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDak` | `zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakH2` | `layoutFeatures` |
+| 3 | Een installatie die past bij uw situatie | H2: Een installatie die past bij uw situatie | `zonnepanelenSectEenInstallatieDiePastBijUwSituatie` | `zonnepanelenSectEenInstallatieDiePastBijUwSituatieH2` | `layoutSplitCard` |
+| 4 | Hoe werken zonnepanelen? | H2: Hoe werken zonnepanelen? | `zonnepanelenSectHoeWerkenZonnepanelen` | `zonnepanelenSectHoeWerkenZonnepanelenH2` | `layoutSplitCard` |
+| 5 | Sla overtollige stroom op | ⚠ Ontbreekt (`zonnepanelenSectSlaOvertolligeStroomOpH2`) | `zonnepanelenSectSlaOvertolligeStroomOp` | `zonnepanelenSectSlaOvertolligeStroomOpH2` | `layoutStickySplitCards` |
+| 6 | Wilt u weten wat zonnepanelen voor u kunnen opleveren? | H2: Wilt u weten wat zonnepanelen voor u kunnen opleveren? | `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren` | `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleverenH2` | `layoutImageCta` |
+| 7 | Sparky Energies denkt met u mee over de juiste oplossing. Wij helpen met advies, installatie, onderhoud en uitbreiding van bestaande installaties. | H2: Sparky Energies denkt met u mee over de juiste oplossing. Wij helpen met advies, installatie, onderhoud en uitbreiding van bestaande installaties. | `zonnepanelenSectZoWerkenWij` | `zonnepanelenSectZoWerkenWijH2` | `layoutProcessTimeline` |
+| 8 | Antwoorden op de meest gestelde vragen over zonnepanelen. | H2: Veel gestelde vragen over zonnepanelen. | `zonnepanelenSectAntwoordenOpDeMeestGesteldeVragenOverZonnepanelen` | `zonnepanelenSectAntwoordenOpDeMeestGesteldeVragenOverZonnepanelenH2` | `layoutFaq` |
+| 9 | Benieuwd hoeveel u kunt besparen? | H2: Benieuwd hoeveel u kunt besparen? | `zonnepanelenSectBenieuwdHoeveelUKuntBesparen` | `zonnepanelenSectBenieuwdHoeveelUKuntBesparenH2` | `layoutEmailCta` |
+
+### 4. Laadpalen — `laadpalen.html`
+
+| Nr. | Data-titel | Zichtbare heading | Section ID | Heading ID | Layout/shared classes |
+|---:|---|---|---|---|---|
+| 1 | Laadpaal laten installeren | H1: Laadpaal laten installeren | `laadpalenSectLaadpaalLatenInstalleren` | `laadpalenSectLaadpaalLatenInstallerenH1` | `layoutSplitCard` |
+| 2 | Laad uw elektrische auto veilig en gemakkelijk op eigen locatie | H2: Laad uw elektrische auto veilig en gemakkelijk op eigen locatie | `laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatie` | `laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieH2` | `layoutFeatures` |
+| 3 | Slim, veilig en goedkoop laden op eigen locatie | H2: Slim, veilig en goedkoop laden op eigen locatie | `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie` | `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieH2` | `layoutSplitCard` |
+| 4 | Slim laden: veilig, voordelig en efficiënt | H2: Slim laden: veilig, voordelig en efficiënt | `laadpalenSectSlimLadenVeiligVoordeligEnEfficient` | `laadpalenSectSlimLadenVeiligVoordeligEnEfficientH2` | `layoutStickySplitCards` |
+| 5 | Slim laden voor medewerkers, klanten en bedrijfswagens | H2: Slim laden voor medewerkers, klanten en bedrijfswagens | `laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagens` | `laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagensH2` | `layoutSplitCard` |
+| 6 | Sparky Energies helpt u met eerlijk advies, een veilige installatie en duidelijke uitleg. Wij kijken naar uw auto, aansluiting, laadwens en toekomstplannen, zodat u een laadpaal krijgt die echt bij uw situatie past. | H2: Sparky Energies helpt u met eerlijk advies, een veilige installatie en duidelijke uitleg. Wij kijken naar uw auto, aansluiting, laadwens en toekomstplannen, zodat u een laadpaal krijgt die echt bij uw situatie past. | `laadpalenSectZoWerkenWij` | `laadpalenSectZoWerkenWijH2` | `layoutProcessTimeline` |
+| 7 | Antwoorden op de meest gestelde vragen over laadpalen. | H2: Veel gestelde vragen over laadpalen. | `laadpalenSectAntwoordenOpDeMeestGesteldeVragenOverLaadpalen` | `laadpalenSectAntwoordenOpDeMeestGesteldeVragenOverLaadpalenH2` | `layoutFaq` |
+| 8 | Welke laadpaal past bij u? | H2: Welke laadpaal past bij u? | `laadpalenSectWelkeLaadpaalPastBijU` | `laadpalenSectWelkeLaadpaalPastBijUH2` | `layoutEmailCta` |
+
+### 5. Elektrotechnische renovaties — `elektrotechnische-renovaties.html`
+
+| Nr. | Data-titel | Zichtbare heading | Section ID | Heading ID | Layout/shared classes |
+|---:|---|---|---|---|---|
+| 1 | Groepenkast en elektrotechnische renovaties | H1: Groepenkast en elektrotechnische renovaties | `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovaties` | `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovatiesH1` | `layoutSplitCard` |
+| 2 | Zorgeloos voorbereid op een duurzame toekomst | H2: Zorgeloos voorbereid op een duurzame toekomst | `elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomst` | `elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstH2` | `kenmerkKaartenSectie`<br>`layoutFeatures` |
+| 3 | Van het gas af? Wij bereiden uw installatie voor | H2: Van het gas af? Wij bereiden uw installatie voor | `elektrotechnischeRenovatiesSectVanHetGasAfWijBereidenUwInstallatieVoor` | `elektrotechnischeRenovatiesSectVanHetGasAfWijBereidenUwInstallatieVoorH2` | `layoutStickySplitCards` |
+| 4 | Groepenkast: het hart van uw woning | H2: Groepenkast: het hart van uw woning | `elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoning` | `elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoningH2` | `layoutSplitFeatures` |
+| 5 | Extra elektra waar u het nodig heeft | H2: Extra elektra waar u het nodig heeft | `elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeft` | `elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeftH2` | `layoutSplitFeatures` |
+| 6 | Elektra voor bedrijfspanden | H2: Elektra voor bedrijfspanden | `elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden` | `elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenH2` | `layoutFeatureColumnsTransparent` |
+| 7 | Zo werken wij | H2: Sparky Energies helpt u met eerlijk advies, een veilige installatie en duidelijke uitleg. Wij kijken naar uw groepenkast, aansluiting, wensen en toekomstplannen, zodat uw elektrotechnische renovatie echt bij uw situatie past. | `elektrotechnischeRenovatiesSectZoWerkenWij` | `elektrotechnischeRenovatiesSectZoWerkenWijH2` | `layoutProcessTimeline` |
+| 8 | Alles wat u weten moet over elektrotechnische aanpassingen | H2: Veelgestelde vragen over elektrotechnische aanpassingen | `elektrotechnischeRenovatiesSectAllesWatUWetenMoetOverElektrotechnischeAanpassingen` | `elektrotechnischeRenovatiesSectAllesWatUWetenMoetOverElektrotechnischeAanpassingenH2` | `layoutFaq` |
+| 9 | Wilt u uw elektra veilig laten aanpassen? | H2: Wilt u uw elektra veilig laten aanpassen? | `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen` | `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassenH2` | `layoutEmailCta` |
+
+### 6. Over ons — `over-ons.html`
+
+| Nr. | Data-titel | Zichtbare heading | Section ID | Heading ID | Layout/shared classes |
+|---:|---|---|---|---|---|
+| 1 | Jong, gedreven en gebouwd op vakmanschap | H1: Jong, gedreven en gebouwd op vakmanschap | `overOnsSectJongGedrevenEnGebouwdOpVakmanschap` | `overOnsSectJongGedrevenEnGebouwdOpVakmanschapH1` | — |
+| 2 | Twee vrienden, één doel | H2: Twee vrienden, één doel | `overOnsSectTweeVriendenEenDoel` | `overOnsSectTweeVriendenEenDoelH2` | — |
+| 3 | Rotterdamse mentaliteit, landelijke service. | H2: Rotterdamse mentaliteit, landelijke service. | `overOnsSectRotterdamseMentaliteitLandelijkeService` | `overOnsSectRotterdamseMentaliteitLandelijkeServiceH2` | `layoutFeatureColumnsTransparent` |
+| 4 | Persoonlijk contact en snelle service | H2: Persoonlijk contact en snelle service | `overOnsSectPersoonlijkContactEnSnelleService` | `overOnsSectPersoonlijkContactEnSnelleServiceH2` | — |
+| 5 | Wat wij doen | H2: Wat wij doen | `overOnsSectWatWijDoen` | `overOnsSectWatWijDoenH2` | `layoutImageGrid` |
+| 6 | Werken volgens normen en fabrikantsrichtlijnen | H2: Wij werken volgens de geldende normen, voorschriften en fabrikantsrichtlijnen. Onze monteurs beschikken over de benodigde certificering, kennis en ervaring om installaties professioneel aan te leggen, te controleren en op te leveren. | `overOnsSectWerkenVolgensNormenEnFabrikantsrichtlijnen` | `overOnsSectWerkenVolgensNormenEnFabrikantsrichtlijnenH2` | `layoutCertificationLogos` |
+| 7 | Samen bouwen aan de energie van morgen | H2: Samen bouwen aan de energie van morgen | `overOnsSectSamenBouwenAanDeEnergieVanMorgen` | `overOnsSectSamenBouwenAanDeEnergieVanMorgenH2` | — |
+| 8 | Klaar voor de volgende stap? | H2: Klaar voor de volgende stap? | `overOnsSectKlaarVoorDeVolgendeStap` | `overOnsSectKlaarVoorDeVolgendeStapH2` | `layoutEmailCta` |
+
+### 7. Contact — `contact.html`
+
+| Nr. | Data-titel | Zichtbare heading | Section ID | Heading ID | Layout/shared classes |
+|---:|---|---|---|---|---|
+| 1 | Vraag vrijblijvend een offerte aan | H1: Vraag vrijblijvend een offerte aan | `contactSectVraagVrijblijvendEenOfferteAan` | `contactSectVraagVrijblijvendEenOfferteAanH1` | `layoutSplitCard` |
+| 2 | Laten we beginnen | H2: Laten we beginnen | `contactSectLatenWeBeginnen` | `contactSectLatenWeBeginnenH2` | `layoutContactOfferte` |
+
+## Ondersteunende main-secties
+
+Deze secties zijn belangrijk voor styling en toegankelijkheid, maar tellen niet mee in de paginanummering.
+
+| Pagina | Bovenliggende sectie | Section ID | Heading | Classes |
+|---|---|---|---|---|
+| Home | `homeSectGecertificeerdeInstallateursMetVakmanschap` | `homeSectGecertificeerdeInstallateursMetVakmanschapKaarten` | H2: Gecertificeerde installateurs met vakmanschap | `siteSectie`<br>`homeSectGecertificeerdeInstallateursMetVakmanschapKaarten`<br>`kenmerkKaartenSectie`<br>`layoutFeatures` |
+| Thuisbatterijen | `thuisbatterijSectVeelGesteldeVragenOverThuisbatterijenInstallatieEnVoordelen` | `thuisbatterijSectVeelGesteldeVragenOverThuisbatterijenInstallatieEnVoordelenVragen` | — | `faqLijst` |
+| Zonnepanelen | `zonnepanelenSectAntwoordenOpDeMeestGesteldeVragenOverZonnepanelen` | `zonnepanelenSectAntwoordenOpDeMeestGesteldeVragenOverZonnepanelenVragen` | — | `faqLijst` |
+| Laadpalen | `laadpalenSectAntwoordenOpDeMeestGesteldeVragenOverLaadpalen` | `laadpalenSectAntwoordenOpDeMeestGesteldeVragenOverLaadpalenVragen` | — | `faqLijst` |
+| Elektrotechnische renovaties | `elektrotechnischeRenovatiesSectAllesWatUWetenMoetOverElektrotechnischeAanpassingen` | `elektrotechnischeRenovatiesSectAllesWatUWetenMoetOverElektrotechnischeAanpassingenVragen` | — | `faqLijst` |
 
 ## Buttons en hyperlinks
-- `homeSectGecertificeerdeInstallateursMetVakmanschapBtn01Offerte` – Pagina 1 / Home, sectie 1 `homeSectGecertificeerdeInstallateursMetVakmanschap` – label: **Offerte** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `homeSectWatWijVoorUInstallerenEnOnderhoudenBtn01LeesMeer` – Pagina 1 / Home, sectie 2 `homeSectWatWijVoorUInstallerenEnOnderhouden` – label: **Lees meer** – href: `thuisbatterijen.html` – linktype: `interne-pagina` – doel: Thuisbatterijen ``
-- `homeSectWatWijVoorUInstallerenEnOnderhoudenBtn02Ontdek` – Pagina 1 / Home, sectie 2 `homeSectWatWijVoorUInstallerenEnOnderhouden` – label: **Ontdek** – href: `zonnepanelen.html` – linktype: `interne-pagina` – doel: Zonnepanelen ``
-- `homeSectWatWijVoorUInstallerenEnOnderhoudenBtn03Meer` – Pagina 1 / Home, sectie 2 `homeSectWatWijVoorUInstallerenEnOnderhouden` – label: **Meer** – href: `laadpalen.html` – linktype: `interne-pagina` – doel: Laadpalen ``
-- `homeSectWatWijVoorUInstallerenEnOnderhoudenBtn04Meer` – Pagina 1 / Home, sectie 2 `homeSectWatWijVoorUInstallerenEnOnderhouden` – label: **Meer** – href: `elektrotechnische-renovaties.html` – linktype: `interne-pagina` – doel: Elektrotechnische renovaties ``
-- `homeSectVanIdeeTotInstallatieVanVonkTotVermogenBtn01OntdekSparky` – Pagina 1 / Home, sectie 3 `homeSectVanIdeeTotInstallatieVanVonkTotVermogen` – label: **Ontdek Sparky** – href: `over-ons.html` – linktype: `interne-pagina` – doel: Over ons ``
-- `homeSectRecentWerkBtn01Bekijk` – Pagina 1 / Home, sectie 5 `homeSectRecentWerk` – label: **Bekijk** – href: `#linkNogToevoegen` – linktype: `todo` – NOTITIE: TODO: koppel deze kaart later aan `projecten.html#zonnepanelen`.
-- `homeSectRecentWerkBtn04Bekijk` – Pagina 1 / Home, sectie 5 `homeSectRecentWerk` – label: **Bekijk** – href: `#linkNogToevoegen` – linktype: `todo` – NOTITIE: TODO: koppel deze kaart later aan `projecten.html#thuisbatterijen`.
-- `homeSectRecentWerkBtn02Bekijk` – Pagina 1 / Home, sectie 5 `homeSectRecentWerk` – label: **Bekijk** – href: `#linkNogToevoegen` – linktype: `todo` – NOTITIE: TODO: koppel deze kaart later aan `projecten.html#groepenkast-renovaties`.
-- `homeSectRecentWerkBtn03Bekijk` – Pagina 1 / Home, sectie 5 `homeSectRecentWerk` – label: **Bekijk** – href: `#linkNogToevoegen` – linktype: `todo` – NOTITIE: TODO: koppel deze kaart later aan `projecten.html#laadpaal-installaties`.
-- `homeSectRecentWerkBtn01AlleProjecten` – Pagina 1 / Home, sectie 5 `homeSectRecentWerk` – label: **Alle projecten** – href: `#linkNogToevoegen` – linktype: `todo` – NOTITIE: TODO: maak de toekomstige projectenpagina en koppel deze knop aan `projecten.html`.
-- `homeSectKlaarOmUwWoningToekomstbestendigTeMakenBtn01Aanvragen` – Pagina 1 / Home, sectie 7 `homeSectKlaarOmUwWoningToekomstbestendigTeMaken` – label: **Aanvragen** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `formulier-doorsturen` – doel: Contact `contactSectLatenWeBeginnen` – NOTITIE: Formulier moet later worden gekoppeld aan definitieve verwerking.
-- `thuisbatterijSectThuisbatterijLatenInstallerenBtn01Offerte` – Pagina 2 / Thuisbatterijen, sectie 1 `thuisbatterijSectThuisbatterijLatenInstalleren` – label: **Offerte** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `thuisbatterijSectThuisbatterijLatenInstallerenBtn02Besparing` – Pagina 2 / Thuisbatterijen, sectie 1 `thuisbatterijSectThuisbatterijLatenInstalleren` – label: **Besparing** – href: `#thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren` – linktype: `interne-sectie` – doel: Thuisbatterijen `thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren`
-- `thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenBtn01Meer` – Pagina 2 / Thuisbatterijen, sectie 2 `thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen` – label: **Meer** – href: `#thuisbatterijSectOntdekWelkeBatterijPastBijU` – linktype: `interne-sectie` – doel: Thuisbatterijen `thuisbatterijSectOntdekWelkeBatterijPastBijU`
-- `thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleverenBtn01Meer` – Pagina 2 / Thuisbatterijen, sectie 6 `thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren` – label: **Meer** – href: `#thuisbatterijSectOntdekWelkeBatterijPastBijU` – linktype: `interne-sectie` – doel: Thuisbatterijen `thuisbatterijSectOntdekWelkeBatterijPastBijU`
-- `thuisbatterijSectZoWerkenWijBtn01Meer` – Pagina 2 / Thuisbatterijen, sectie 7 `thuisbatterijSectZoWerkenWij` – label: **Meer** – href: `#thuisbatterijSectOntdekWelkeBatterijPastBijU` – linktype: `interne-sectie` – doel: Thuisbatterijen `thuisbatterijSectOntdekWelkeBatterijPastBijU`
-- `thuisbatterijSectVeelGesteldeVragenOverThuisbatterijenInstallatieEnVoordelenBtn01Contact` – Pagina 2 / Thuisbatterijen, sectie 8 `thuisbatterijSectVeelGesteldeVragenOverThuisbatterijenInstallatieEnVoordelen` – label: **Contact** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `thuisbatterijSectOntdekWelkeBatterijPastBijUBtn01Aanvragen` – Pagina 2 / Thuisbatterijen, sectie 9 `thuisbatterijSectOntdekWelkeBatterijPastBijU` – label: **Aanvragen** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `formulier-doorsturen` – doel: Contact `contactSectLatenWeBeginnen` – NOTITIE: Formulier moet later worden gekoppeld aan definitieve verwerking.
-- `zonnepanelenSectZonnepanelenLatenInstallerenBtn01Offerte` – Pagina 3 / Zonnepanelen, sectie 1 `zonnepanelenSectZonnepanelenLatenInstalleren` – label: **Offerte** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleverenBtn01Offerte` – Pagina 3 / Zonnepanelen, sectie 6 `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren` – label: **Offerte** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleverenBtn02Meer` – Pagina 3 / Zonnepanelen, sectie 6 `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren` – label: **Meer** – href: `#zonnepanelenSectBenieuwdHoeveelUKuntBesparen` – linktype: `interne-sectie` – doel: Zonnepanelen `zonnepanelenSectBenieuwdHoeveelUKuntBesparen`
-- `zonnepanelenSectZoWerkenWijBtn01Meer` – Pagina 3 / Zonnepanelen, sectie 7 `zonnepanelenSectZoWerkenWij` – label: **Meer** – href: `#zonnepanelenSectBenieuwdHoeveelUKuntBesparen` – linktype: `interne-sectie` – doel: Zonnepanelen `zonnepanelenSectBenieuwdHoeveelUKuntBesparen`
-- `zonnepanelenSectAntwoordenOpDeMeestGesteldeVragenOverZonnepanelenBtn01Contact` – Pagina 3 / Zonnepanelen, sectie 8 `zonnepanelenSectAntwoordenOpDeMeestGesteldeVragenOverZonnepanelen` – label: **Contact** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `zonnepanelenSectBenieuwdHoeveelUKuntBesparenBtn01Aanvragen` – Pagina 3 / Zonnepanelen, sectie 9 `zonnepanelenSectBenieuwdHoeveelUKuntBesparen` – label: **Aanvragen** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `formulier-doorsturen` – doel: Contact `contactSectLatenWeBeginnen` – NOTITIE: Formulier moet later worden gekoppeld aan definitieve verwerking.
-- `laadpalenSectLaadpaalLatenInstallerenBtn01Offerte` – Pagina 4 / Laadpalen, sectie 1 `laadpalenSectLaadpaalLatenInstalleren` – label: **Offerte** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `laadpalenSectLaadpaalLatenInstallerenBtn02Adviesgesprek` – Pagina 4 / Laadpalen, sectie 1 `laadpalenSectLaadpaalLatenInstalleren` – label: **Adviesgesprek** – href: `#laadpalenSectZoWerkenWij` – linktype: `interne-sectie` – doel: Laadpalen `laadpalenSectZoWerkenWij`
-- `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieBtn01Offerte` – Pagina 4 / Laadpalen, sectie 3 `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie` – label: **Offerte** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieBtn02Meer` – Pagina 4 / Laadpalen, sectie 3 `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie` – label: **Meer** – href: `#laadpalenSectWelkeLaadpaalPastBijU` – linktype: `interne-sectie` – doel: Laadpalen `laadpalenSectWelkeLaadpaalPastBijU`
-- `laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagensBtn01Offerte` – Pagina 4 / Laadpalen, sectie 5 `laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagens` – label: **Offerte** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagensBtn02Meer` – Pagina 4 / Laadpalen, sectie 5 `laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagens` – label: **Meer** – href: `#laadpalenSectWelkeLaadpaalPastBijU` – linktype: `interne-sectie` – doel: Laadpalen `laadpalenSectWelkeLaadpaalPastBijU`
-- `laadpalenSectZoWerkenWijBtn01Meer` – Pagina 4 / Laadpalen, sectie 6 `laadpalenSectZoWerkenWij` – label: **Meer** – href: `#laadpalenSectWelkeLaadpaalPastBijU` – linktype: `interne-sectie` – doel: Laadpalen `laadpalenSectWelkeLaadpaalPastBijU`
-- `laadpalenSectAntwoordenOpDeMeestGesteldeVragenOverLaadpalenBtn01Contact` – Pagina 4 / Laadpalen, sectie 7 `laadpalenSectAntwoordenOpDeMeestGesteldeVragenOverLaadpalen` – label: **Contact** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `laadpalenSectWelkeLaadpaalPastBijUBtn01Aanvragen` – Pagina 4 / Laadpalen, sectie 8 `laadpalenSectWelkeLaadpaalPastBijU` – label: **Aanvragen** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `formulier-doorsturen` – doel: Contact `contactSectLatenWeBeginnen` – NOTITIE: Formulier moet later worden gekoppeld aan definitieve verwerking.
-- `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovatiesBtn01Offerte` – Pagina 5 / Elektrotechnische renovaties, sectie 1 `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovaties` – label: **Offerte** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovatiesBtn02Bespreken` – Pagina 5 / Elektrotechnische renovaties, sectie 1 `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovaties` – label: **Bespreken** – href: `#elektrotechnischeRenovatiesSectZoWerkenWij` – linktype: `interne-sectie` – doel: Elektrotechnische renovaties `elektrotechnischeRenovatiesSectZoWerkenWij`
-- `elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoningBtn02Meer` – Pagina 5 / Elektrotechnische renovaties, sectie 4 `elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoning` – label: **Meer** – href: `#elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen` – linktype: `interne-sectie` – doel: Elektrotechnische renovaties `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen`
-- `elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeftBtn02Meer` – Pagina 5 / Elektrotechnische renovaties, sectie 5 `elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeft` – label: **Meer** – href: `#elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen` – linktype: `interne-sectie` – doel: Elektrotechnische renovaties `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen`
-- `elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenBtn02MeerInformatie` – Pagina 5 / Elektrotechnische renovaties, sectie 6 `elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden` – label: **Meer informatie** – href: `#elektrotechnischeRenovatiesSectZoWerkenWij` – linktype: `interne-sectie` – doel: Elektrotechnische renovaties `elektrotechnischeRenovatiesSectZoWerkenWij`
-- `elektrotechnischeRenovatiesSectZoWerkenWijBtn01Meer` – Pagina 5 / Elektrotechnische renovaties, sectie 7 `elektrotechnischeRenovatiesSectZoWerkenWij` – label: **Meer** – href: `#elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen` – linktype: `interne-sectie` – doel: Elektrotechnische renovaties `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen`
-- `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassenBtn01Aanvragen` – Pagina 5 / Elektrotechnische renovaties, sectie 9 `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen` – label: **Aanvragen** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `formulier-doorsturen` – doel: Contact `contactSectLatenWeBeginnen` – NOTITIE: Formulier moet later worden gekoppeld aan definitieve verwerking.
-- `overOnsSectTweeVriendenEenDoelBtn01Meer` – Pagina 6 / Over ons, sectie 2 `overOnsSectTweeVriendenEenDoel` – label: **Meer** – href: `#overOnsSectKlaarVoorDeVolgendeStap` – linktype: `interne-sectie` – doel: Over ons `overOnsSectKlaarVoorDeVolgendeStap`
-- `overOnsSectTweeVriendenEenDoelBtn02Diensten` – Pagina 6 / Over ons, sectie 2 `overOnsSectTweeVriendenEenDoel` – label: **Diensten** – href: `index.html#homeSectWatWijVoorUInstallerenEnOnderhouden` – linktype: `interne-pagina-sectie` – doel: Home `homeSectWatWijVoorUInstallerenEnOnderhouden`
-- `overOnsSectPersoonlijkContactEnSnelleServiceBtn01Meer` – Pagina 6 / Over ons, sectie 4 `overOnsSectPersoonlijkContactEnSnelleService` – label: **Meer** – href: `#overOnsSectKlaarVoorDeVolgendeStap` – linktype: `interne-sectie` – doel: Over ons `overOnsSectKlaarVoorDeVolgendeStap`
-- `overOnsSectPersoonlijkContactEnSnelleServiceBtn02Contact` – Pagina 6 / Over ons, sectie 4 `overOnsSectPersoonlijkContactEnSnelleService` – label: **Contact** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `interne-pagina-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `overOnsSectKlaarVoorDeVolgendeStapBtn01Aanvragen` – Pagina 6 / Over ons, sectie 8 `overOnsSectKlaarVoorDeVolgendeStap` – label: **Aanvragen** – href: `contact.html#contactSectLatenWeBeginnen` – linktype: `formulier-doorsturen` – doel: Contact `contactSectLatenWeBeginnen` – NOTITIE: Formulier moet later worden gekoppeld aan definitieve verwerking.
-- `contactSectVraagVrijblijvendEenOfferteAanBtn01Offerte` – Pagina 7 / Contact, sectie 1 `contactSectVraagVrijblijvendEenOfferteAan` – label: **Offerte** – href: `#contactSectLatenWeBeginnen` – linktype: `interne-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `contactSectVraagVrijblijvendEenOfferteAanBtn02Advies` – Pagina 7 / Contact, sectie 1 `contactSectVraagVrijblijvendEenOfferteAan` – label: **Advies** – href: `#contactSectLatenWeBeginnen` – linktype: `interne-sectie` – doel: Contact `contactSectLatenWeBeginnen`
-- `contactSectLatenWeBeginnenBtn01Versturen` – Pagina 7 / Contact, sectie 2 `contactSectLatenWeBeginnen` – label: **Versturen** – href: `#formulierNogNietGekoppeld` – linktype: `formulier-backend-todo` – NOTITIE: TODO: koppel dit formulier later aan e-mail, CRM of backend.
+
+### 1. Home
+
+| Label | Element | Element ID | Section ID | Bestemming | Linktype |
+|---|---|---|---|---|---|
+| Offerte | `a` | `homeSectGecertificeerdeInstallateursMetVakmanschapBtn01Offerte` | `homeSectGecertificeerdeInstallateursMetVakmanschap` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Lees meer | `a` | `homeSectWatWijVoorUInstallerenEnOnderhoudenBtn01LeesMeer` | `homeSectWatWijVoorUInstallerenEnOnderhouden` | `thuisbatterijen.html` | `interne-pagina` |
+| Ontdek | `a` | `homeSectWatWijVoorUInstallerenEnOnderhoudenBtn02Ontdek` | `homeSectWatWijVoorUInstallerenEnOnderhouden` | `zonnepanelen.html` | `interne-pagina` |
+| Meer | `a` | `homeSectWatWijVoorUInstallerenEnOnderhoudenBtn03Meer` | `homeSectWatWijVoorUInstallerenEnOnderhouden` | `laadpalen.html` | `interne-pagina` |
+| Meer | `a` | `homeSectWatWijVoorUInstallerenEnOnderhoudenBtn04Meer` | `homeSectWatWijVoorUInstallerenEnOnderhouden` | `elektrotechnische-renovaties.html` | `interne-pagina` |
+| Ontdek Sparky | `a` | `homeSectVanIdeeTotInstallatieVanVonkTotVermogenBtn01OntdekSparky` | `homeSectVanIdeeTotInstallatieVanVonkTotVermogen` | `over-ons.html` | `interne-pagina` |
+| Bekijk | `a` | `homeSectRecentWerkBtn01Bekijk` | `homeSectRecentWerk` | `#linkNogToevoegen` | `todo` |
+| Bekijk | `a` | `homeSectRecentWerkBtn04Bekijk` | `homeSectRecentWerk` | `#linkNogToevoegen` | `todo` |
+| Bekijk | `a` | `homeSectRecentWerkBtn02Bekijk` | `homeSectRecentWerk` | `#linkNogToevoegen` | `todo` |
+| Bekijk | `a` | `homeSectRecentWerkBtn03Bekijk` | `homeSectRecentWerk` | `#linkNogToevoegen` | `todo` |
+| Alle projecten | `a` | `homeSectRecentWerkBtn01AlleProjecten` | `homeSectRecentWerk` | `#linkNogToevoegen` | `todo` |
+| Aanvragen | `button` | `homeSectKlaarOmUwWoningToekomstbestendigTeMakenBtn01Aanvragen` | `homeSectKlaarOmUwWoningToekomstbestendigTeMaken` | `https://formspree.io/f/xnjenvqd` | `formulier-versturen` |
+
+### 2. Thuisbatterijen
+
+| Label | Element | Element ID | Section ID | Bestemming | Linktype |
+|---|---|---|---|---|---|
+| Offerte | `a` | `thuisbatterijSectThuisbatterijLatenInstallerenBtn01Offerte` | `thuisbatterijSectThuisbatterijLatenInstalleren` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Besparing | `a` | `thuisbatterijSectThuisbatterijLatenInstallerenBtn02Besparing` | `thuisbatterijSectThuisbatterijLatenInstalleren` | `#thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren` | `interne-sectie` |
+| Meer | `a` | `thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenBtn01Meer` | `thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen` | `#thuisbatterijSectOntdekWelkeBatterijPastBijU` | `interne-sectie` |
+| Meer | `a` | `thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleverenBtn01Meer` | `thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren` | `#thuisbatterijSectOntdekWelkeBatterijPastBijU` | `interne-sectie` |
+| Meer | `a` | `thuisbatterijSectZoWerkenWijBtn01Meer` | `thuisbatterijSectZoWerkenWij` | `#thuisbatterijSectOntdekWelkeBatterijPastBijU` | `interne-sectie` |
+| Contact | `a` | `thuisbatterijSectVeelGesteldeVragenOverThuisbatterijenInstallatieEnVoordelenBtn01Contact` | `thuisbatterijSectVeelGesteldeVragenOverThuisbatterijenInstallatieEnVoordelen` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Aanvragen | `button` | `thuisbatterijSectOntdekWelkeBatterijPastBijUBtn01Aanvragen` | `thuisbatterijSectOntdekWelkeBatterijPastBijU` | `https://formspree.io/f/xnjenvqd` | `formulier-versturen` |
+
+### 3. Zonnepanelen
+
+| Label | Element | Element ID | Section ID | Bestemming | Linktype |
+|---|---|---|---|---|---|
+| Offerte | `a` | `zonnepanelenSectZonnepanelenLatenInstallerenBtn01Offerte` | `zonnepanelenSectZonnepanelenLatenInstalleren` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Offerte | `a` | `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleverenBtn01Offerte` | `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Meer | `a` | `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleverenBtn02Meer` | `zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren` | `#zonnepanelenSectBenieuwdHoeveelUKuntBesparen` | `interne-sectie` |
+| Meer | `a` | `zonnepanelenSectZoWerkenWijBtn01Meer` | `zonnepanelenSectZoWerkenWij` | `#zonnepanelenSectBenieuwdHoeveelUKuntBesparen` | `interne-sectie` |
+| Contact | `a` | `zonnepanelenSectAntwoordenOpDeMeestGesteldeVragenOverZonnepanelenBtn01Contact` | `zonnepanelenSectAntwoordenOpDeMeestGesteldeVragenOverZonnepanelen` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Aanvragen | `button` | `zonnepanelenSectBenieuwdHoeveelUKuntBesparenBtn01Aanvragen` | `zonnepanelenSectBenieuwdHoeveelUKuntBesparen` | `https://formspree.io/f/xnjenvqd` | `formulier-versturen` |
+
+### 4. Laadpalen
+
+| Label | Element | Element ID | Section ID | Bestemming | Linktype |
+|---|---|---|---|---|---|
+| Offerte | `a` | `laadpalenSectLaadpaalLatenInstallerenBtn01Offerte` | `laadpalenSectLaadpaalLatenInstalleren` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Adviesgesprek | `a` | `laadpalenSectLaadpaalLatenInstallerenBtn02Adviesgesprek` | `laadpalenSectLaadpaalLatenInstalleren` | `#laadpalenSectZoWerkenWij` | `interne-sectie` |
+| Offerte | `a` | `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieBtn01Offerte` | `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Meer | `a` | `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieBtn02Meer` | `laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie` | `#laadpalenSectWelkeLaadpaalPastBijU` | `interne-sectie` |
+| Offerte | `a` | `laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagensBtn01Offerte` | `laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagens` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Meer | `a` | `laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagensBtn02Meer` | `laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagens` | `#laadpalenSectWelkeLaadpaalPastBijU` | `interne-sectie` |
+| Meer | `a` | `laadpalenSectZoWerkenWijBtn01Meer` | `laadpalenSectZoWerkenWij` | `#laadpalenSectWelkeLaadpaalPastBijU` | `interne-sectie` |
+| Contact | `a` | `laadpalenSectAntwoordenOpDeMeestGesteldeVragenOverLaadpalenBtn01Contact` | `laadpalenSectAntwoordenOpDeMeestGesteldeVragenOverLaadpalen` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Aanvragen | `button` | `laadpalenSectWelkeLaadpaalPastBijUBtn01Aanvragen` | `laadpalenSectWelkeLaadpaalPastBijU` | `https://formspree.io/f/xnjenvqd` | `formulier-versturen` |
+
+### 5. Elektrotechnische renovaties
+
+| Label | Element | Element ID | Section ID | Bestemming | Linktype |
+|---|---|---|---|---|---|
+| Offerte | `a` | `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovatiesBtn01Offerte` | `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovaties` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Bespreken | `a` | `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovatiesBtn02Bespreken` | `elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovaties` | `#elektrotechnischeRenovatiesSectZoWerkenWij` | `interne-sectie` |
+| Meer | `a` | `elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoningBtn02Meer` | `elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoning` | `#elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen` | `interne-sectie` |
+| Meer | `a` | `elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeftBtn02Meer` | `elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeft` | `#elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen` | `interne-sectie` |
+| Meer informatie | `a` | `elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenBtn02MeerInformatie` | `elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden` | `#elektrotechnischeRenovatiesSectZoWerkenWij` | `interne-sectie` |
+| Meer | `a` | `elektrotechnischeRenovatiesSectZoWerkenWijBtn01Meer` | `elektrotechnischeRenovatiesSectZoWerkenWij` | `#elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen` | `interne-sectie` |
+| Contact | `a` | `elektrotechnischeRenovatiesSectAllesWatUWetenMoetOverElektrotechnischeAanpassingenBtn01Contact` | `elektrotechnischeRenovatiesSectAllesWatUWetenMoetOverElektrotechnischeAanpassingen` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Aanvragen | `button` | `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassenBtn01Aanvragen` | `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen` | `https://formspree.io/f/xnjenvqd` | `formulier-versturen` |
+
+### 6. Over ons
+
+| Label | Element | Element ID | Section ID | Bestemming | Linktype |
+|---|---|---|---|---|---|
+| Meer | `a` | `overOnsSectTweeVriendenEenDoelBtn01Meer` | `overOnsSectTweeVriendenEenDoel` | `#overOnsSectKlaarVoorDeVolgendeStap` | `interne-sectie` |
+| Diensten | `a` | `overOnsSectTweeVriendenEenDoelBtn02Diensten` | `overOnsSectTweeVriendenEenDoel` | `index.html#homeSectWatWijVoorUInstallerenEnOnderhouden` | `interne-pagina-sectie` |
+| Meer | `a` | `overOnsSectPersoonlijkContactEnSnelleServiceBtn01Meer` | `overOnsSectPersoonlijkContactEnSnelleService` | `#overOnsSectKlaarVoorDeVolgendeStap` | `interne-sectie` |
+| Contact | `a` | `overOnsSectPersoonlijkContactEnSnelleServiceBtn02Contact` | `overOnsSectPersoonlijkContactEnSnelleService` | `contact.html#contactSectLatenWeBeginnen` | `interne-pagina-sectie` |
+| Thuisbatterijen | `a` | `overOnsSectWatWijDoenLink01Thuisbatterijen` | `overOnsSectWatWijDoen` | `thuisbatterijen.html` | `interne-pagina` |
+| Zonnepanelen | `a` | `overOnsSectWatWijDoenLink02Zonnepanelen` | `overOnsSectWatWijDoen` | `zonnepanelen.html` | `interne-pagina` |
+| Laadpalen | `a` | `overOnsSectWatWijDoenLink03Laadpalen` | `overOnsSectWatWijDoen` | `laadpalen.html` | `interne-pagina` |
+| Groepenkasten | `a` | `overOnsSectWatWijDoenLink04Groepenkasten` | `overOnsSectWatWijDoen` | `elektrotechnische-renovaties.html#elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoning` | `interne-pagina-sectie` |
+| Elektrotechnische renovaties | `a` | `overOnsSectWatWijDoenLink05ElektrotechnischeRenovaties` | `overOnsSectWatWijDoen` | `elektrotechnische-renovaties.html` | `interne-pagina` |
+| Krachtstroom | `a` | `overOnsSectWatWijDoenLink06Krachtstroom` | `overOnsSectWatWijDoen` | `elektrotechnische-renovaties.html#elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden` | `interne-pagina-sectie` |
+| Inspectie, onderhoud en service | `a` | `overOnsSectWatWijDoenLink07InspectieOnderhoudEnService` | `overOnsSectWatWijDoen` | `#overOnsSectWerkenVolgensNormenEnFabrikantsrichtlijnen` | `interne-sectie` |
+| Industriële oplossingen | `a` | `overOnsSectWatWijDoenLink08IndustrieleOplossingen` | `overOnsSectWatWijDoen` | `elektrotechnische-renovaties.html#elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden` | `interne-pagina-sectie` |
+| Aanvragen | `button` | `overOnsSectKlaarVoorDeVolgendeStapBtn01Aanvragen` | `overOnsSectKlaarVoorDeVolgendeStap` | `https://formspree.io/f/xnjenvqd` | `formulier-versturen` |
+
+### 7. Contact
+
+| Label | Element | Element ID | Section ID | Bestemming | Linktype |
+|---|---|---|---|---|---|
+| Offerte | `a` | `contactSectVraagVrijblijvendEenOfferteAanBtn01Offerte` | `contactSectVraagVrijblijvendEenOfferteAan` | `#contactSectLatenWeBeginnen` | `interne-sectie` |
+| Advies | `a` | `contactSectVraagVrijblijvendEenOfferteAanBtn02Advies` | `contactSectVraagVrijblijvendEenOfferteAan` | `#contactSectLatenWeBeginnen` | `interne-sectie` |
+| Versturen | `button` | `contactSectLatenWeBeginnenBtn01Versturen` | `contactSectLatenWeBeginnen` | `https://formspree.io/f/xnjenvqd` | `formulier-versturen` |
 
 ## Formulieren
-- `homeSectKlaarOmUwWoningToekomstbestendigTeMakenFormulier` – Home – section `homeSectKlaarOmUwWoningToekomstbestendigTeMaken` – Korte CTA naar contactformulier
-- `thuisbatterijSectOntdekWelkeBatterijPastBijUFormulier` – Thuisbatterijen – section `thuisbatterijSectOntdekWelkeBatterijPastBijU` – Korte CTA voor persoonlijk thuisbatterijadvies
-- `zonnepanelenSectBenieuwdHoeveelUKuntBesparenFormulier` – Zonnepanelen – section `zonnepanelenSectBenieuwdHoeveelUKuntBesparen` – Korte e-mail-CTA voor een zonnepanelenofferte
-- `laadpalenSectWelkeLaadpaalPastBijUFormulier` – Laadpalen – section `laadpalenSectWelkeLaadpaalPastBijU` – Korte e-mail-CTA voor een laadpaalaanvraag
-- `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassenFormulier` – Elektrotechnische renovaties – section `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen` – Korte e-mail-CTA voor elektrotechnische aanpassingen
-- `overOnsSectKlaarVoorDeVolgendeStapFormulier` – Over ons – section `overOnsSectKlaarVoorDeVolgendeStap` – Korte e-mail-CTA naar het contactformulier
-- `contactSectLatenWeBeginnenFormulier` – Contact – section `contactSectLatenWeBeginnen` – Offerte/contactaanvraag. Backend later koppelen.
+
+| Pagina | Form ID | Section ID | Methode | Action | Provider | Doel |
+|---|---|---|---|---|---|---|
+| Home | `homeSectKlaarOmUwWoningToekomstbestendigTeMakenFormulier` | `homeSectKlaarOmUwWoningToekomstbestendigTeMaken` | `POST` | `https://formspree.io/f/xnjenvqd` | Formspree | Korte aanvraag voor woningverduurzaming. |
+| Thuisbatterijen | `thuisbatterijSectOntdekWelkeBatterijPastBijUFormulier` | `thuisbatterijSectOntdekWelkeBatterijPastBijU` | `POST` | `https://formspree.io/f/xnjenvqd` | Formspree | Korte aanvraag voor persoonlijk thuisbatterijadvies. |
+| Zonnepanelen | `zonnepanelenSectBenieuwdHoeveelUKuntBesparenFormulier` | `zonnepanelenSectBenieuwdHoeveelUKuntBesparen` | `POST` | `https://formspree.io/f/xnjenvqd` | Formspree | Korte aanvraag voor een zonnepanelenofferte. |
+| Laadpalen | `laadpalenSectWelkeLaadpaalPastBijUFormulier` | `laadpalenSectWelkeLaadpaalPastBijU` | `POST` | `https://formspree.io/f/xnjenvqd` | Formspree | Korte aanvraag voor laadpaaladvies. |
+| Elektrotechnische renovaties | `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassenFormulier` | `elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen` | `POST` | `https://formspree.io/f/xnjenvqd` | Formspree | Korte aanvraag voor elektrotechnische aanpassingen. |
+| Over ons | `overOnsSectKlaarVoorDeVolgendeStapFormulier` | `overOnsSectKlaarVoorDeVolgendeStap` | `POST` | `https://formspree.io/f/xnjenvqd` | Formspree | Korte algemene aanvraag vanaf de pagina Over ons. |
+| Contact | `contactSectLatenWeBeginnenFormulier` | `contactSectLatenWeBeginnen` | `POST` | `https://formspree.io/f/xnjenvqd` | Formspree | Uitgebreide offerte- en contactaanvraag. |
+
+## Developer-aandachtspunten
+
+- ⚠ In `zonnepanelen.html` verwijst `zonnepanelenSectSlaOvertolligeStroomOp` naar ontbrekende heading `zonnepanelenSectSlaOvertolligeStroomOpH2`.
+- Geen dubbele ID’s binnen een pagina gevonden.
+- ⚠ Interne bestemming ontbreekt voor `homeSectRecentWerkBtn01Bekijk`: `#linkNogToevoegen`.
+- ⚠ Interne bestemming ontbreekt voor `homeSectRecentWerkBtn04Bekijk`: `#linkNogToevoegen`.
+- ⚠ Interne bestemming ontbreekt voor `homeSectRecentWerkBtn02Bekijk`: `#linkNogToevoegen`.
+- ⚠ Interne bestemming ontbreekt voor `homeSectRecentWerkBtn03Bekijk`: `#linkNogToevoegen`.
+- ⚠ Interne bestemming ontbreekt voor `homeSectRecentWerkBtn01AlleProjecten`: `#linkNogToevoegen`.
+- 9 primaire secties gebruiken bewust of historisch een andere `data-section-title` dan de zichtbare heading. Beide waarden staan daarom apart in deze index.
+- Alle 7 formulieren posten momenteel via Formspree naar `https://formspree.io/f/xnjenvqd`.
+
+## JSON-structuur
+
+- `metadata`: bronbestanden, schema en aantallen.
+- `tracking`: Google Tag-ID’s, stream-ID en controle per pagina.
+- `sections`: primaire, genummerde secties.
+- `supporting_sections`: aanvullende main-secties, waaronder de gedeelde kaarten- en FAQ-regio’s.
+- `paragraphs`: alle paragrafen met ID, tekst, classes en bovenliggende sectie.
+- `buttons`: links en buttons met developmentmetadata en actuele bestemming.
+- `forms`: actuele formulier-actions, methode en provider.
+- `validation`: dubbele ID’s, ontbrekende headings, ontbrekende interne doelen en titelverschillen.
