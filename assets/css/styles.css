@@ -460,16 +460,16 @@ body.hoogContrast .homeHeroScrollMediaLabel { border: 2px solid #000; background
     body:not(.tekstGroot) .homeHeroReferentieGrid.isScrollAfbeeldingActief .homeHeroScrollMedia { position: absolute; z-index: 2; grid-column: 1 / -1; grid-row: 1; inset-block: 0; inset-inline-start: var(--scroll-volledige-breedte-offset-links, 0); width: var(--scroll-volledige-breedte, 100%); height: 100%; min-height: 100%; border-radius: 0; clip-path: inset(0 var(--scroll-afbeelding-inset-rechts, 50%) 0 var(--scroll-afbeelding-inset-links, 0) round var(--scroll-afbeelding-radius, 10px)); will-change: clip-path; }
   }
 }
-.homeSectGecertificeerdeInstallateursMetVakmanschapKaarten.layoutFeatures { padding-block-start: var(--sectieRuimte); }
+.kenmerkKaartenSectie.layoutFeatures { padding-block-start: var(--sectieRuimte); }
 @media (max-width: 767px) {
-  .homeSectGecertificeerdeInstallateursMetVakmanschapKaarten .homeSectGecertificeerdeInstallateursMetVakmanschapLijst { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; gap: clamp(10px, 3vw, 16px); margin-block-start: 24px; }
-  .homeSectGecertificeerdeInstallateursMetVakmanschapLijst > .kaartLijstItem { height: auto; min-height: 0; aspect-ratio: 1; overflow: hidden; }
-  .homeSectGecertificeerdeInstallateursMetVakmanschapKaart { display: flex; min-width: 0; flex-direction: column; justify-content: center; padding: clamp(9px, 3.2vw, 16px); }
-  .homeSectGecertificeerdeInstallateursMetVakmanschapKaart h3 { font-size: clamp(.8rem, 3.6vw, 1.05rem); line-height: 1.14; overflow-wrap: anywhere; text-wrap: balance; }
-  .homeSectGecertificeerdeInstallateursMetVakmanschapKaart p { margin-block-start: clamp(6px, 1.8vw, 9px); font-size: clamp(.67rem, 2.75vw, .84rem); line-height: 1.28; overflow-wrap: anywhere; }
-  body.tekstGroot .homeSectGecertificeerdeInstallateursMetVakmanschapLijst > .kaartLijstItem { aspect-ratio: auto; min-height: calc((100vw - 58px) / 2); }
-  body.tekstGroot .homeSectGecertificeerdeInstallateursMetVakmanschapKaart h3,
-  body.tekstGroot .homeSectGecertificeerdeInstallateursMetVakmanschapKaart p { font-size: inherit; }
+  .kenmerkKaartenSectie .kenmerkKaartLijst { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; gap: clamp(10px, 3vw, 16px); margin-block-start: 24px; }
+  .kenmerkKaartLijst > .kaartLijstItem { height: auto; min-height: 0; aspect-ratio: 1; overflow: hidden; }
+  .kenmerkKaart { display: flex; min-width: 0; flex-direction: column; align-items: center; justify-content: center; padding: clamp(9px, 3.2vw, 16px); }
+  .kenmerkKaart h3 { font-size: clamp(.8rem, 3.6vw, 1.05rem); line-height: 1.14; overflow-wrap: anywhere; text-wrap: balance; }
+  .kenmerkKaart p { margin-block-start: clamp(6px, 1.8vw, 9px); font-size: clamp(.67rem, 2.75vw, .84rem); line-height: 1.28; overflow-wrap: anywhere; }
+  body.tekstGroot .kenmerkKaartLijst > .kaartLijstItem { aspect-ratio: auto; min-height: calc((100vw - 58px) / 2); }
+  body.tekstGroot .kenmerkKaart h3,
+  body.tekstGroot .kenmerkKaart p { font-size: inherit; }
 }
 .kaartLijst, .dienstLijst, .procesLijst, .testimonialLijst, .contactKaarten { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 18px; }
 .kaartLijst { grid-auto-rows: 1fr; align-items: stretch; }
@@ -1335,21 +1335,12 @@ body.tekstGroot .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenLijst {
 .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop .sectieTitel,
 .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop .sectieIntro { margin: 0; }
 .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop .sectieIntro { max-width: 62ch; }
-.elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomst .kaartLijst { grid-auto-rows: 1fr; align-items: stretch; gap: clamp(18px, 2.5vw, 28px); margin-block-start: clamp(36px, 5vw, 56px); }
-.elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomst .kaartLijstItem { min-width: 0; height: 100%; }
-.elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomst .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKaart { display: flex; min-width: 0; height: 100%; flex-direction: column; align-items: flex-start; padding: clamp(24px, 3vw, 34px); overflow: hidden; border: 0; border-radius: 10px; background: transparent; box-shadow: none; }
-.elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKaart .kaartIcoon { display: inline-grid; width: 56px; height: 56px; flex: none; place-items: center; margin-block-end: clamp(20px, 3vw, 28px); border: 2px solid var(--sparkyOranje); border-radius: 10px; background: var(--sparkyOranje); color: #111; line-height: 1; }
-.elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKaart .kaartIcoon svg { display: block; width: 29px; height: 29px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKaart h3 { max-width: 18ch; align-self: flex-start; }
-.elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKaart p { margin-block-start: 14px; }
-body.hoogContrast .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomst .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKaart { border: 0; background: transparent; box-shadow: none; }
-body.hoogContrast .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKaart .kaartIcoon { border: 2px solid #000; background: var(--sparkyOranje); color: #000; }
 @media (min-width: 768px) {
   .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); column-gap: clamp(48px, 8vw, 96px); row-gap: 0; }
   .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop .sectieTitel { grid-column: 1; }
   .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop .sectieIntro { grid-column: 2; }
 }
-body.tekstGroot .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomst .kaartLijst { grid-template-columns: minmax(0, 1fr); }
+body.tekstGroot .kenmerkKaartLijst { grid-template-columns: minmax(0, 1fr); }
 body.tekstGroot .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop { grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 4vw, 40px); }
 body.tekstGroot .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop .sectieTitel,
 body.tekstGroot .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop .sectieIntro { grid-column: 1; }
