@@ -6,8 +6,6 @@
   const CHOICE_FULL = 'volledig';
   const CHOICE_FUNCTIONAL = 'functioneel';
   const MEASUREMENT_ID = 'G-B8QNYQR8CY';
-  const GOOGLE_TAG_ID = 'GT-PL9T2DJM';
-  const GOOGLE_TAG_SCRIPT_ID = 'googleAnalyticsTag';
 
   let currentChoice = readChoice();
   let consentLayer;
@@ -50,25 +48,10 @@
     };
   }
 
-  function loadGoogleAnalytics() {
+  function enableGoogleAnalytics() {
     window['ga-disable-' + MEASUREMENT_ID] = false;
     ensureGtag();
-
-    if (document.getElementById(GOOGLE_TAG_SCRIPT_ID)) {
-      window.gtag('consent', 'update', consentSettings(CHOICE_FULL));
-      return;
-    }
-
-    window.gtag('consent', 'default', consentSettings(CHOICE_FULL));
-    window.gtag('js', new Date());
-    window.gtag('config', MEASUREMENT_ID);
-
-    const script = document.createElement('script');
-    script.id = GOOGLE_TAG_SCRIPT_ID;
-    script.dataset.googleTagId = GOOGLE_TAG_ID;
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(MEASUREMENT_ID);
-    document.head.appendChild(script);
+    window.gtag('consent', 'update', consentSettings(CHOICE_FULL));
   }
 
   function deleteGoogleAnalyticsCookies() {
@@ -188,7 +171,7 @@
 
   function chooseFullConsent() {
     saveChoice(CHOICE_FULL);
-    loadGoogleAnalytics();
+    enableGoogleAnalytics();
     updateGoogleMaps(true);
     closeConsentLayer();
   }
@@ -281,7 +264,7 @@
     createConsentLayer();
 
     if (currentChoice === CHOICE_FULL) {
-      loadGoogleAnalytics();
+      enableGoogleAnalytics();
       updateGoogleMaps(true);
       return;
     }

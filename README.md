@@ -79,10 +79,10 @@ De zeven openbare pagina's gebruiken de Google-tag voor de GA4-webstream van Spa
 - Google tag ID: `GT-PL9T2DJM`
 - Measurement ID: `G-B8QNYQR8CY`
 
-`assets/js/cookie-consent.js` biedt twee keuzes:
+De Google-tag staat direct na de tekencodering in `<head>` op alle zeven openbare HTML-pagina's. Consent Mode v2 staat standaard op `denied`; `assets/js/cookie-consent.js` werkt die status bij op basis van de keuze van de bezoeker:
 
-- `Volledig`: functionele opslag, Google Analytics en de Google Maps-iframe worden geladen.
-- `Weigeren`: alleen de functionele toestemmingsvoorkeur wordt lokaal bewaard; Analytics en Maps worden niet geladen.
+- `Volledig`: Google Analytics-opslag en de Google Maps-iframe worden toegestaan.
+- `Weigeren`: Google-opslag blijft geweigerd, Analytics-cookies worden verwijderd en Maps wordt niet geladen.
 
 Bij het eerste bezoek staat de modale keuzelaag met transparante achtergrond vast onderaan het scherm. De bezoeker kan de pagina bekijken en scrollen, maar niet klikken, tekst selecteren of toetsenbordfocus buiten de laag verplaatsen. Na een keuze wordt de website volledig vrijgegeven. Onder `Sitemap` staan achtereenvolgens `Contact`, de hyperlink `Cookie Voorkeuren`, de downloadbare `Algemene voorwaarden` en de downloadbare `Privacy verklaring`. Beide juridische downloads staan bij de aanvraagformulieren; de privacy-download staat ook in de cookielaag. De interne `section-index.html` heeft `noindex` en wordt niet gemeten.
 

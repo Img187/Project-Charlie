@@ -2,6 +2,29 @@
 <html lang="nl">
 <head>
   <meta charset="utf-8" />
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var storedConsent = null;
+      try {
+        storedConsent = window.localStorage.getItem('sparky-cookie-toestemming');
+      } catch (error) {}
+      var consentState = storedConsent === 'volledig' ? 'granted' : 'denied';
+      gtag('consent', 'default', {
+        ad_storage: consentState,
+        analytics_storage: consentState,
+        ad_user_data: consentState,
+        ad_personalization: consentState,
+        wait_for_update: 500
+      });
+      window['ga-disable-G-B8QNYQR8CY'] = consentState !== 'granted';
+    })();
+    gtag('js', new Date());
+    gtag('config', 'G-B8QNYQR8CY');
+  </script>
+  <script id="googleAnalyticsTag" data-google-tag-id="GT-PL9T2DJM" async src="https://www.googletagmanager.com/gtag/js?id=G-B8QNYQR8CY"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Elektrotechnisch bedrijf Rotterdam | Over Sparky Energies</title>
   <meta name="description" content="Maak kennis met Sparky Energies: een elektrotechnisch installatiebedrijf uit Rotterdam met persoonlijke service, vakmanschap en duurzame oplossingen." />
