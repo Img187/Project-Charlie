@@ -46,7 +46,37 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
     buildAccessibilityDropdown(accessPanel);
   }
 
-  // Globale back-to-topknop voor alle openbare pagina's.
+  // Vaste WhatsApp- en back-to-topknoppen voor alle openbare pagina's.
+  const floatingActionButtons = document.createElement('div');
+  floatingActionButtons.className = 'vasteActieKnoppen';
+
+  const whatsappPhoneNumber = '31107934002';
+  const whatsappDesktopQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const whatsappButton = document.createElement('a');
+  whatsappButton.id = 'siteWhatsAppKnop';
+  whatsappButton.className = 'whatsAppKnop';
+  whatsappButton.target = '_blank';
+  whatsappButton.rel = 'noopener noreferrer';
+  whatsappButton.setAttribute('aria-label', 'Chat met Sparky Energies via WhatsApp');
+  whatsappButton.title = 'Chat met ons via WhatsApp';
+  whatsappButton.innerHTML = '<img class="whatsAppKnopLogo" src="assets/img/whatsapp-logo.svg" alt="" width="36" height="36" aria-hidden="true">';
+
+  function updateWhatsAppDestination(mediaQuery) {
+    const isDesktop = mediaQuery.matches;
+    whatsappButton.href = isDesktop
+      ? `https://web.whatsapp.com/send?phone=${whatsappPhoneNumber}`
+      : `https://wa.me/${whatsappPhoneNumber}`;
+    whatsappButton.dataset.whatsappBestemming = isDesktop ? 'web' : 'app';
+  }
+
+  if ('addEventListener' in whatsappDesktopQuery) {
+    whatsappDesktopQuery.addEventListener('change', updateWhatsAppDestination);
+  } else {
+    whatsappDesktopQuery.addListener(updateWhatsAppDestination);
+  }
+  updateWhatsAppDestination(whatsappDesktopQuery);
+  floatingActionButtons.appendChild(whatsappButton);
+
   const backToTopButton = document.createElement('button');
   backToTopButton.id = 'siteBackToTopKnop';
   backToTopButton.className = 'backNaarBovenKnop';
@@ -56,7 +86,8 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
   backToTopButton.setAttribute('tabindex', '-1');
   backToTopButton.title = 'Terug naar boven';
   backToTopButton.innerHTML = '<span class="backNaarBovenIcoon" aria-hidden="true">&uarr;</span><span class="backNaarBovenTekst">Terug naar boven</span>';
-  body.appendChild(backToTopButton);
+  floatingActionButtons.appendChild(backToTopButton);
+  body.appendChild(floatingActionButtons);
 
   let backToTopFrame = 0;
 

@@ -316,14 +316,25 @@ body.hoogContrast .siteBtnSecondary,
 body.hoogContrast .siteBtnLink { background: #000; color: #fff; border-color: #000; }
 body.hoogContrast .siteBtn:hover { filter: none; text-decoration: underline; }
 .sectionActies { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 28px; }
-.backNaarBovenKnop { position: fixed; z-index: 950; inset-inline-end: clamp(16px, 3vw, 40px); inset-block-end: max(20px, env(safe-area-inset-bottom)); display: inline-flex; min-height: 52px; align-items: center; justify-content: center; gap: 10px; padding: 12px 18px; border: 2px solid var(--sparkyDonkerBlauw); border-radius: var(--radiusKnop); background: var(--sparkyOranje); color: #111; font-weight: 800; line-height: 1.15; white-space: nowrap; cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(16px); pointer-events: none; transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s, filter .18s ease; }
+.vasteActieKnoppen { position: fixed; z-index: 950; inset-inline-end: clamp(16px, 3vw, 40px); inset-block-end: max(20px, env(safe-area-inset-bottom)); display: flex; flex-direction: column; align-items: flex-end; gap: 12px; pointer-events: none; }
+body.cookieKeuzeOpen .vasteActieKnoppen { visibility: hidden; }
+.whatsAppKnop { position: relative; display: inline-grid; width: 50px; height: 50px; flex: 0 0 50px; place-items: center; border: 0; border-radius: 50%; background: transparent; line-height: 0; pointer-events: auto; transition: transform .18s ease; }
+.whatsAppKnopLogo { display: block; width: 36px; height: 36px; object-fit: contain; }
+.whatsAppKnop:hover { transform: translateY(-2px); }
+.backNaarBovenKnop { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; gap: 10px; padding: 12px 18px; border: 2px solid var(--sparkyDonkerBlauw); border-radius: var(--radiusKnop); background: var(--sparkyOranje); color: #111; font-weight: 800; line-height: 1.15; white-space: nowrap; cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(16px); pointer-events: none; transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s, filter .18s ease; }
 .backNaarBovenKnop.isZichtbaar { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; transition-delay: 0s; }
 .backNaarBovenKnop:hover { color: #111; filter: brightness(1.1) saturate(1.08); }
 .backNaarBovenIcoon { font-family: Arial, sans-serif; font-size: 1.45em; font-weight: 700; line-height: .8; }
 .backNaarBovenTekst { display: inline-block; }
 body.hoogContrast .backNaarBovenKnop { border-color: #000; background: var(--sparkyOranje); color: #000; }
 body.hoogContrast .backNaarBovenKnop:hover { color: #000; filter: none; text-decoration: underline; }
+body.hoogContrast .whatsAppKnop { border-radius: 50%; background: #000; }
+body.hoogContrast .whatsAppKnop:hover { background: #151b20; }
 body.tekstGroot .backNaarBovenKnop { min-height: 58px; padding: 12px 18px; white-space: normal; text-align: center; }
+@media (prefers-reduced-motion: reduce) {
+  .whatsAppKnop { transition: none; }
+  .whatsAppKnop:hover { transform: none; }
+}
 .layoutHero, .layoutSplit { display: grid; gap: 32px; align-items: center; }
 .layoutHero { min-height: min(760px, calc(100svh - 76px)); }
 .overOnsHeroVolledigeBreedte { position: relative; isolation: isolate; display: grid; width: 100%; min-height: min(760px, calc(100svh - 76px)); place-items: center; overflow: hidden; padding-inline: max(5vw, calc((100vw - 1320px) / 2)); }
@@ -1577,7 +1588,7 @@ body.hoogContrast .footerCopyright {
   color: var(--sparkyLichtGrijs) !important;
 }
 
-body.hoogContrast a:not(.siteBtn):not(.hoofdNavigatieContact):not(.backNaarBovenKnop):hover {
+body.hoogContrast a:not(.siteBtn):not(.hoofdNavigatieContact):not(.whatsAppKnop):not(.backNaarBovenKnop):hover {
   color: var(--sparkyLichtBlauw) !important;
 }
 
