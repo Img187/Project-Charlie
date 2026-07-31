@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 2,
-    "generated_on": "2026-07-17",
+    "generated_on": "2026-07-31",
     "language": "nl",
     "source_files": [
       "index.html",
@@ -15,10 +15,10 @@
     "scope": "Publieke pagina’s; primaire secties, ondersteunende main-secties, headings, paragrafen, buttons, formulieren en Google-tagconfiguratie.",
     "counts": {
       "pages": 7,
-      "primary_sections": 52,
+      "primary_sections": 48,
       "supporting_sections": 5,
-      "paragraphs": 209,
-      "buttons": 58,
+      "paragraphs": 204,
+      "buttons": 41,
       "forms": 7
     }
   },
@@ -205,28 +205,6 @@
       "page": "Home",
       "file": "index.html",
       "page_number": 1,
-      "section_number": 6,
-      "id": "homeSectWatKlantenOverOnsZeggen",
-      "class": "homeSectWatKlantenOverOnsZeggen",
-      "classes": [
-        "siteSectie",
-        "homeSectWatKlantenOverOnsZeggen",
-        "layoutTestimonials"
-      ],
-      "layout_classes": [
-        "layoutTestimonials"
-      ],
-      "data_section_title": "Wat klanten over ons zeggen",
-      "heading_id": "homeSectWatKlantenOverOnsZeggenH2",
-      "heading_tag": "h2",
-      "heading": "Wat klanten over ons zeggen",
-      "heading_status": "present",
-      "type": "testimonials"
-    },
-    {
-      "page": "Home",
-      "file": "index.html",
-      "page_number": 1,
       "section_number": 7,
       "id": "homeSectKlaarOmUwWoningToekomstbestendigTeMaken",
       "class": "homeSectKlaarOmUwWoningToekomstbestendigTeMaken",
@@ -277,9 +255,11 @@
       "classes": [
         "siteSectie",
         "thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen",
+        "kenmerkKaartenSectie",
         "layoutFeatures"
       ],
       "layout_classes": [
+        "kenmerkKaartenSectie",
         "layoutFeatures"
       ],
       "data_section_title": "Slim opslaan, slim gebruiken en slim besparen",
@@ -354,28 +334,6 @@
       "heading": "Sla overtollige energie op voor gebruik wanneer de zon niet schijnt.",
       "heading_status": "present",
       "type": "sticky_split_cards"
-    },
-    {
-      "page": "Thuisbatterijen",
-      "file": "thuisbatterijen.html",
-      "page_number": 2,
-      "section_number": 6,
-      "id": "thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren",
-      "class": "thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren",
-      "classes": [
-        "siteSectie",
-        "thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren",
-        "layoutImageCta"
-      ],
-      "layout_classes": [
-        "layoutImageCta"
-      ],
-      "data_section_title": "Wilt u weten wat een thuisbatterij-installatie voor u kunt opleveren?",
-      "heading_id": "thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleverenH2",
-      "heading_tag": "h2",
-      "heading": "Wilt u weten wat een thuisbatterij-installatie voor u kunt opleveren?",
-      "heading_status": "present",
-      "type": "image_cta"
     },
     {
       "page": "Thuisbatterijen",
@@ -477,9 +435,11 @@
       "classes": [
         "siteSectie",
         "zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDak",
+        "kenmerkKaartenSectie",
         "layoutFeatures"
       ],
       "layout_classes": [
+        "kenmerkKaartenSectie",
         "layoutFeatures"
       ],
       "data_section_title": "Profiteer van duurzame energie uit eigen dak",
@@ -550,32 +510,10 @@
       ],
       "data_section_title": "Sla overtollige stroom op",
       "heading_id": "zonnepanelenSectSlaOvertolligeStroomOpH2",
-      "heading_tag": "",
-      "heading": "",
-      "heading_status": "missing",
-      "type": "sticky_split_cards"
-    },
-    {
-      "page": "Zonnepanelen",
-      "file": "zonnepanelen.html",
-      "page_number": 3,
-      "section_number": 6,
-      "id": "zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren",
-      "class": "zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren",
-      "classes": [
-        "siteSectie",
-        "zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren",
-        "layoutImageCta"
-      ],
-      "layout_classes": [
-        "layoutImageCta"
-      ],
-      "data_section_title": "Wilt u weten wat zonnepanelen voor u kunnen opleveren?",
-      "heading_id": "zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleverenH2",
       "heading_tag": "h2",
-      "heading": "Wilt u weten wat zonnepanelen voor u kunnen opleveren?",
+      "heading": "Sla overtollige stroom op",
       "heading_status": "present",
-      "type": "image_cta_split"
+      "type": "sticky_split_cards"
     },
     {
       "page": "Zonnepanelen",
@@ -677,9 +615,11 @@
       "classes": [
         "siteSectie",
         "laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatie",
+        "kenmerkKaartenSectie",
         "layoutFeatures"
       ],
       "layout_classes": [
+        "kenmerkKaartenSectie",
         "layoutFeatures"
       ],
       "data_section_title": "Laad uw elektrische auto veilig en gemakkelijk op eigen locatie",
@@ -901,9 +841,11 @@
       "classes": [
         "siteSectie",
         "elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoning",
+        "kenmerkKaartenSectie",
         "layoutSplitFeatures"
       ],
       "layout_classes": [
+        "kenmerkKaartenSectie",
         "layoutSplitFeatures"
       ],
       "data_section_title": "Groepenkast: het hart van uw woning",
@@ -923,9 +865,11 @@
       "classes": [
         "siteSectie",
         "elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeft",
+        "kenmerkKaartenSectie",
         "layoutSplitFeatures"
       ],
       "layout_classes": [
+        "kenmerkKaartenSectie",
         "layoutSplitFeatures"
       ],
       "data_section_title": "Extra elektra waar u het nodig heeft",
@@ -945,9 +889,11 @@
       "classes": [
         "siteSectie",
         "elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden",
+        "kenmerkKaartenSectie",
         "layoutFeatureColumnsTransparent"
       ],
       "layout_classes": [
+        "kenmerkKaartenSectie",
         "layoutFeatureColumnsTransparent"
       ],
       "data_section_title": "Elektra voor bedrijfspanden",
@@ -1075,10 +1021,12 @@
       "classes": [
         "siteSectie",
         "overOnsSectRotterdamseMentaliteitLandelijkeService",
+        "kenmerkKaartenSectie",
         "layoutFeatureColumnsTransparent",
         "overOnsAchtergrondSectieVolledigeBreedte"
       ],
       "layout_classes": [
+        "kenmerkKaartenSectie",
         "layoutFeatureColumnsTransparent"
       ],
       "data_section_title": "Rotterdamse mentaliteit, landelijke service.",
@@ -1199,28 +1147,6 @@
       "file": "contact.html",
       "page_number": 7,
       "section_number": 1,
-      "id": "contactSectVraagVrijblijvendEenOfferteAan",
-      "class": "contactSectVraagVrijblijvendEenOfferteAan",
-      "classes": [
-        "siteSectie",
-        "contactSectVraagVrijblijvendEenOfferteAan",
-        "layoutSplitCard"
-      ],
-      "layout_classes": [
-        "layoutSplitCard"
-      ],
-      "data_section_title": "Vraag vrijblijvend een offerte aan",
-      "heading_id": "contactSectVraagVrijblijvendEenOfferteAanH1",
-      "heading_tag": "h1",
-      "heading": "Vraag vrijblijvend een offerte aan",
-      "heading_status": "present",
-      "type": "hero"
-    },
-    {
-      "page": "Contact",
-      "file": "contact.html",
-      "page_number": 7,
-      "section_number": 2,
       "id": "contactSectLatenWeBeginnen",
       "class": "contactSectLatenWeBeginnen",
       "classes": [
@@ -1232,8 +1158,8 @@
         "layoutContactOfferte"
       ],
       "data_section_title": "Laten we beginnen",
-      "heading_id": "contactSectLatenWeBeginnenH2",
-      "heading_tag": "h2",
+      "heading_id": "contactSectLatenWeBeginnenH1",
+      "heading_tag": "h1",
       "heading": "Laten we beginnen",
       "heading_status": "present",
       "type": "contact_form"
@@ -1482,28 +1408,6 @@
       "type": "portfolio-p",
       "classes": [],
       "text": "Wallbox in garage met load balancing"
-    },
-    {
-      "id": "homeSectWatKlantenOverOnsZeggenP01",
-      "page": "Home",
-      "file": "index.html",
-      "page_number": 1,
-      "section_id": "homeSectWatKlantenOverOnsZeggen",
-      "type": "intro",
-      "classes": [
-        "sectieIntro"
-      ],
-      "text": "“Sparky Energies heeft ons huis toekomstbestendig gemaakt. Professioneel, betrouwbaar en eerlijk in de communicatie.”"
-    },
-    {
-      "id": "homeSectWatKlantenOverOnsZeggenArtikel01P01",
-      "page": "Home",
-      "file": "index.html",
-      "page_number": 1,
-      "section_id": "homeSectWatKlantenOverOnsZeggen",
-      "type": "paragraph",
-      "classes": [],
-      "text": "“Sparky Energies heeft ons huis toekomstbestendig gemaakt. Professioneel, betrouwbaar en eerlijk in de communicatie.”"
     },
     {
       "id": "homeSectKlaarOmUwWoningToekomstbestendigTeMakenP01",
@@ -1770,18 +1674,6 @@
       "type": "card-p",
       "classes": [],
       "text": "Afhankelijk van het systeem en de batterijcapaciteit kan een deel of de hele woning van noodstroom worden voorzien. Let op: niet iedere thuisbatterij levert standaard noodstroom. Hiervoor zijn een geschikte omvormer en back-upvoorziening nodig. Wij adviseren u graag over de beste oplossing."
-    },
-    {
-      "id": "thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleverenP01",
-      "page": "Thuisbatterijen",
-      "file": "thuisbatterijen.html",
-      "page_number": 2,
-      "section_id": "thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren",
-      "type": "intro",
-      "classes": [
-        "sectieIntro"
-      ],
-      "text": "Bij stroomuitval schakelt uw batterij automatisch over op opgeslagen energie. Essentiële apparaten blijven werken zonder onderbreking."
     },
     {
       "id": "thuisbatterijSectZoWerkenWijStap01P01",
@@ -2186,18 +2078,6 @@
       "type": "paragraph",
       "classes": [],
       "text": "Sparky Energies controleert of uw elektrische installatie geschikt is voor deze combinatie en denkt mee over toekomstige uitbreidingen."
-    },
-    {
-      "id": "zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleverenP01",
-      "page": "Zonnepanelen",
-      "file": "zonnepanelen.html",
-      "page_number": 3,
-      "section_id": "zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren",
-      "type": "intro",
-      "classes": [
-        "sectieIntro"
-      ],
-      "text": "Elk dak is anders. Wij kijken naar uw dakoppervlak, richting, schaduw en toekomstige plannen om het juiste systeem voor u te ontwerpen. Zo krijgt u maximale opbrengst uit uw installatie."
     },
     {
       "id": "zonnepanelenSectZoWerkenWijStap01P01",
@@ -3522,18 +3402,6 @@
       "text": "Lees onze Privacy verklaring en Algemene voorwaarden."
     },
     {
-      "id": "contactSectVraagVrijblijvendEenOfferteAanP01",
-      "page": "Contact",
-      "file": "contact.html",
-      "page_number": 7,
-      "section_id": "contactSectVraagVrijblijvendEenOfferteAan",
-      "type": "intro",
-      "classes": [
-        "sectieIntro"
-      ],
-      "text": "Vertel ons kort waar u hulp bij nodig heeft. Wij nemen zo snel mogelijk contact met u op."
-    },
-    {
       "id": "contactSectLatenWeBeginnenP01",
       "page": "Contact",
       "file": "contact.html",
@@ -3781,57 +3649,6 @@
       "note": ""
     },
     {
-      "id": "thuisbatterijSectThuisbatterijLatenInstallerenBtn02Besparing",
-      "element": "a",
-      "page": "Thuisbatterijen",
-      "file": "thuisbatterijen.html",
-      "page_number": 2,
-      "section_number": 1,
-      "section_id": "thuisbatterijSectThuisbatterijLatenInstalleren",
-      "section_heading": "Thuisbatterij laten installeren",
-      "label": "Besparing",
-      "href": "#thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren",
-      "link_type": "interne-sectie",
-      "target_page": "Thuisbatterijen",
-      "target_section": "thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenBtn01Meer",
-      "element": "a",
-      "page": "Thuisbatterijen",
-      "file": "thuisbatterijen.html",
-      "page_number": 2,
-      "section_number": 2,
-      "section_id": "thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen",
-      "section_heading": "Slim opslaan, slim gebruiken en slim besparen",
-      "label": "Meer",
-      "href": "#thuisbatterijSectOntdekWelkeBatterijPastBijU",
-      "link_type": "interne-sectie",
-      "target_page": "Thuisbatterijen",
-      "target_section": "thuisbatterijSectOntdekWelkeBatterijPastBijU",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleverenBtn01Meer",
-      "element": "a",
-      "page": "Thuisbatterijen",
-      "file": "thuisbatterijen.html",
-      "page_number": 2,
-      "section_number": 6,
-      "section_id": "thuisbatterijSectWiltUWetenWatEenThuisbatterijInstallatieVoorUKuntOpleveren",
-      "section_heading": "Wilt u weten wat een thuisbatterij-installatie voor u kunt opleveren?",
-      "label": "Meer",
-      "href": "#thuisbatterijSectOntdekWelkeBatterijPastBijU",
-      "link_type": "interne-sectie",
-      "target_page": "Thuisbatterijen",
-      "target_section": "thuisbatterijSectOntdekWelkeBatterijPastBijU",
-      "form_id": "",
-      "note": ""
-    },
-    {
       "id": "thuisbatterijSectZoWerkenWijBtn01Meer",
       "element": "a",
       "page": "Thuisbatterijen",
@@ -3896,40 +3713,6 @@
       "link_type": "interne-pagina-sectie",
       "target_page": "Contact",
       "target_section": "contactSectLatenWeBeginnen",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleverenBtn01Offerte",
-      "element": "a",
-      "page": "Zonnepanelen",
-      "file": "zonnepanelen.html",
-      "page_number": 3,
-      "section_number": 6,
-      "section_id": "zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren",
-      "section_heading": "Wilt u weten wat zonnepanelen voor u kunnen opleveren?",
-      "label": "Offerte",
-      "href": "contact.html#contactSectLatenWeBeginnen",
-      "link_type": "interne-pagina-sectie",
-      "target_page": "Contact",
-      "target_section": "contactSectLatenWeBeginnen",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleverenBtn02Meer",
-      "element": "a",
-      "page": "Zonnepanelen",
-      "file": "zonnepanelen.html",
-      "page_number": 3,
-      "section_number": 6,
-      "section_id": "zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren",
-      "section_heading": "Wilt u weten wat zonnepanelen voor u kunnen opleveren?",
-      "label": "Meer",
-      "href": "#zonnepanelenSectBenieuwdHoeveelUKuntBesparen",
-      "link_type": "interne-sectie",
-      "target_page": "Zonnepanelen",
-      "target_section": "zonnepanelenSectBenieuwdHoeveelUKuntBesparen",
       "form_id": "",
       "note": ""
     },
@@ -4002,40 +3785,6 @@
       "note": ""
     },
     {
-      "id": "laadpalenSectLaadpaalLatenInstallerenBtn02Adviesgesprek",
-      "element": "a",
-      "page": "Laadpalen",
-      "file": "laadpalen.html",
-      "page_number": 4,
-      "section_number": 1,
-      "section_id": "laadpalenSectLaadpaalLatenInstalleren",
-      "section_heading": "Laadpaal laten installeren",
-      "label": "Adviesgesprek",
-      "href": "#laadpalenSectZoWerkenWij",
-      "link_type": "interne-sectie",
-      "target_page": "Laadpalen",
-      "target_section": "laadpalenSectZoWerkenWij",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieBtn01Offerte",
-      "element": "a",
-      "page": "Laadpalen",
-      "file": "laadpalen.html",
-      "page_number": 4,
-      "section_number": 3,
-      "section_id": "laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie",
-      "section_heading": "Slim, veilig en goedkoop laden op eigen locatie",
-      "label": "Offerte",
-      "href": "contact.html#contactSectLatenWeBeginnen",
-      "link_type": "interne-pagina-sectie",
-      "target_page": "Contact",
-      "target_section": "contactSectLatenWeBeginnen",
-      "form_id": "",
-      "note": ""
-    },
-    {
       "id": "laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieBtn02Meer",
       "element": "a",
       "page": "Laadpalen",
@@ -4044,40 +3793,6 @@
       "section_number": 3,
       "section_id": "laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie",
       "section_heading": "Slim, veilig en goedkoop laden op eigen locatie",
-      "label": "Meer",
-      "href": "#laadpalenSectWelkeLaadpaalPastBijU",
-      "link_type": "interne-sectie",
-      "target_page": "Laadpalen",
-      "target_section": "laadpalenSectWelkeLaadpaalPastBijU",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagensBtn01Offerte",
-      "element": "a",
-      "page": "Laadpalen",
-      "file": "laadpalen.html",
-      "page_number": 4,
-      "section_number": 5,
-      "section_id": "laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagens",
-      "section_heading": "Slim laden voor medewerkers, klanten en bedrijfswagens",
-      "label": "Offerte",
-      "href": "contact.html#contactSectLatenWeBeginnen",
-      "link_type": "interne-pagina-sectie",
-      "target_page": "Contact",
-      "target_section": "contactSectLatenWeBeginnen",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagensBtn02Meer",
-      "element": "a",
-      "page": "Laadpalen",
-      "file": "laadpalen.html",
-      "page_number": 4,
-      "section_number": 5,
-      "section_id": "laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagens",
-      "section_heading": "Slim laden voor medewerkers, klanten en bedrijfswagens",
       "label": "Meer",
       "href": "#laadpalenSectWelkeLaadpaalPastBijU",
       "link_type": "interne-sectie",
@@ -4155,74 +3870,6 @@
       "note": ""
     },
     {
-      "id": "elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovatiesBtn02Bespreken",
-      "element": "a",
-      "page": "Elektrotechnische renovaties",
-      "file": "elektrotechnische-renovaties.html",
-      "page_number": 5,
-      "section_number": 1,
-      "section_id": "elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovaties",
-      "section_heading": "Groepenkast en elektrotechnische renovaties",
-      "label": "Bespreken",
-      "href": "#elektrotechnischeRenovatiesSectZoWerkenWij",
-      "link_type": "interne-sectie",
-      "target_page": "Elektrotechnische renovaties",
-      "target_section": "elektrotechnischeRenovatiesSectZoWerkenWij",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoningBtn02Meer",
-      "element": "a",
-      "page": "Elektrotechnische renovaties",
-      "file": "elektrotechnische-renovaties.html",
-      "page_number": 5,
-      "section_number": 4,
-      "section_id": "elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoning",
-      "section_heading": "Groepenkast: het hart van uw woning",
-      "label": "Meer",
-      "href": "#elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen",
-      "link_type": "interne-sectie",
-      "target_page": "Elektrotechnische renovaties",
-      "target_section": "elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeftBtn02Meer",
-      "element": "a",
-      "page": "Elektrotechnische renovaties",
-      "file": "elektrotechnische-renovaties.html",
-      "page_number": 5,
-      "section_number": 5,
-      "section_id": "elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeft",
-      "section_heading": "Extra elektra waar u het nodig heeft",
-      "label": "Meer",
-      "href": "#elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen",
-      "link_type": "interne-sectie",
-      "target_page": "Elektrotechnische renovaties",
-      "target_section": "elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassen",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenBtn02MeerInformatie",
-      "element": "a",
-      "page": "Elektrotechnische renovaties",
-      "file": "elektrotechnische-renovaties.html",
-      "page_number": 5,
-      "section_number": 6,
-      "section_id": "elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden",
-      "section_heading": "Elektra voor bedrijfspanden",
-      "label": "Meer informatie",
-      "href": "#elektrotechnischeRenovatiesSectZoWerkenWij",
-      "link_type": "interne-sectie",
-      "target_page": "Elektrotechnische renovaties",
-      "target_section": "elektrotechnischeRenovatiesSectZoWerkenWij",
-      "form_id": "",
-      "note": ""
-    },
-    {
       "id": "elektrotechnischeRenovatiesSectZoWerkenWijBtn01Meer",
       "element": "a",
       "page": "Elektrotechnische renovaties",
@@ -4272,40 +3919,6 @@
       "target_section": "",
       "form_id": "elektrotechnischeRenovatiesSectWiltUUwElektraVeiligLatenAanpassenFormulier",
       "note": "Verstuurt rechtstreeks via Formspree."
-    },
-    {
-      "id": "overOnsSectTweeVriendenEenDoelBtn01Meer",
-      "element": "a",
-      "page": "Over ons",
-      "file": "over-ons.html",
-      "page_number": 6,
-      "section_number": 2,
-      "section_id": "overOnsSectTweeVriendenEenDoel",
-      "section_heading": "Twee vrienden, één doel",
-      "label": "Meer",
-      "href": "#overOnsSectKlaarVoorDeVolgendeStap",
-      "link_type": "interne-sectie",
-      "target_page": "Over ons",
-      "target_section": "overOnsSectKlaarVoorDeVolgendeStap",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "overOnsSectTweeVriendenEenDoelBtn02Diensten",
-      "element": "a",
-      "page": "Over ons",
-      "file": "over-ons.html",
-      "page_number": 6,
-      "section_number": 2,
-      "section_id": "overOnsSectTweeVriendenEenDoel",
-      "section_heading": "Twee vrienden, één doel",
-      "label": "Diensten",
-      "href": "index.html#homeSectWatWijVoorUInstallerenEnOnderhouden",
-      "link_type": "interne-pagina-sectie",
-      "target_page": "Home",
-      "target_section": "homeSectWatWijVoorUInstallerenEnOnderhouden",
-      "form_id": "",
-      "note": ""
     },
     {
       "id": "overOnsSectPersoonlijkContactEnSnelleServiceBtn01Meer",
@@ -4495,46 +4108,12 @@
       "note": "Verstuurt rechtstreeks via Formspree."
     },
     {
-      "id": "contactSectVraagVrijblijvendEenOfferteAanBtn01Offerte",
-      "element": "a",
-      "page": "Contact",
-      "file": "contact.html",
-      "page_number": 7,
-      "section_number": 1,
-      "section_id": "contactSectVraagVrijblijvendEenOfferteAan",
-      "section_heading": "Vraag vrijblijvend een offerte aan",
-      "label": "Offerte",
-      "href": "#contactSectLatenWeBeginnen",
-      "link_type": "interne-sectie",
-      "target_page": "Contact",
-      "target_section": "contactSectLatenWeBeginnen",
-      "form_id": "",
-      "note": ""
-    },
-    {
-      "id": "contactSectVraagVrijblijvendEenOfferteAanBtn02Advies",
-      "element": "a",
-      "page": "Contact",
-      "file": "contact.html",
-      "page_number": 7,
-      "section_number": 1,
-      "section_id": "contactSectVraagVrijblijvendEenOfferteAan",
-      "section_heading": "Vraag vrijblijvend een offerte aan",
-      "label": "Advies",
-      "href": "#contactSectLatenWeBeginnen",
-      "link_type": "interne-sectie",
-      "target_page": "Contact",
-      "target_section": "contactSectLatenWeBeginnen",
-      "form_id": "",
-      "note": ""
-    },
-    {
       "id": "contactSectLatenWeBeginnenBtn01Versturen",
       "element": "button",
       "page": "Contact",
       "file": "contact.html",
       "page_number": 7,
-      "section_number": 2,
+      "section_number": 1,
       "section_id": "contactSectLatenWeBeginnen",
       "section_heading": "Laten we beginnen",
       "label": "Versturen",
@@ -4627,45 +4206,8 @@
   ],
   "validation": {
     "duplicate_ids": [],
-    "missing_primary_headings": [
-      {
-        "file": "zonnepanelen.html",
-        "section_id": "zonnepanelenSectSlaOvertolligeStroomOp",
-        "heading_id": "zonnepanelenSectSlaOvertolligeStroomOpH2"
-      }
-    ],
-    "missing_internal_targets": [
-      {
-        "button_id": "homeSectRecentWerkBtn01Bekijk",
-        "href": "#linkNogToevoegen",
-        "expected_file": "index.html",
-        "expected_id": "linkNogToevoegen"
-      },
-      {
-        "button_id": "homeSectRecentWerkBtn04Bekijk",
-        "href": "#linkNogToevoegen",
-        "expected_file": "index.html",
-        "expected_id": "linkNogToevoegen"
-      },
-      {
-        "button_id": "homeSectRecentWerkBtn02Bekijk",
-        "href": "#linkNogToevoegen",
-        "expected_file": "index.html",
-        "expected_id": "linkNogToevoegen"
-      },
-      {
-        "button_id": "homeSectRecentWerkBtn03Bekijk",
-        "href": "#linkNogToevoegen",
-        "expected_file": "index.html",
-        "expected_id": "linkNogToevoegen"
-      },
-      {
-        "button_id": "homeSectRecentWerkBtn01AlleProjecten",
-        "href": "#linkNogToevoegen",
-        "expected_file": "index.html",
-        "expected_id": "linkNogToevoegen"
-      }
-    ],
+    "missing_primary_headings": [],
+    "missing_internal_targets": [],
     "title_differences": [
       {
         "file": "index.html",

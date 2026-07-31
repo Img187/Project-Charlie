@@ -194,7 +194,7 @@ body.hoogContrast :focus-visible { outline: 3px solid #000; outline-offset: 3px;
 .primaireNavigatieSubmenu.isOpen {
   display: grid;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
   .primaireNavigatieLijst { display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap; }
   .primaireNavigatieLijst a,
   .primaireNavigatieLijst button {
@@ -222,7 +222,7 @@ body.hoogContrast :focus-visible { outline: 3px solid #000; outline-offset: 3px;
     text-align: left;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1023px), (hover: none) and (pointer: coarse) {
   .navigatieMenuKnop { width: 52px; min-width: 52px; min-height: 52px; padding: 0; }
   .primaireNavigatieLijst { width: 100%; }
   .primaireNavigatieSubmenu {
@@ -280,7 +280,7 @@ body.hoogContrast .siteLogoAfbeelding { filter: grayscale(1) contrast(1.35); }
 body.hoogContrast .hoofdNavigatieContact { border-color: #000; background: var(--sparkyOranje); color: #000; }
 body.hoogContrast .hoofdNavigatieContact:hover,
 body.hoogContrast .hoofdNavigatieContact:focus-visible { background: var(--sparkyOranje); color: #000; filter: brightness(1.08); }
-@media (max-width: 1023px) {
+@media (max-width: 1023px), (hover: none) and (pointer: coarse) {
   .toegankelijkheidSubmenu { position: absolute; inset-inline-end: 0; width: min(220px, calc(100vw - 32px)); }
 }
 @media (max-width: 380px) {
@@ -360,31 +360,16 @@ body.tekstGroot .overOnsHeroVolledigeBreedte { min-height: auto; }
 .overOnsSectRotterdamseMentaliteitLandelijkeServiceKop .sectieIntro { max-width: none; margin: 0; }
 .overOnsSectRotterdamseMentaliteitLandelijkeServiceKop .sectieTitel { text-wrap: balance; }
 .overOnsSectRotterdamseMentaliteitLandelijkeServiceKop .sectieIntro { max-width: 62ch; }
-.overOnsSectRotterdamseMentaliteitLandelijkeServiceLijst { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(34px, 5vw, 64px) clamp(24px, 3vw, 40px); margin: clamp(44px, 7vw, 80px) 0 0; padding: 0; list-style: none; }
-.overOnsSectRotterdamseMentaliteitLandelijkeServiceLijst > li { min-width: 0; }
-.overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart { height: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
-.overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart h3 { max-width: 22ch; font-size: clamp(1.25rem, 1.08rem + .7vw, 1.75rem); line-height: 1.2; }
-.overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart p { max-width: 38ch; margin-block-start: clamp(12px, 2vw, 16px); }
-body.hoogContrast .overOnsSectRotterdamseMentaliteitLandelijkeService,
-body.hoogContrast .overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart { border: 0; background: transparent; box-shadow: none; }
+body.hoogContrast .overOnsSectRotterdamseMentaliteitLandelijkeService { border: 0; background: transparent; box-shadow: none; }
 body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte::after { display: none; }
 body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .overOnsHeroAchtergrond { background: #000; }
 body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .overOnsHeroAchtergrondAfbeelding { filter: grayscale(1) contrast(1.35) brightness(.5); }
 body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .sectieTitel,
-body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .sectieIntro,
-body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart h3,
-body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart p { color: #fff; text-shadow: 0 2px 8px rgba(0, 0, 0, .9); }
-@media (min-width: 600px) {
-  .overOnsSectRotterdamseMentaliteitLandelijkeServiceLijst { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
+body.hoogContrast .overOnsAchtergrondSectieVolledigeBreedte .sectieIntro { color: #fff; text-shadow: 0 2px 8px rgba(0, 0, 0, .9); }
 @media (min-width: 768px) {
   .overOnsSectRotterdamseMentaliteitLandelijkeServiceKop { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(48px, 8vw, 96px); }
 }
-@media (min-width: 1024px) {
-  .overOnsSectRotterdamseMentaliteitLandelijkeServiceLijst { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
-body.tekstGroot .overOnsSectRotterdamseMentaliteitLandelijkeServiceKop,
-body.tekstGroot .overOnsSectRotterdamseMentaliteitLandelijkeServiceLijst { grid-template-columns: minmax(0, 1fr); }
+body.tekstGroot .overOnsSectRotterdamseMentaliteitLandelijkeServiceKop { grid-template-columns: minmax(0, 1fr); }
 .overOnsSectWatWijDoenKop { width: min(720px, 100%); max-width: none; margin-inline: auto; text-align: center; }
 .overOnsSectWatWijDoenKop .sectieTitel,
 .overOnsSectWatWijDoenKop .sectieIntro { max-width: none; margin-inline: auto; }
@@ -412,7 +397,7 @@ body.hoogContrast .overOnsSectWatWijDoenLink:focus-visible { outline-color: #000
 @media (min-width: 600px) {
   .overOnsSectWatWijDoenLijst { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
   .overOnsSectWatWijDoenLijst { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 body.tekstGroot .overOnsSectWatWijDoenLijst { grid-template-columns: minmax(0, 1fr); }
@@ -454,19 +439,22 @@ body.hoogContrast .homeHeroScrollMediaLabel { border: 2px solid #000; background
   .homeHeroReferentieGrid .sectionActies { justify-content: flex-start; }
 }
 @supports (clip-path: inset(0 0 0 50%)) {
-  @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  @media (min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
     body:not(.tekstGroot) .homeHeroReferentieGrid.isScrollAfbeeldingActief { position: relative; isolation: isolate; overflow: visible; }
     body:not(.tekstGroot) .homeHeroReferentieGrid.isScrollAfbeeldingActief .homeHeroScrollInhoud { position: relative; z-index: 1; grid-column: 1; grid-row: 1; }
     body:not(.tekstGroot) .homeHeroReferentieGrid.isScrollAfbeeldingActief .homeHeroScrollMedia { position: absolute; z-index: 2; grid-column: 1 / -1; grid-row: 1; inset-block: 0; inset-inline-start: var(--scroll-volledige-breedte-offset-links, 0); width: var(--scroll-volledige-breedte, 100%); height: 100%; min-height: 100%; border-radius: 0; clip-path: inset(0 var(--scroll-afbeelding-inset-rechts, 50%) 0 var(--scroll-afbeelding-inset-links, 0) round var(--scroll-afbeelding-radius, 10px)); will-change: clip-path; }
   }
 }
 .kenmerkKaartenSectie.layoutFeatures { padding-block-start: var(--sectieRuimte); }
+.kenmerkKaartenSectie .kenmerkKaartLijstTweeKolommen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 767px) {
   .kenmerkKaartenSectie .kenmerkKaartLijst { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; gap: clamp(10px, 3vw, 16px); margin-block-start: 24px; }
   .kenmerkKaartLijst > .kaartLijstItem { height: auto; min-height: 0; aspect-ratio: 1; overflow: hidden; }
   .kenmerkKaart { display: flex; min-width: 0; flex-direction: column; align-items: center; justify-content: center; padding: clamp(9px, 3.2vw, 16px); }
   .kenmerkKaart h3 { font-size: clamp(.8rem, 3.6vw, 1.05rem); line-height: 1.14; overflow-wrap: anywhere; text-wrap: balance; }
   .kenmerkKaart p { margin-block-start: clamp(6px, 1.8vw, 9px); font-size: clamp(.67rem, 2.75vw, .84rem); line-height: 1.28; overflow-wrap: anywhere; }
+  .kenmerkKaartenSectie .kenmerkKaartLijstAutoHoogte > .kaartLijstItem { min-height: calc((100vw - 58px) / 2); aspect-ratio: auto; overflow: visible; }
+  .kenmerkKaartenSectie .kenmerkKaartLijstAutoHoogte > .kaartLijstItem > .kenmerkKaart { height: auto; min-height: 100%; }
   body.tekstGroot .kenmerkKaartLijst > .kaartLijstItem { aspect-ratio: auto; min-height: calc((100vw - 58px) / 2); }
   body.tekstGroot .kenmerkKaart h3,
   body.tekstGroot .kenmerkKaart p { font-size: inherit; }
@@ -591,13 +579,6 @@ body.hoogContrast .homeSectRecentWerkProjectAfbeelding { filter: grayscale(1) co
 .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKop .sectieTitel,
 .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKop .sectieIntro { margin: 0; }
 .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKop .sectieIntro { max-width: 62ch; }
-.thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen .kaartLijst { grid-auto-rows: 1fr; align-items: stretch; gap: clamp(18px, 2.5vw, 28px); margin-block-start: clamp(36px, 5vw, 56px); }
-.thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen .kaartLijstItem { min-width: 0; height: 100%; }
-.thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKaart { display: flex; min-width: 0; height: 100%; flex-direction: column; align-items: flex-start; padding: clamp(24px, 3vw, 34px); overflow: hidden; border: 0; border-radius: 10px; background: transparent; box-shadow: none; }
-.thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKaart .kaartIcoon { display: inline-grid; width: 56px; height: 56px; flex: none; place-items: center; margin-block-end: clamp(20px, 3vw, 28px); border: 2px solid var(--sparkyOranje); border-radius: 10px; background: var(--sparkyOranje); color: #111; line-height: 1; }
-.thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKaart .kaartIcoon svg { display: block; width: 29px; height: 29px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKaart h3 { max-width: 18ch; }
-.thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKaart p { margin-block-start: 14px; }
 .thuisbatterijSectVoorWoningEnBedrijfKop,
 .thuisbatterijSectHoeWerktEenThuisbatterijKop { width: 100%; max-width: 900px; margin-inline: auto; text-align: center; }
 .thuisbatterijSectVoorWoningEnBedrijfKop .sectieTitel,
@@ -628,11 +609,9 @@ body.hoogContrast .homeSectRecentWerkProjectAfbeelding { filter: grayscale(1) co
 .thuisbatterijSectHoeWerktEenThuisbatterij .thuisbatterijSectHoeWerktEenThuisbatterijMedia .thuisbatterijMediaPlaceholderAfbeelding { object-fit: cover; }
 body.hoogContrast .thuisbatterijMediaPlaceholder,
 body.hoogContrast .thuisbatterijSplitKaart { border: 2px solid #000; background: #fff; box-shadow: none; }
-body.hoogContrast .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKaart { border: 0; background: transparent; box-shadow: none; }
 body.hoogContrast .thuisbatterijSplitKaart .thuisbatterijMediaPlaceholder { border: 0; }
 body.hoogContrast .thuisbatterijMediaPlaceholderAfbeelding { filter: grayscale(1) contrast(1.35); }
 body.hoogContrast .thuisbatterijMediaPlaceholderLabel { border: 2px solid #000; background: var(--sparkyOranje); color: #000; box-shadow: none; }
-body.hoogContrast .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKaart .kaartIcoon { border: 2px solid #000; color: #000; }
 body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf { background: #fff; }
 body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf .thuisbatterijSplitKaart,
 body.hoogContrast .thuisbatterijSectHoeWerktEenThuisbatterij .thuisbatterijSplitKaart { border: 0; background: transparent; box-shadow: none; }
@@ -665,8 +644,7 @@ body.hoogContrast .thuisbatterijSectHoeWerktEenThuisbatterij .thuisbatterijSectH
   .thuisbatterijSectHoeWerktEenThuisbatterij .thuisbatterijSplitKaart.thuisbatterijSplitKaartMediaLinks .thuisbatterijSplitKaartInhoud { grid-column: 1; grid-row: 1; }
   .thuisbatterijSectHoeWerktEenThuisbatterij .thuisbatterijSplitKaart.thuisbatterijSplitKaartMediaLinks .thuisbatterijSplitKaartMedia { grid-column: 1; grid-row: 2; }
 }
-body.tekstGroot .thuisbatterijSplitKaart,
-body.tekstGroot .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparen .kaartLijst { grid-template-columns: minmax(0, 1fr); }
+body.tekstGroot .thuisbatterijSplitKaart { grid-template-columns: minmax(0, 1fr); }
 body.tekstGroot .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKop { grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 4vw, 40px); }
 body.tekstGroot .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKop .sectieTitel,
 body.tekstGroot .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKop .sectieIntro { grid-column: 1; }
@@ -805,13 +783,6 @@ body.tekstGroot .elektrotechnischeRenovatiesSectZoWerkenWijTijdlijn { grid-colum
 .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKop .sectieTitel,
 .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKop .sectieIntro { margin: 0; }
 .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKop .sectieIntro { max-width: 62ch; }
-.zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDak .kaartLijst { grid-auto-rows: 1fr; align-items: stretch; gap: clamp(18px, 2.5vw, 28px); margin-block-start: clamp(36px, 5vw, 56px); }
-.zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDak .kaartLijstItem { min-width: 0; height: 100%; }
-.zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDak .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKaart { display: flex; min-width: 0; height: 100%; flex-direction: column; align-items: flex-start; padding: clamp(24px, 3vw, 34px); overflow: hidden; border: 0; border-radius: 10px; background: transparent; box-shadow: none; }
-.zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKaart .kaartIcoon { display: inline-grid; width: 56px; height: 56px; flex: none; place-items: center; margin-block-end: clamp(20px, 3vw, 28px); border: 2px solid var(--sparkyOranje); border-radius: 10px; background: var(--sparkyOranje); color: #111; line-height: 1; }
-.zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKaart .kaartIcoon svg { display: block; width: 29px; height: 29px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKaart h3 { max-width: 18ch; align-self: flex-start; }
-.zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKaart p { margin-block-start: 14px; }
 .zonnepanelenSplitKaart { display: grid; min-width: 0; padding: 0; overflow: hidden; border: 0; border-radius: 10px; background: var(--kleurKaart); box-shadow: none; }
 .zonnepanelenSplitKaartInhoud { display: flex; min-width: 0; flex-direction: column; justify-content: center; padding: clamp(28px, 4vw, 56px); background: var(--kleurKaart); }
 .zonnepanelenSectieMedia { position: relative; min-width: 0; min-height: clamp(260px, 62vw, 380px); margin: 0; overflow: hidden; border: 0; border-radius: 10px; background: var(--sparkyLichtGrijs); box-shadow: none; }
@@ -864,8 +835,6 @@ body.tekstGroot .zonnepanelenHeroSplitKaart .sectionActies { justify-content: ce
 .zonnepanelenSectHoeWerkenZonnepanelen .zonnepanelenSplitKaartInhoud { display: block; grid-column: 1; grid-row: 1; padding: 0; background: transparent; }
 .zonnepanelenSectHoeWerkenZonnepanelen .zonnepanelenSectHoeWerkenZonnepanelenMedia { grid-column: 1; grid-row: 2; width: 100%; height: clamp(360px, 52vw, 680px); min-height: 0; border: 0; border-radius: 10px; background: var(--sparkyDonkerBlauw); box-shadow: none; }
 .zonnepanelenSectHoeWerkenZonnepanelenMedia .zonnepanelenSectieMediaAfbeelding { object-fit: cover; }
-body.hoogContrast .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDak .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKaart { border: 0; background: transparent; box-shadow: none; }
-body.hoogContrast .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKaart .kaartIcoon { border: 2px solid #000; background: var(--sparkyOranje); color: #000; }
 body.hoogContrast .zonnepanelenSectieMediaAfbeelding { filter: grayscale(1) contrast(1.35); }
 body.hoogContrast .zonnepanelenSectieMediaLabel { border: 2px solid #000; background: var(--sparkyOranje); color: #000; box-shadow: none; }
 body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatie { min-height: 0; border: 0; background: #fff; }
@@ -881,7 +850,6 @@ body.hoogContrast .zonnepanelenSectHoeWerkenZonnepanelen .zonnepanelenSectHoeWer
   .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKop .sectieTitel { grid-column: 1; }
   .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKop .sectieIntro { grid-column: 2; }
 }
-body.tekstGroot .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDak .kaartLijst { grid-template-columns: minmax(0, 1fr); }
 body.tekstGroot .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKop { grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 4vw, 40px); }
 body.tekstGroot .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKop .sectieTitel,
 body.tekstGroot .zonnepanelenSectProfiteerVanDuurzameEnergieUitEigenDakKop .sectieIntro { grid-column: 1; }
@@ -979,9 +947,9 @@ body.hoogContrast .thuisbatterijEmsKaartAfbeelding { filter: grayscale(1) contra
   .thuisbatterijEmsScrollKaart:nth-child(even) .thuisbatterijEmsKaartInhoud { order: 2; }
   .thuisbatterijEmsScrollKaart:nth-child(even) .thuisbatterijEmsKaartMedia { order: 1; }
 }
-@media (prefers-reduced-motion: no-preference) {
+@media (min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .thuisbatterijEmsKaartLijst { display: block; }
-  .thuisbatterijEmsScrollKaart { position: sticky; top: clamp(112px, 14vh, 148px); margin-block-end: 10vh; }
+  .thuisbatterijEmsScrollKaart { position: sticky; top: clamp(156px, 14vh, 172px); margin-block-end: 10vh; scroll-margin-top: 164px; }
   .thuisbatterijEmsScrollKaart:last-child { margin-block-end: 0; }
   .thuisbatterijEmsScrollKaart:nth-child(1) { z-index: 1; }
   .thuisbatterijEmsScrollKaart:nth-child(2) { z-index: 2; }
@@ -1017,9 +985,9 @@ body.hoogContrast .zonnepanelenOpslagKaartAfbeelding { filter: grayscale(1) cont
   .zonnepanelenOpslagScrollKaart:nth-child(even) .zonnepanelenOpslagKaartInhoud { order: 2; }
   .zonnepanelenOpslagScrollKaart:nth-child(even) .zonnepanelenOpslagKaartMedia { order: 1; }
 }
-@media (prefers-reduced-motion: no-preference) {
+@media (min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .zonnepanelenOpslagKaartLijst { display: block; }
-  .zonnepanelenOpslagScrollKaart { position: sticky; top: clamp(112px, 14vh, 148px); margin-block-end: 10vh; }
+  .zonnepanelenOpslagScrollKaart { position: sticky; top: clamp(156px, 14vh, 172px); margin-block-end: 10vh; scroll-margin-top: 164px; }
   .zonnepanelenOpslagScrollKaart:last-child { margin-block-end: 0; }
   .zonnepanelenOpslagScrollKaart:nth-child(1) { z-index: 1; }
   .zonnepanelenOpslagScrollKaart:nth-child(2) { z-index: 2; }
@@ -1039,13 +1007,6 @@ body.tekstGroot .zonnepanelenSectSlaOvertolligeStroomOp .zonnepanelenOpslagKaart
 .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKop .sectieTitel,
 .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKop .sectieIntro { margin: 0; }
 .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKop .sectieIntro { max-width: 62ch; }
-.laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatie .kaartLijst { grid-auto-rows: 1fr; align-items: stretch; gap: clamp(18px, 2.5vw, 28px); margin-block-start: clamp(36px, 5vw, 56px); }
-.laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatie .kaartLijstItem { min-width: 0; height: 100%; }
-.laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatie .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKaart { display: flex; min-width: 0; height: 100%; flex-direction: column; align-items: flex-start; padding: clamp(24px, 3vw, 34px); overflow: hidden; border: 0; border-radius: 10px; background: transparent; box-shadow: none; }
-.laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKaart .kaartIcoon { display: inline-grid; width: 56px; height: 56px; flex: none; place-items: center; margin-block-end: clamp(20px, 3vw, 28px); border: 2px solid var(--sparkyOranje); border-radius: 10px; background: var(--sparkyOranje); color: #111; line-height: 1; }
-.laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKaart .kaartIcoon svg { display: block; width: 29px; height: 29px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKaart h3 { max-width: 18ch; align-self: flex-start; }
-.laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKaart p { margin-block-start: 14px; }
 .laadpalenSectieMedia { position: relative; min-width: 0; min-height: clamp(260px, 62vw, 380px); margin: 0; overflow: hidden; border: 0; border-radius: 10px; background: var(--sparkyLichtGrijs); box-shadow: none; }
 .laadpalenSectieMediaAfbeelding { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
 .laadpalenSectieMediaLabel { position: absolute; z-index: 1; inset: auto 16px 16px auto; margin: 0; padding: 8px 12px; border-radius: 10px; background: var(--sparkyOranje); color: #111; font-family: var(--fontKop); font-size: .9rem; font-weight: 700; line-height: 1; box-shadow: 0 6px 20px rgba(5, 28, 45, .2); }
@@ -1091,10 +1052,10 @@ body.tekstGroot .laadpalenStandardSplitKaart .sectionActies { justify-content: c
 body.hoogContrast .laadpalenStandardSplitKaart.laadpalenZakelijkSplitKaart { border: 0; background: transparent; box-shadow: none; }
 body.hoogContrast .laadpalenStandardSplitKaart.laadpalenZakelijkSplitKaart .laadpalenSplitKaartInhoud { background: transparent; }
 @supports (clip-path: inset(0 50% 0 0)) {
-  @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
-    body:not(.hoogContrast):not(.tekstGroot) .laadpalenZakelijkSplitKaart.isScrollAfbeeldingActief { position: relative; isolation: isolate; overflow: hidden; border-radius: 10px; }
-    body:not(.hoogContrast):not(.tekstGroot) .laadpalenZakelijkSplitKaart.isScrollAfbeeldingActief .laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagensMedia { position: absolute; z-index: 2; inset: 0; grid-column: auto; grid-row: auto; width: 100%; height: 100%; min-height: 100%; aspect-ratio: auto; clip-path: inset(0 var(--scroll-afbeelding-inset, 50%) 0 0 round 10px); will-change: clip-path; }
-    body:not(.hoogContrast):not(.tekstGroot) .laadpalenZakelijkSplitKaart.isScrollAfbeeldingActief .laadpalenSplitKaartInhoud { position: relative; z-index: 1; grid-column: 2; grid-row: 1; }
+  @media (min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    body:not(.tekstGroot) .laadpalenZakelijkSplitKaart.isScrollAfbeeldingActief { position: relative; isolation: isolate; overflow: hidden; border-radius: 10px; }
+    body:not(.tekstGroot) .laadpalenZakelijkSplitKaart.isScrollAfbeeldingActief .laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagensMedia { position: absolute; z-index: 2; inset: 0; grid-column: auto; grid-row: auto; width: 100%; height: 100%; min-height: 100%; aspect-ratio: auto; clip-path: inset(0 var(--scroll-afbeelding-inset, 50%) 0 0 round 10px); will-change: clip-path; }
+    body:not(.tekstGroot) .laadpalenZakelijkSplitKaart.isScrollAfbeeldingActief .laadpalenSplitKaartInhoud { position: relative; z-index: 1; grid-column: 2; grid-row: 1; }
   }
 }
 .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie { position: relative; width: 100%; max-width: none; min-height: clamp(320px, 31vw, 410px); margin-inline: 0; padding-block: 0; overflow: hidden; border: 0; background: var(--sparkyDonkerBlauw); box-shadow: none; }
@@ -1107,8 +1068,6 @@ body.hoogContrast .laadpalenStandardSplitKaart.laadpalenZakelijkSplitKaart .laad
 .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie .sectionActies { position: relative; z-index: 1; justify-content: center; margin-block-start: clamp(24px, 3vw, 32px); }
 .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieMedia { position: absolute; z-index: 0; inset: 0; grid-column: 1; grid-row: 1; width: 100%; height: 100%; min-height: 100%; border: 0; border-radius: 0; background: var(--sparkyDonkerBlauw); box-shadow: none; }
 .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieMedia .laadpalenSectieMediaAfbeelding { filter: brightness(.42) saturate(.9); }
-body.hoogContrast .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatie .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKaart { border: 0; background: transparent; box-shadow: none; }
-body.hoogContrast .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKaart .kaartIcoon { border: 2px solid #000; background: var(--sparkyOranje); color: #000; }
 body.hoogContrast .laadpalenSectieMediaAfbeelding { filter: grayscale(1) contrast(1.35); }
 body.hoogContrast .laadpalenSectieMediaLabel { border: 2px solid #000; background: var(--sparkyOranje); color: #000; box-shadow: none; }
 body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie,
@@ -1121,7 +1080,6 @@ body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatieKop > p {
   .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKop .sectieTitel { grid-column: 1; }
   .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKop .sectieIntro { grid-column: 2; }
 }
-body.tekstGroot .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatie .kaartLijst { grid-template-columns: minmax(0, 1fr); }
 body.tekstGroot .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKop { grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 4vw, 40px); }
 body.tekstGroot .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKop .sectieTitel,
 body.tekstGroot .laadpalenSectLaadUwElektrischeAutoVeiligEnGemakkelijkOpEigenLocatieKop .sectieIntro { grid-column: 1; }
@@ -1153,9 +1111,9 @@ body.hoogContrast .laadpalenSectSlimLadenVeiligVoordeligEnEfficientKop .sectieLe
   .laadpalenSlimLadenScrollKaart:nth-child(even) .laadpalenSlimLadenKaartInhoud { order: 2; }
   .laadpalenSlimLadenScrollKaart:nth-child(even) .laadpalenSlimLadenKaartMedia { order: 1; }
 }
-@media (prefers-reduced-motion: no-preference) {
+@media (min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .laadpalenSlimLadenKaartLijst { display: block; }
-  .laadpalenSlimLadenScrollKaart { position: sticky; top: clamp(112px, 14vh, 148px); margin-block-end: 10vh; }
+  .laadpalenSlimLadenScrollKaart { position: sticky; top: clamp(156px, 14vh, 172px); margin-block-end: 10vh; scroll-margin-top: 164px; }
   .laadpalenSlimLadenScrollKaart:last-child { margin-block-end: 0; }
   .laadpalenSlimLadenScrollKaart:nth-child(1) { z-index: 1; }
   .laadpalenSlimLadenScrollKaart:nth-child(2) { z-index: 2; }
@@ -1194,9 +1152,9 @@ body.hoogContrast .elektrotechnischeRenovatiesGasKaartAfbeelding { filter: grays
   .elektrotechnischeRenovatiesGasScrollKaart:nth-child(even) .elektrotechnischeRenovatiesGasKaartInhoud { order: 2; }
   .elektrotechnischeRenovatiesGasScrollKaart:nth-child(even) .elektrotechnischeRenovatiesGasKaartMedia { order: 1; }
 }
-@media (prefers-reduced-motion: no-preference) {
+@media (min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .elektrotechnischeRenovatiesGasKaartLijst { display: block; }
-  .elektrotechnischeRenovatiesGasScrollKaart { position: sticky; top: clamp(112px, 14vh, 148px); margin-block-end: 10vh; }
+  .elektrotechnischeRenovatiesGasScrollKaart { position: sticky; top: clamp(156px, 14vh, 172px); margin-block-end: 10vh; scroll-margin-top: 164px; }
   .elektrotechnischeRenovatiesGasScrollKaart:last-child { margin-block-end: 0; }
   .elektrotechnischeRenovatiesGasScrollKaart:nth-child(1) { z-index: 1; }
   .elektrotechnischeRenovatiesGasScrollKaart:nth-child(2) { z-index: 2; }
@@ -1252,20 +1210,9 @@ body.tekstGroot .elektrotechnischeRenovatiesHeroSplitKaart .sectionActies { just
 .elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoningKop { width: 100%; max-width: none; }
 .elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoningKop .sectieTitel { max-width: 16ch; text-wrap: balance; }
 .elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoningKop .sectieIntro { max-width: 62ch; margin-block-start: clamp(18px, 3vw, 26px); }
-.elektrotechnischeRenovatiesGroepenkastKenmerkLijst { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(24px, 4vw, 40px); margin: clamp(28px, 4vw, 40px) 0 0; padding: 0; list-style: none; }
-.elektrotechnischeRenovatiesGroepenkastKenmerkLijst > li { min-width: 0; }
-.elektrotechnischeRenovatiesGroepenkastKenmerk { height: 100%; padding: 0; border: 0; background: transparent; box-shadow: none; }
-.elektrotechnischeRenovatiesGroepenkastIcoon { display: inline-grid; width: 56px; height: 56px; place-items: center; margin-block-end: clamp(18px, 3vw, 24px); border: 2px solid var(--sparkyOranje); border-radius: 10px; background: var(--sparkyOranje); color: #111; line-height: 1; }
-.elektrotechnischeRenovatiesGroepenkastIcoon svg { display: block; width: 29px; height: 29px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.elektrotechnischeRenovatiesGroepenkastKenmerk h3 { max-width: 18ch; }
-.elektrotechnischeRenovatiesGroepenkastKenmerk p { margin-block-start: 12px; }
 .elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoning .sectionActies { margin-block-start: clamp(28px, 4vw, 40px); }
 body.hoogContrast .elektrotechnischeRenovatiesSectGroepenkastHetHartVanUwWoning { border: 0; background: transparent; box-shadow: none; }
 body.hoogContrast .elektrotechnischeRenovatiesGroepenkastMedia { border: 2px solid #000; background: #fff; box-shadow: none; }
-body.hoogContrast .elektrotechnischeRenovatiesGroepenkastIcoon { border-color: #000; background: var(--sparkyOranje); color: #000; }
-@media (min-width: 600px) {
-  .elektrotechnischeRenovatiesGroepenkastKenmerkLijst { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
 @media (min-width: 768px) {
   .elektrotechnischeRenovatiesGroepenkastGrid { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); column-gap: clamp(48px, 8vw, 96px); row-gap: 0; align-items: stretch; }
   .elektrotechnischeRenovatiesGroepenkastMedia { order: 1; grid-column: 1; grid-row: 1; min-height: clamp(520px, 55vw, 680px); aspect-ratio: auto; }
@@ -1274,7 +1221,6 @@ body.hoogContrast .elektrotechnischeRenovatiesGroepenkastIcoon { border-color: #
 body.tekstGroot .elektrotechnischeRenovatiesGroepenkastGrid { grid-template-columns: minmax(0, 1fr); gap: clamp(36px, 6vw, 80px); }
 body.tekstGroot .elektrotechnischeRenovatiesGroepenkastInhoud { order: 1; display: block; grid-column: 1; grid-row: 1; }
 body.tekstGroot .elektrotechnischeRenovatiesGroepenkastMedia { order: 2; grid-column: 1; grid-row: 2; min-height: clamp(300px, 72vw, 440px); aspect-ratio: 4 / 3; }
-body.tekstGroot .elektrotechnischeRenovatiesGroepenkastKenmerkLijst { grid-template-columns: minmax(0, 1fr); }
 .elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeft { border: 0; background: transparent; box-shadow: none; }
 .elektrotechnischeRenovatiesExtraElektraGrid { display: grid; grid-template-columns: minmax(0, 1fr); min-width: 0; gap: clamp(36px, 6vw, 80px); align-items: center; }
 .elektrotechnischeRenovatiesExtraElektraInhoud { min-width: 0; }
@@ -1282,20 +1228,9 @@ body.tekstGroot .elektrotechnischeRenovatiesGroepenkastKenmerkLijst { grid-templ
 .elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeftKop { width: 100%; max-width: none; }
 .elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeftKop .sectieTitel { max-width: 16ch; text-wrap: balance; }
 .elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeftKop .sectieIntro { max-width: 62ch; margin-block-start: clamp(18px, 3vw, 26px); }
-.elektrotechnischeRenovatiesExtraElektraKenmerkLijst { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(24px, 4vw, 40px); margin: clamp(28px, 4vw, 40px) 0 0; padding: 0; list-style: none; }
-.elektrotechnischeRenovatiesExtraElektraKenmerkLijst > li { min-width: 0; }
-.elektrotechnischeRenovatiesExtraElektraKenmerk { height: 100%; padding: 0; border: 0; background: transparent; box-shadow: none; }
-.elektrotechnischeRenovatiesExtraElektraIcoon { display: inline-grid; width: 56px; height: 56px; place-items: center; margin-block-end: clamp(18px, 3vw, 24px); border: 2px solid var(--sparkyOranje); border-radius: 10px; background: var(--sparkyOranje); color: #111; line-height: 1; }
-.elektrotechnischeRenovatiesExtraElektraIcoon svg { display: block; width: 29px; height: 29px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.elektrotechnischeRenovatiesExtraElektraKenmerk h3 { max-width: 18ch; }
-.elektrotechnischeRenovatiesExtraElektraKenmerk p { margin-block-start: 12px; }
 .elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeft .sectionActies { margin-block-start: clamp(28px, 4vw, 40px); }
 body.hoogContrast .elektrotechnischeRenovatiesSectExtraElektraWaarUHetNodigHeeft { border: 0; background: transparent; box-shadow: none; }
 body.hoogContrast .elektrotechnischeRenovatiesExtraElektraMedia { border: 2px solid #000; background: #fff; box-shadow: none; }
-body.hoogContrast .elektrotechnischeRenovatiesExtraElektraIcoon { border-color: #000; background: var(--sparkyOranje); color: #000; }
-@media (min-width: 600px) {
-  .elektrotechnischeRenovatiesExtraElektraKenmerkLijst { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
 @media (min-width: 768px) {
   .elektrotechnischeRenovatiesExtraElektraGrid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); column-gap: clamp(48px, 8vw, 96px); row-gap: 0; align-items: stretch; }
   .elektrotechnischeRenovatiesExtraElektraInhoud { display: flex; grid-column: 1; grid-row: 1; flex-direction: column; justify-content: center; }
@@ -1304,32 +1239,18 @@ body.hoogContrast .elektrotechnischeRenovatiesExtraElektraIcoon { border-color: 
 body.tekstGroot .elektrotechnischeRenovatiesExtraElektraGrid { grid-template-columns: minmax(0, 1fr); gap: clamp(36px, 6vw, 80px); }
 body.tekstGroot .elektrotechnischeRenovatiesExtraElektraInhoud { display: block; grid-column: 1; grid-row: 1; }
 body.tekstGroot .elektrotechnischeRenovatiesExtraElektraMedia { grid-column: 1; grid-row: 2; min-height: clamp(300px, 72vw, 440px); aspect-ratio: 4 / 3; }
-body.tekstGroot .elektrotechnischeRenovatiesExtraElektraKenmerkLijst { grid-template-columns: minmax(0, 1fr); }
 .elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden { border: 0; background: transparent; box-shadow: none; }
 .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKop { display: grid; width: 100%; max-width: none; grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 4vw, 40px); align-items: start; }
 .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKop .sectieTitel,
 .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKop .sectieIntro { max-width: none; margin: 0; }
 .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKop .sectieTitel { text-wrap: balance; }
 .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKop .sectieIntro { max-width: 62ch; }
-.elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenLijst { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(34px, 5vw, 64px) clamp(24px, 3vw, 40px); margin: clamp(44px, 7vw, 80px) 0 0; padding: 0; list-style: none; }
-.elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenLijst > li { min-width: 0; }
-.elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKaart { height: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
-.elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKaart h3 { max-width: 22ch; font-size: clamp(1.25rem, 1.08rem + .7vw, 1.75rem); line-height: 1.2; }
-.elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKaart p { max-width: 38ch; margin-block-start: clamp(12px, 2vw, 16px); }
 .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenActies { margin-block-start: clamp(44px, 7vw, 80px); }
-body.hoogContrast .elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden,
-body.hoogContrast .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKaart { border: 0; background: transparent; box-shadow: none; }
-@media (min-width: 600px) {
-  .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenLijst { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
+body.hoogContrast .elektrotechnischeRenovatiesSectElektraVoorBedrijfspanden { border: 0; background: transparent; box-shadow: none; }
 @media (min-width: 768px) {
   .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKop { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(48px, 8vw, 96px); }
 }
-@media (min-width: 1024px) {
-  .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenLijst { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
-body.tekstGroot .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKop,
-body.tekstGroot .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenLijst { grid-template-columns: minmax(0, 1fr); }
+body.tekstGroot .elektrotechnischeRenovatiesSectElektraVoorBedrijfspandenKop { grid-template-columns: minmax(0, 1fr); }
 .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomst { border: 0; background: transparent; box-shadow: none; }
 .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop { display: grid; width: 100%; max-width: none; gap: clamp(20px, 4vw, 40px); align-items: start; }
 .elektrotechnischeRenovatiesSectZorgeloosVoorbereidOpEenDuurzameToekomstKop .sectieTitel,
@@ -1435,8 +1356,8 @@ body.tekstGroot .contactKeuzeRaster { grid-template-columns: minmax(0, 1fr); }
 .footerCertificeringLijst { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; margin: 0; padding: 0; list-style: none; }
 .footerCertificeringLijst li { display: grid; min-width: 0; min-height: 96px; place-items: center; padding: 10px; border-radius: 10px; background: #fff; }
 .footerCertificeringLogo { display: block; width: min(116px, 100%); height: 76px; object-fit: contain; }
-.footerLocatie { width: min(260px, 100%); justify-self: center; }
-.footerKaart { display: block; width: 100%; height: auto; border: 0; border-radius: 10px; aspect-ratio: 3 / 4; background: #fff; }
+.footerLocatie { position: relative; isolation: isolate; width: min(260px, 100%); aspect-ratio: 3 / 4; justify-self: center; overflow: hidden; border-radius: 10px; background: #fff; }
+.footerKaart { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; border-radius: 10px; aspect-ratio: auto; background: #fff; }
 .footerSitemap h2 { color: #fff; font-size: clamp(1.35rem, 2vw, 1.8rem); }
 .footerNavigatieLijst { display: grid; gap: 7px; margin: 20px 0 0; padding: 0; list-style: none; }
 .footerNavigatieLijst a { display: inline-flex; width: fit-content; color: #fff; text-decoration: none; transition: color .18s ease; }
@@ -1461,22 +1382,20 @@ body.hoogContrast .footerNavigatieLijst a:hover { color: var(--sparkyOranje); te
   .footerCertificeringen { grid-column: 1 / -1; grid-row: 3; }
   .footerLocatie { grid-column: 2; grid-row: 1; }
   .footerSitemap { grid-column: 2; grid-row: 2; }
-  .footerKaart { height: auto; }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
   .footerKolommen { grid-template-columns: minmax(220px, 1.05fr) minmax(132px, .55fr) minmax(280px, 1.25fr) minmax(180px, .8fr); gap: clamp(24px, 3vw, 48px); }
   .footerBedrijf { grid-column: 1; grid-row: 1; }
   .footerCertificeringen { grid-column: 2; grid-row: 1; }
   .footerLocatie { grid-column: 3; grid-row: 1; }
   .footerSitemap { grid-column: 4; grid-row: 1; }
-  .footerKaart { height: auto; }
 }
 body.tekstGroot .footerKolommen { grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr); }
 body.tekstGroot .footerBedrijf { grid-column: 1; grid-row: 1 / span 2; }
 body.tekstGroot .footerCertificeringen { grid-column: 1 / -1; grid-row: 3; }
 body.tekstGroot .footerLocatie { grid-column: 2; grid-row: 1; }
 body.tekstGroot .footerSitemap { grid-column: 2; grid-row: 2; }
-@media (max-width: 1023px) {
+@media (max-width: 1023px), (hover: none) and (pointer: coarse) {
   .footerKolommen,
   body.tekstGroot .footerKolommen { grid-template-columns: minmax(0, 1fr); gap: clamp(36px, 10vw, 52px); text-align: center; }
   .footerSitemap,
@@ -1496,8 +1415,18 @@ body.tekstGroot .footerSitemap { grid-column: 2; grid-row: 2; }
   .footerCertificeringLijst { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(8px, 3vw, 16px); }
   .footerCertificeringLijst li { min-height: 84px; padding: 8px; }
   .footerCertificeringLogo { width: min(96px, 100%); height: 64px; }
-  .footerLocatie { width: 100%; }
-  .footerKaart { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+  .footerLocatie { width: 100%; aspect-ratio: 16 / 9; }
+  .footerKaart { width: 100%; height: 100%; aspect-ratio: auto; }
+}
+
+@media (orientation: landscape) and (min-width: 768px) and (max-width: 1279px),
+       (orientation: landscape) and (min-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .footerKolommen { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 40px); align-items: start; }
+  .footerSitemap { grid-column: 1; grid-row: 1; }
+  .footerBedrijf { grid-column: 1; grid-row: 2; }
+  .footerLocatie { grid-column: 2; grid-row: 1 / span 2; width: 100%; aspect-ratio: 16 / 9; }
+  .footerCertificeringen { grid-column: 1 / -1; grid-row: 3; width: 100%; }
+  .footerCertificeringLijst { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(8px, 2vw, 16px); }
 }
 
 @media (max-width: 767px) {
@@ -1567,14 +1496,16 @@ body.tekstGroot .footerSitemap { grid-column: 2; grid-row: 2; }
   form.contactFormulier, form.adviesBerekeningFormulier { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
   form.contactFormulier > button, form.contactFormulier > p, form.adviesBerekeningFormulier > button, form.adviesBerekeningFormulier > output, form.adviesBerekeningFormulier > p { grid-column: 1 / -1; justify-self: start; }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
   .hoofdNavigatie { min-height: 118px; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
   .navigatieMenuKnop { display: none; }
   .primaireNavigatieLijst { display: flex; grid-column: 1; grid-row: 1; align-items: center; justify-content: flex-start; justify-self: start; flex-wrap: wrap; }
-  .siteLogoLink { grid-column: 2; grid-row: 1; max-width: 102px; }
-  .siteLogoAfbeelding { height: 92px; }
+  .primaireNavigatieLijst.isOpen { display: flex; }
+  .siteLogoLink { grid-column: 2; grid-row: 1; max-width: 140.76px; }
+  .siteLogoAfbeelding { height: 126.96px; }
   .hoofdNavigatieActies { grid-column: 3; grid-row: 1; justify-self: end; }
   .toegankelijkheidPaneel { justify-content: end; }
+  .siteSectie { scroll-margin-top: 156px; }
   .layoutHero, .layoutSplit { grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); }
   .layoutHero .sectionActies, .layoutSplit .sectionActies { grid-column: 1; }
   .layoutHero .mediaNotitie, .layoutSplit .mediaNotitie { grid-column: 2; grid-row: 1 / span 2; }
@@ -1595,11 +1526,6 @@ body.tekstGroot .footerSitemap { grid-column: 2; grid-row: 2; }
 }
 @media (min-width: 1280px) {
   :root { --containerBreedte: min(1320px, calc(100vw - 80px)); }
-}
-@media (orientation: landscape) and (max-height: 560px) {
-  .layoutHero { min-height: auto; }
-  .siteSectie { padding-block: 36px; }
-  h1 { font-size: clamp(2rem, 7vw, 4rem); }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .001ms !important; }
@@ -1865,9 +1791,7 @@ body.hoogContrast .kaartIcoon,
 body.hoogContrast .thuisbatterijSectZoWerkenWijStapIcoon,
 body.hoogContrast .zonnepanelenSectZoWerkenWijStapIcoon,
 body.hoogContrast .laadpalenSectZoWerkenWijStapIcoon,
-body.hoogContrast .elektrotechnischeRenovatiesSectZoWerkenWijStapIcoon,
-body.hoogContrast .elektrotechnischeRenovatiesGroepenkastIcoon,
-body.hoogContrast .elektrotechnischeRenovatiesExtraElektraIcoon {
+body.hoogContrast .elektrotechnischeRenovatiesSectZoWerkenWijStapIcoon {
   border-color: var(--sparkyOranje) !important;
   background: var(--sparkyOranje) !important;
   color: #fff !important;
@@ -1936,7 +1860,6 @@ body.hoogContrast .siteFaq .faqItem {
 }
 
 /* Tekstlagen boven sectie-afbeeldingen blijven transparant. */
-body.hoogContrast .overOnsSectRotterdamseMentaliteitLandelijkeServiceKaart,
 body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf .thuisbatterijSplitKaart,
 body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf .thuisbatterijSplitKaartInhoud,
 body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatie .zonnepanelenSplitKaart,
@@ -2005,7 +1928,7 @@ body.cookieKeuzeOpen > :not(.cookieToestemmingLaag):not(script) { pointer-events
 .cookieToestemmingWeigeren { background: #fff; color: var(--sparkyDonkerBlauw); }
 .cookieToestemmingKnop:hover,
 .cookieKaartVoorkeurenKnop:hover { filter: brightness(.88); }
-.footerKaartToestemming { display: grid; width: min(240px, 100%); min-height: 320px; place-content: center; gap: 14px; margin-inline: auto; padding: 20px; border: 2px solid rgba(255,255,255,.7); border-radius: 6px; text-align: center; }
+.footerKaartToestemming { position: absolute; z-index: 2; inset: 0; display: grid; width: 100%; height: 100%; min-height: 0; place-content: safe center; gap: 14px; margin: 0; padding: clamp(16px, 3vw, 20px); overflow: auto; border: 2px solid rgba(255,255,255,.7); border-radius: 10px; background: var(--sparkyDonkerBlauw); color: #fff; text-align: center; }
 .footerKaartToestemming p { margin: 0; }
 .cookieKaartVoorkeurenKnop { padding: 8px 12px; border-color: var(--sparkyOranje); background: var(--sparkyOranje); color: #111; }
 
@@ -2023,4 +1946,79 @@ body.hoogContrast .cookieKaartVoorkeurenKnop:focus-visible { outline-color: var(
   .cookieToestemmingInhoud { gap: 18px; padding: 22px 18px; }
   .cookieToestemmingActies { grid-template-columns: 1fr; }
   .cookieToestemmingKnop { width: 100%; }
+  .footerKaartToestemming { gap: 10px; padding: 12px; }
+}
+
+@media (orientation: landscape) and (max-height: 560px) {
+  .layoutHero { min-height: auto; }
+  .siteSectie { padding-block: clamp(28px, 8svh, 36px); }
+  h1 { font-size: clamp(2rem, 7vw, 4rem); }
+
+  .homeHeroReferentieGrid,
+  .thuisbatterijSplitKaart,
+  .thuisbatterijSectSlimEnergiebeheerMetEMSEnAISturing .thuisbatterijEmsKaart,
+  .zonnepanelenHeroSplitKaart,
+  .zonnepanelenSectSlaOvertolligeStroomOp .zonnepanelenOpslagKaart,
+  .laadpalenStandardSplitKaart,
+  .laadpalenSectSlimLadenVeiligVoordeligEnEfficient .laadpalenSlimLadenKaart,
+  .elektrotechnischeRenovatiesHeroSplitKaart,
+  .elektrotechnischeRenovatiesSectVanHetGasAfWijBereidenUwInstallatieVoor .elektrotechnischeRenovatiesGasKaart,
+  .contactHeroSplitKaart,
+  .layoutImageCta,
+  .zonnepanelenSectWiltUWetenWatZonnepanelenVoorUKunnenOpleveren,
+  .thuisbatterijSectVoorWoningEnBedrijf,
+  .thuisbatterijSectVoorWoningEnBedrijf .thuisbatterijSplitKaart,
+  .zonnepanelenSectEenInstallatieDiePastBijUwSituatie,
+  .zonnepanelenSectEenInstallatieDiePastBijUwSituatie .zonnepanelenSplitKaart,
+  .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie,
+  .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie .laadpalenSplitKaart,
+  body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf,
+  body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf .thuisbatterijSplitKaart,
+  body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatie,
+  body.hoogContrast .zonnepanelenSectEenInstallatieDiePastBijUwSituatie .zonnepanelenSplitKaart,
+  body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie,
+  body.hoogContrast .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie .laadpalenSplitKaart { min-height: 0 !important; }
+
+  .homeHeroScrollMedia,
+  .thuisbatterijMediaPlaceholder,
+  .thuisbatterijEmsKaartMedia,
+  .zonnepanelenSectieMedia,
+  .zonnepanelenOpslagKaartMedia,
+  .laadpalenSectieMedia,
+  .laadpalenSlimLadenKaartMedia,
+  .elektrotechnischeRenovatiesGasKaartMedia,
+  .elektrotechnischeRenovatiesSectieMedia,
+  .contactSectieMedia,
+  .elektrotechnischeRenovatiesGroepenkastMedia,
+  .elektrotechnischeRenovatiesExtraElektraMedia { min-height: clamp(220px, 70svh, 300px) !important; }
+
+  .thuisbatterijSectHoeWerktEenThuisbatterij .thuisbatterijSectHoeWerktEenThuisbatterijMedia,
+  .zonnepanelenSectHoeWerkenZonnepanelen .zonnepanelenSectHoeWerkenZonnepanelenMedia { height: clamp(240px, 70svh, 320px) !important; }
+
+  .footerLocatie { width: min(100%, 150svh); aspect-ratio: 16 / 9; }
+  .footerKaartToestemming { gap: 10px; padding: 12px; }
+}
+
+@media (orientation: landscape) and (max-height: 560px) and (max-width: 1023px),
+       (orientation: landscape) and (max-height: 560px) and (hover: none) and (pointer: coarse) {
+  .hoofdNavigatie { min-height: 80px; padding-block: 4px; }
+  .siteLogoLink { max-width: 68px; min-height: 60px; }
+  .siteLogoAfbeelding { height: 64px; }
+  .navigatieMenuKnop { width: 48px; min-width: 48px; min-height: 48px; }
+  .hoofdNavigatieContact { height: 48px; min-height: 48px; padding-inline: 10px; }
+  .toegankelijkheidToggle { width: 48px; height: 48px; min-width: 48px; min-height: 48px; }
+  .primaireNavigatieLijst.isOpen { max-height: calc(100dvh - 80px); overflow-y: auto; overscroll-behavior: contain; }
+  .toegankelijkheidSubmenu { max-height: calc(100dvh - 88px); overflow-y: auto; }
+  .siteSectie { scroll-margin-top: 88px; }
+}
+
+@media (orientation: landscape) and (max-width: 767px) and (max-height: 560px) {
+  .homeHeroScrollMedia,
+  .thuisbatterijHeroSplitKaart .thuisbatterijSplitKaartMedia,
+  .zonnepanelenHeroSplitKaart .zonnepanelenSplitKaartMedia,
+  .laadpalenStandardSplitKaart .laadpalenSplitKaartMedia,
+  .elektrotechnischeRenovatiesHeroSplitKaart .elektrotechnischeRenovatiesSplitKaartMedia,
+  .contactHeroSplitKaart .contactSplitKaartMedia,
+  .elektrotechnischeRenovatiesGroepenkastMedia,
+  .elektrotechnischeRenovatiesExtraElektraMedia { aspect-ratio: auto !important; }
 }

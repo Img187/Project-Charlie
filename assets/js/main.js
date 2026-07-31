@@ -7,6 +7,7 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
   const navButton = document.getElementById('navigatieMenuKnop');
   const navList = document.getElementById('primaireNavigatieLijst');
   const accessPanel = document.getElementById('toegankelijkheidPaneel');
+  const desktopNavigationQuery = window.matchMedia('(min-width: 1024px) and (hover: hover) and (pointer: fine)');
 
   if (navButton && navList) {
     navButton.addEventListener('click', () => {
@@ -25,6 +26,20 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
     });
 
     buildDienstenDropdown(navList);
+
+    const closeMobileMenuOnDesktop = (mediaQuery) => {
+      if (!mediaQuery.matches) return;
+      navButton.setAttribute('aria-expanded', 'false');
+      navList.classList.remove('isOpen');
+      closeDienstenSubmenu(navList);
+    };
+
+    if ('addEventListener' in desktopNavigationQuery) {
+      desktopNavigationQuery.addEventListener('change', closeMobileMenuOnDesktop);
+    } else {
+      desktopNavigationQuery.addListener(closeMobileMenuOnDesktop);
+    }
+    closeMobileMenuOnDesktop(desktopNavigationQuery);
   }
 
   if (accessPanel) {
@@ -138,7 +153,6 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
       navList.appendChild(wrapper);
     }
 
-    const desktopHoverQuery = window.matchMedia('(min-width: 1024px) and (hover: hover) and (pointer: fine)');
     const setSubmenuOpen = (isOpen) => {
       toggleButton.setAttribute('aria-expanded', String(isOpen));
       submenu.classList.toggle('isOpen', isOpen);
@@ -151,14 +165,14 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
     });
 
     wrapper.addEventListener('mouseenter', () => {
-      if (desktopHoverQuery.matches) setSubmenuOpen(true);
+      if (desktopNavigationQuery.matches) setSubmenuOpen(true);
     });
 
     Array.from(navList.children).forEach((item) => {
       if (item === wrapper) return;
 
       item.addEventListener('mouseenter', () => {
-        if (desktopHoverQuery.matches) setSubmenuOpen(false);
+        if (desktopNavigationQuery.matches) setSubmenuOpen(false);
       });
 
       item.addEventListener('focusin', () => {
@@ -416,6 +430,7 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
   });
 
   // Sticky split-kaarten: maak alle kaarten even hoog en schaal de vorige tijdens het scrollen.
+  const desktopAnimationQuery = window.matchMedia('(min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine)');
   document.querySelectorAll('[data-sticky-stack]').forEach((stack) => {
     const items = Array.from(stack.querySelectorAll('[data-sticky-card]'));
     const panels = items.map((item) => item.querySelector('[data-sticky-panel], .thuisbatterijEmsKaart'));
@@ -424,9 +439,15 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
     let stackFrame = 0;
     let equalHeightFrame = 0;
 
+    function isStickyLayoutActive() {
+      return desktopAnimationQuery.matches
+        && !carouselReducedMotion
+        && !body.classList.contains('tekstGroot');
+    }
+
     function updateStickyStack() {
       stackFrame = 0;
-      const stickyLayoutActive = !carouselReducedMotion && !body.classList.contains('tekstGroot');
+      const stickyLayoutActive = isStickyLayoutActive();
 
       panels.forEach((panel, index) => {
         if (!stickyLayoutActive || index === panels.length - 1) {
@@ -447,9 +468,18 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
       stackFrame = window.requestAnimationFrame(updateStickyStack);
     }
 
+    function handleStickyStackScroll() {
+      if (!isStickyLayoutActive()) return;
+      scheduleStickyStackUpdate();
+    }
+
     function equalizePanelHeights() {
       equalHeightFrame = 0;
       panels.forEach((panel) => panel.style.removeProperty('min-height'));
+      if (!isStickyLayoutActive()) {
+        scheduleStickyStackUpdate();
+        return;
+      }
       const largestPanelHeight = Math.max(...panels.map((panel) => panel.offsetHeight));
       panels.forEach((panel) => panel.style.setProperty('min-height', `${largestPanelHeight}px`));
       scheduleStickyStackUpdate();
@@ -460,8 +490,13 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
       equalHeightFrame = window.requestAnimationFrame(equalizePanelHeights);
     }
 
-    window.addEventListener('scroll', scheduleStickyStackUpdate, { passive: true });
+    window.addEventListener('scroll', handleStickyStackScroll, { passive: true });
     window.addEventListener('resize', scheduleEqualHeightUpdate);
+    if ('addEventListener' in desktopAnimationQuery) {
+      desktopAnimationQuery.addEventListener('change', scheduleEqualHeightUpdate);
+    } else {
+      desktopAnimationQuery.addListener(scheduleEqualHeightUpdate);
+    }
 
     if (document.readyState === 'complete') scheduleEqualHeightUpdate();
     else window.addEventListener('load', scheduleEqualHeightUpdate, { once: true });
@@ -515,7 +550,7 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
       const animationActive = clipPathSupported
         && !reducedMotionQuery.matches
         && !body.classList.contains('tekstGroot')
-        && window.innerWidth >= 1024;
+        && desktopAnimationQuery.matches;
 
       if (!animationActive) {
         resetScrollImage();
@@ -569,6 +604,11 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
       reducedMotionQuery.addEventListener('change', scheduleScrollImageUpdate);
     } else {
       reducedMotionQuery.addListener(scheduleScrollImageUpdate);
+    }
+    if ('addEventListener' in desktopAnimationQuery) {
+      desktopAnimationQuery.addEventListener('change', scheduleScrollImageUpdate);
+    } else {
+      desktopAnimationQuery.addListener(scheduleScrollImageUpdate);
     }
 
     card.addEventListener('focusin', () => {
