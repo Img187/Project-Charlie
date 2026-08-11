@@ -955,6 +955,7 @@ body.hoogContrast .thuisbatterijEmsKaartAfbeelding { filter: grayscale(1) contra
 @media (min-width: 768px) {
   .thuisbatterijSectSlimEnergiebeheerMetEMSEnAISturing .thuisbatterijEmsKaart { grid-template-columns: repeat(2, minmax(0, 1fr)); min-height: clamp(540px, calc(100svh - 160px), 760px); }
   .thuisbatterijEmsKaartMedia { min-height: 100%; }
+  #thuisbatterijSectSlimEnergiebeheerMetEMSEnAISturingArtikel03 .thuisbatterijEmsKaartAfbeelding { object-position: 90% center; }
   .thuisbatterijEmsScrollKaart:nth-child(even) .thuisbatterijEmsKaartInhoud { order: 2; }
   .thuisbatterijEmsScrollKaart:nth-child(even) .thuisbatterijEmsKaartMedia { order: 1; }
 }
@@ -1062,13 +1063,6 @@ body.tekstGroot .laadpalenStandardSplitKaart .sectionActies { justify-content: c
 .laadpalenStandardSplitKaart.laadpalenZakelijkSplitKaart .laadpalenSectieMedia { border-radius: 10px; }
 body.hoogContrast .laadpalenStandardSplitKaart.laadpalenZakelijkSplitKaart { border: 0; background: transparent; box-shadow: none; }
 body.hoogContrast .laadpalenStandardSplitKaart.laadpalenZakelijkSplitKaart .laadpalenSplitKaartInhoud { background: transparent; }
-@supports (clip-path: inset(0 50% 0 0)) {
-  @media (min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-    body:not(.tekstGroot) .laadpalenZakelijkSplitKaart.isScrollAfbeeldingActief { position: relative; isolation: isolate; overflow: hidden; border-radius: 10px; }
-    body:not(.tekstGroot) .laadpalenZakelijkSplitKaart.isScrollAfbeeldingActief .laadpalenSectSlimLadenVoorMedewerkersKlantenEnBedrijfswagensMedia { position: absolute; z-index: 2; inset: 0; grid-column: auto; grid-row: auto; width: 100%; height: 100%; min-height: 100%; aspect-ratio: auto; clip-path: inset(0 var(--scroll-afbeelding-inset, 50%) 0 0 round 10px); will-change: clip-path; }
-    body:not(.tekstGroot) .laadpalenZakelijkSplitKaart.isScrollAfbeeldingActief .laadpalenSplitKaartInhoud { position: relative; z-index: 1; grid-column: 2; grid-row: 1; }
-  }
-}
 .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie { position: relative; width: 100%; max-width: none; min-height: clamp(320px, 31vw, 410px); margin-inline: 0; padding-block: 0; overflow: hidden; border: 0; background: var(--sparkyDonkerBlauw); box-shadow: none; }
 .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie .laadpalenSplitKaart { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1fr); min-height: clamp(320px, 31vw, 410px); align-items: center; padding: 0; overflow: hidden; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
 .laadpalenSectSlimVeiligEnGoedkoopLadenOpEigenLocatie .laadpalenSplitKaartInhoud { position: relative; z-index: 1; display: block; grid-column: 1; grid-row: 1; width: var(--containerBreedte); margin-inline: auto; padding-block: clamp(24px, 4vw, 56px); background: transparent; }
@@ -1205,6 +1199,9 @@ body.hoogContrast .elektrotechnischeRenovatiesSectieMediaLabel { border: 2px sol
   .elektrotechnischeRenovatiesHeroSplitKaart .sectieTitel,
   .elektrotechnischeRenovatiesHeroSplitKaart .sectieIntro { margin-inline: 0; }
   .elektrotechnischeRenovatiesHeroSplitKaart .sectionActies { justify-content: flex-start; }
+}
+@media (min-width: 1024px) {
+  .elektrotechnischeRenovatiesHeroSplitKaart .elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovatiesMedia .elektrotechnischeRenovatiesSectieMediaAfbeelding { object-position: 80% center; }
 }
 body.tekstGroot .elektrotechnischeRenovatiesHeroSplitKaart { grid-template-columns: minmax(0, 1fr); min-height: 0; }
 body.tekstGroot .elektrotechnischeRenovatiesHeroSplitKaart .elektrotechnischeRenovatiesSplitKaartInhoud,
