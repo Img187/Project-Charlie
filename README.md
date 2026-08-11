@@ -27,7 +27,7 @@ Open deze map in VS Code en start bijvoorbeeld Live Server op `index.html`.
 
 ## Logo en afbeeldingen
 
-Het definitieve Sparky Energies-logo en de achtergrondfoto `zonnepanelen-installatie-achtergrond.jpg` staan in `assets/img/`. Voor overige media zijn bewust geen tijdelijke afbeeldingen toegevoegd; de HTML gebruikt `NOTITIE MEDIA`-blokken totdat echte afbeeldingen of video’s beschikbaar zijn.
+Het definitieve Sparky Energies-logo en de achtergrondfoto `SparkyEnergies_Algemeen_Afbeelding_09.jpg` staan in `assets/img/`. Voor overige media zijn bewust geen tijdelijke afbeeldingen toegevoegd; de HTML gebruikt `NOTITIE MEDIA`-blokken totdat echte afbeeldingen of video’s beschikbaar zijn.
 
 ### Responsive afbeeldingsafspraken
 

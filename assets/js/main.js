@@ -59,7 +59,7 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
   whatsappButton.rel = 'noopener noreferrer';
   whatsappButton.setAttribute('aria-label', 'Chat met Sparky Energies via WhatsApp');
   whatsappButton.title = 'Chat met ons via WhatsApp';
-  whatsappButton.innerHTML = '<img class="whatsAppKnopLogo" src="assets/img/whatsapp-logo.svg" alt="" width="36" height="36" aria-hidden="true">';
+  whatsappButton.innerHTML = '<img class="whatsAppKnopLogo" src="assets/img/SparkyEnergies_Algemeen_Afbeelding_08.svg" alt="" width="36" height="36" aria-hidden="true">';
 
   function updateWhatsAppDestination(mediaQuery) {
     const isDesktop = mediaQuery.matches;

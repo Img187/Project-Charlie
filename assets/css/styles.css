@@ -497,7 +497,7 @@ body.hoogContrast .homeHeroScrollMediaLabel { border: 2px solid #000; background
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhoudenMedia { background: #fff; }
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhoudenAfbeelding { filter: grayscale(1) contrast(1.35); }
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhouden .homeSectWatWijVoorUInstallerenEnOnderhoudenDienstKaart { border: 0; border-radius: 10px; box-shadow: none; }
-.layoutImageCta { display: grid; width: 100%; max-width: none; min-height: 350px; margin-inline: 0; place-items: center; padding-inline: clamp(20px, 6vw, 80px); overflow: hidden; background-color: var(--sparkyDonkerBlauw); background-image: linear-gradient(135deg, rgba(5, 28, 45, .68), rgba(11, 60, 93, .52)), url("../img/zonnepanelen-installatie-achtergrond.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; }
+.layoutImageCta { display: grid; width: 100%; max-width: none; min-height: 350px; margin-inline: 0; place-items: center; padding-inline: clamp(20px, 6vw, 80px); overflow: hidden; background-color: var(--sparkyDonkerBlauw); background-image: linear-gradient(135deg, rgba(5, 28, 45, .68), rgba(11, 60, 93, .52)), url("../img/SparkyEnergies_Algemeen_Afbeelding_09.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; }
 .layoutImageCtaInhoud { display: flex; width: min(960px, 100%); flex-direction: column; align-items: center; text-align: center; }
 .layoutImageCta .sectieKop { width: 100%; max-width: 960px; }
 .layoutImageCta h2,
@@ -513,7 +513,7 @@ body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhouden .homeSectWatWijVo
 .layoutImageCta .siteBtn { margin-block-start: clamp(26px, 4vw, 40px); }
 .layoutImageCta .sectionActies { justify-content: center; margin-block-start: clamp(26px, 4vw, 40px); }
 .layoutImageCta .sectionActies .siteBtn { margin-block-start: 0; }
-body.hoogContrast .layoutImageCta { background-color: var(--sparkyDonkerBlauw); background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/zonnepanelen-installatie-achtergrond.jpg"); background-size: cover; }
+body.hoogContrast .layoutImageCta { background-color: var(--sparkyDonkerBlauw); background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/SparkyEnergies_Algemeen_Afbeelding_09.jpg"); background-size: cover; }
 body.hoogContrast .layoutImageCta h2,
 body.hoogContrast .layoutImageCta h4,
 body.hoogContrast .layoutImageCta .sectieIntro { color: #000; text-shadow: none; }
@@ -654,6 +654,10 @@ body.hoogContrast .thuisbatterijSectHoeWerktEenThuisbatterij .thuisbatterijSectH
   .thuisbatterijSectVoorWoningEnBedrijf .thuisbatterijSectVoorWoningEnBedrijfMedia { grid-column: 1; grid-row: 1; }
   .thuisbatterijSectHoeWerktEenThuisbatterij .thuisbatterijSplitKaart.thuisbatterijSplitKaartMediaLinks .thuisbatterijSplitKaartInhoud { grid-column: 1; grid-row: 1; }
   .thuisbatterijSectHoeWerktEenThuisbatterij .thuisbatterijSplitKaart.thuisbatterijSplitKaartMediaLinks .thuisbatterijSplitKaartMedia { grid-column: 1; grid-row: 2; }
+}
+@media (min-width: 768px) and (max-width: 1023px),
+       (min-width: 768px) and (max-width: 1279px) and (hover: none) and (pointer: coarse) {
+  .thuisbatterijHeroSplitKaart .thuisbatterijMediaPlaceholderAfbeelding { object-position: 65% center; }
 }
 body.tekstGroot .thuisbatterijSplitKaart { grid-template-columns: minmax(0, 1fr); }
 body.tekstGroot .thuisbatterijSectSlimOpslaanSlimGebruikenEnSlimBesparenKop { grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 4vw, 40px); }
@@ -959,6 +963,10 @@ body.hoogContrast .thuisbatterijEmsKaartAfbeelding { filter: grayscale(1) contra
   .thuisbatterijEmsScrollKaart:nth-child(even) .thuisbatterijEmsKaartInhoud { order: 2; }
   .thuisbatterijEmsScrollKaart:nth-child(even) .thuisbatterijEmsKaartMedia { order: 1; }
 }
+@media (min-width: 768px) and (max-width: 1023px),
+       (min-width: 768px) and (max-width: 1279px) and (hover: none) and (pointer: coarse) {
+  #thuisbatterijSectSlimEnergiebeheerMetEMSEnAISturingArtikel03 .thuisbatterijEmsKaartAfbeelding { object-position: 80% center; }
+}
 @media (min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .thuisbatterijEmsKaartLijst { display: block; }
   .thuisbatterijEmsScrollKaart { position: sticky; top: clamp(156px, 14vh, 172px); margin-block-end: 10vh; scroll-margin-top: 164px; }
@@ -1157,6 +1165,10 @@ body.hoogContrast .elektrotechnischeRenovatiesGasKaartAfbeelding { filter: grays
   .elektrotechnischeRenovatiesGasScrollKaart:nth-child(even) .elektrotechnischeRenovatiesGasKaartInhoud { order: 2; }
   .elektrotechnischeRenovatiesGasScrollKaart:nth-child(even) .elektrotechnischeRenovatiesGasKaartMedia { order: 1; }
 }
+@media (min-width: 768px) and (max-width: 1023px),
+       (min-width: 768px) and (max-width: 1279px) and (hover: none) and (pointer: coarse) {
+  #elektrotechnischeRenovatiesSectVanHetGasAfWijBereidenUwInstallatieVoorArtikel03 .elektrotechnischeRenovatiesGasKaartAfbeelding { object-position: 20% center; }
+}
 @media (min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .elektrotechnischeRenovatiesGasKaartLijst { display: block; }
   .elektrotechnischeRenovatiesGasScrollKaart { position: sticky; top: clamp(156px, 14vh, 172px); margin-block-end: 10vh; scroll-margin-top: 164px; }
@@ -1202,6 +1214,10 @@ body.hoogContrast .elektrotechnischeRenovatiesSectieMediaLabel { border: 2px sol
 }
 @media (min-width: 1024px) {
   .elektrotechnischeRenovatiesHeroSplitKaart .elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovatiesMedia .elektrotechnischeRenovatiesSectieMediaAfbeelding { object-position: 80% center; }
+}
+@media (min-width: 768px) and (max-width: 1023px),
+       (min-width: 768px) and (max-width: 1279px) and (hover: none) and (pointer: coarse) {
+  .elektrotechnischeRenovatiesHeroSplitKaart .elektrotechnischeRenovatiesSectGroepenkastEnElektrotechnischeRenovatiesMedia .elektrotechnischeRenovatiesSectieMediaAfbeelding { object-position: 70% center; }
 }
 body.tekstGroot .elektrotechnischeRenovatiesHeroSplitKaart { grid-template-columns: minmax(0, 1fr); min-height: 0; }
 body.tekstGroot .elektrotechnischeRenovatiesHeroSplitKaart .elektrotechnischeRenovatiesSplitKaartInhoud,
@@ -1759,7 +1775,7 @@ body.hoogContrast .contactSectLatenWeBeginnen {
 
 body.hoogContrast .layoutImageCta {
   background-color: #000 !important;
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/zonnepanelen-installatie-achtergrond.jpg") !important;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/SparkyEnergies_Algemeen_Afbeelding_09.jpg") !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
