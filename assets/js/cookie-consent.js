@@ -6,12 +6,15 @@
   const CHOICE_FULL = 'volledig';
   const CHOICE_FUNCTIONAL = 'functioneel';
   const MEASUREMENT_ID = 'G-B8QNYQR8CY';
+  const GOOGLE_ANALYTICS_SCRIPT_ID = 'googleAnalyticsTag';
 
   let currentChoice = readChoice();
   let consentLayer;
   let preferencesLink;
   let returnFocusElement;
   let lockedPageElements = [];
+  let analyticsLoadScheduled = false;
+  let analyticsConfigured = false;
 
   function readChoice() {
     try {
@@ -48,10 +51,41 @@
     };
   }
 
+  function loadGoogleAnalytics() {
+    analyticsLoadScheduled = false;
+    if (currentChoice !== CHOICE_FULL || document.getElementById(GOOGLE_ANALYTICS_SCRIPT_ID)) return;
+
+    ensureGtag();
+    if (!analyticsConfigured) {
+      window.gtag('js', new Date());
+      window.gtag('config', MEASUREMENT_ID);
+      analyticsConfigured = true;
+    }
+
+    const script = document.createElement('script');
+    script.id = GOOGLE_ANALYTICS_SCRIPT_ID;
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(MEASUREMENT_ID);
+    document.head.appendChild(script);
+  }
+
+  function scheduleGoogleAnalyticsLoad() {
+    if (analyticsLoadScheduled || document.getElementById(GOOGLE_ANALYTICS_SCRIPT_ID)) return;
+    analyticsLoadScheduled = true;
+
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(loadGoogleAnalytics, { timeout: 1500 });
+      return;
+    }
+
+    window.setTimeout(loadGoogleAnalytics, 0);
+  }
+
   function enableGoogleAnalytics() {
     window['ga-disable-' + MEASUREMENT_ID] = false;
     ensureGtag();
     window.gtag('consent', 'update', consentSettings(CHOICE_FULL));
+    scheduleGoogleAnalyticsLoad();
   }
 
   function deleteGoogleAnalyticsCookies() {

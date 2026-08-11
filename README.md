@@ -32,6 +32,8 @@ Het definitieve Sparky Energies-logo en de achtergrondfoto `SparkyEnergies_Algem
 ### Responsive afbeeldingsafspraken
 
 - Foto's, placeholders en decoratieve sectiebeelden die hun vlak volledig moeten vullen gebruiken `width: 100%`, `height: 100%` en `object-fit: cover`.
+- De vijf hero-afbeeldingen hebben WebP-varianten in `assets/img/responsive/` en gebruiken een gekoppelde `srcset`, `sizes` en responsive preload. Houd de preloadwaarden gelijk aan die van het bijbehorende `<img>`-element.
+- De grote CTA-achtergrond op Home wordt via `IntersectionObserver` pas geladen wanneer de sectie bijna in beeld komt.
 - CSS-achtergrondafbeeldingen gebruiken `background-size: cover`, `background-position: center` en `background-repeat: no-repeat`.
 - Logo's en certificeringsbeelden mogen niet worden afgesneden en gebruiken daarom `object-fit: contain`.
 - Hoog contrast mag filters en overlays veranderen, maar niet het responsive vulgedrag van een afbeelding.
@@ -48,13 +50,13 @@ Gebruikt uit de aangeleverde huisstijl:
 
 ## Fonts
 
-De lokale huisstijlfonts zijn via `@font-face` gekoppeld in `assets/css/styles.css`:
+De lokale huisstijlfonts zijn als gesubsette WOFF2-bestanden via `@font-face` gekoppeld in `assets/css/styles.css`:
 
 - `Futura PT Heavy` voor koppen
 - `Futura Light` voor lichte Futura-tekst
 - `Open Sans` in Light, Regular, Semibold, Bold en Extrabold, inclusief cursieven
 
-Lopende tekst gebruikt standaard Open Sans Light; elementen met een zwaarder `font-weight` laden automatisch het bijbehorende lokale bestand.
+Lopende tekst gebruikt standaard Open Sans Light; elementen met een zwaarder `font-weight` laden automatisch het bijbehorende lokale bestand. Elke openbare pagina preload alleen Futura PT Heavy en Open Sans Light.
 
 ## Toegankelijkheid
 
@@ -79,10 +81,10 @@ De zeven openbare pagina's gebruiken de Google-tag voor de GA4-webstream van Spa
 - Google tag ID: `GT-PL9T2DJM`
 - Measurement ID: `G-B8QNYQR8CY`
 
-De Google-tag staat direct na de tekencodering in `<head>` op alle zeven openbare HTML-pagina's. Consent Mode v2 staat standaard op `denied`; `assets/js/cookie-consent.js` werkt die status bij op basis van de keuze van de bezoeker:
+De Google-tag staat niet in de HTML-head en wordt dus niet standaard gedownload. `assets/js/cookie-consent.js` injecteert het Analytics-script eenmalig tijdens een vrij browsermoment, uitsluitend nadat de bezoeker volledige toestemming heeft gegeven:
 
-- `Volledig`: Google Analytics-opslag en de Google Maps-iframe worden toegestaan.
-- `Weigeren`: Google-opslag blijft geweigerd, Analytics-cookies worden verwijderd en Maps wordt niet geladen.
+- `Volledig`: Google Analytics wordt geladen en de Google Maps-iframe wordt toegestaan.
+- `Weigeren`: Analytics wordt niet geladen, eventuele Analytics-cookies worden verwijderd en Maps wordt niet geladen.
 
 Bij het eerste bezoek staat de modale keuzelaag met transparante achtergrond vast onderaan het scherm. De bezoeker kan de pagina bekijken en scrollen, maar niet klikken, tekst selecteren of toetsenbordfocus buiten de laag verplaatsen. Na een keuze wordt de website volledig vrijgegeven. Onder `Sitemap` staan achtereenvolgens `Contact`, de hyperlink `Cookie Voorkeuren`, de downloadbare `Algemene voorwaarden` en de downloadbare `Privacy verklaring`. Beide juridische downloads staan bij de aanvraagformulieren; de privacy-download staat ook in de cookielaag. De interne `section-index.html` heeft `noindex` en wordt niet gemeten.
 

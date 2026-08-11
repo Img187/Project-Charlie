@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 2,
-    "generated_on": "2026-07-31",
+    "generated_on": "2026-08-11",
     "language": "nl",
     "source_files": [
       "index.html",
@@ -33,8 +33,9 @@
         "measurement_id": "G-B8QNYQR8CY",
         "config_id": "G-B8QNYQR8CY",
         "google_tag_id": "GT-PL9T2DJM",
-        "script_in_head": true,
-        "consent_default_in_head": true
+        "script_in_head": false,
+        "consent_default_in_head": false,
+        "loaded_after_full_consent": true
       },
       {
         "page": "Thuisbatterijen",
@@ -42,8 +43,9 @@
         "measurement_id": "G-B8QNYQR8CY",
         "config_id": "G-B8QNYQR8CY",
         "google_tag_id": "GT-PL9T2DJM",
-        "script_in_head": true,
-        "consent_default_in_head": true
+        "script_in_head": false,
+        "consent_default_in_head": false,
+        "loaded_after_full_consent": true
       },
       {
         "page": "Zonnepanelen",
@@ -51,8 +53,9 @@
         "measurement_id": "G-B8QNYQR8CY",
         "config_id": "G-B8QNYQR8CY",
         "google_tag_id": "GT-PL9T2DJM",
-        "script_in_head": true,
-        "consent_default_in_head": true
+        "script_in_head": false,
+        "consent_default_in_head": false,
+        "loaded_after_full_consent": true
       },
       {
         "page": "Laadpalen",
@@ -60,8 +63,9 @@
         "measurement_id": "G-B8QNYQR8CY",
         "config_id": "G-B8QNYQR8CY",
         "google_tag_id": "GT-PL9T2DJM",
-        "script_in_head": true,
-        "consent_default_in_head": true
+        "script_in_head": false,
+        "consent_default_in_head": false,
+        "loaded_after_full_consent": true
       },
       {
         "page": "Elektrotechnische renovaties",
@@ -69,8 +73,9 @@
         "measurement_id": "G-B8QNYQR8CY",
         "config_id": "G-B8QNYQR8CY",
         "google_tag_id": "GT-PL9T2DJM",
-        "script_in_head": true,
-        "consent_default_in_head": true
+        "script_in_head": false,
+        "consent_default_in_head": false,
+        "loaded_after_full_consent": true
       },
       {
         "page": "Over ons",
@@ -78,8 +83,9 @@
         "measurement_id": "G-B8QNYQR8CY",
         "config_id": "G-B8QNYQR8CY",
         "google_tag_id": "GT-PL9T2DJM",
-        "script_in_head": true,
-        "consent_default_in_head": true
+        "script_in_head": false,
+        "consent_default_in_head": false,
+        "loaded_after_full_consent": true
       },
       {
         "page": "Contact",
@@ -87,8 +93,9 @@
         "measurement_id": "G-B8QNYQR8CY",
         "config_id": "G-B8QNYQR8CY",
         "google_tag_id": "GT-PL9T2DJM",
-        "script_in_head": true,
-        "consent_default_in_head": true
+        "script_in_head": false,
+        "consent_default_in_head": false,
+        "loaded_after_full_consent": true
       }
     ]
   },

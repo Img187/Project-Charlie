@@ -8,84 +8,84 @@ De lokale fontbestanden staan in /assets/fonts/.
 
 @font-face {
   font-family: "Futura PT Light";
-  src: url("../fonts/Futura Light.otf") format("opentype");
+  src: url("../fonts/Futura Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Futura PT Heavy";
-  src: url("../fonts/Futura PT Heavy.ttf") format("truetype");
+  src: url("../fonts/Futura PT Heavy.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/Open Sans Light.ttf") format("truetype");
+  src: url("../fonts/Open Sans Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/Open Sans Light Italic.ttf") format("truetype");
+  src: url("../fonts/Open Sans Light Italic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/Open Sans Regular.ttf") format("truetype");
+  src: url("../fonts/Open Sans Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/Open Sans Italic.ttf") format("truetype");
+  src: url("../fonts/Open Sans Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/Open Sans Semibold.ttf") format("truetype");
+  src: url("../fonts/Open Sans Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/Open Sans Semibold Italic.ttf") format("truetype");
+  src: url("../fonts/Open Sans Semibold Italic.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/Open Sans Bold.ttf") format("truetype");
+  src: url("../fonts/Open Sans Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/Open Sans Bold Italic.ttf") format("truetype");
+  src: url("../fonts/Open Sans Bold Italic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/Open Sans Extrabold.ttf") format("truetype");
+  src: url("../fonts/Open Sans Extrabold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/Open Sans Extrabold Italic.ttf") format("truetype");
+  src: url("../fonts/Open Sans Extrabold Italic.woff2") format("woff2");
   font-weight: 800;
   font-style: italic;
   font-display: swap;
@@ -497,7 +497,8 @@ body.hoogContrast .homeHeroScrollMediaLabel { border: 2px solid #000; background
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhoudenMedia { background: #fff; }
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhoudenAfbeelding { filter: grayscale(1) contrast(1.35); }
 body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhouden .homeSectWatWijVoorUInstallerenEnOnderhoudenDienstKaart { border: 0; border-radius: 10px; box-shadow: none; }
-.layoutImageCta { display: grid; width: 100%; max-width: none; min-height: 350px; margin-inline: 0; place-items: center; padding-inline: clamp(20px, 6vw, 80px); overflow: hidden; background-color: var(--sparkyDonkerBlauw); background-image: linear-gradient(135deg, rgba(5, 28, 45, .68), rgba(11, 60, 93, .52)), url("../img/SparkyEnergies_Algemeen_Afbeelding_09.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; }
+.layoutImageCta { display: grid; width: 100%; max-width: none; min-height: 350px; margin-inline: 0; place-items: center; padding-inline: clamp(20px, 6vw, 80px); overflow: hidden; background-color: var(--sparkyDonkerBlauw); background-image: none; background-position: center; background-repeat: no-repeat; background-size: cover; }
+.layoutImageCta.isAchtergrondGeladen { background-image: linear-gradient(135deg, rgba(5, 28, 45, .68), rgba(11, 60, 93, .52)), url("../img/SparkyEnergies_Algemeen_Afbeelding_09.jpg"); }
 .layoutImageCtaInhoud { display: flex; width: min(960px, 100%); flex-direction: column; align-items: center; text-align: center; }
 .layoutImageCta .sectieKop { width: 100%; max-width: 960px; }
 .layoutImageCta h2,
@@ -513,7 +514,8 @@ body.hoogContrast .homeSectWatWijVoorUInstallerenEnOnderhouden .homeSectWatWijVo
 .layoutImageCta .siteBtn { margin-block-start: clamp(26px, 4vw, 40px); }
 .layoutImageCta .sectionActies { justify-content: center; margin-block-start: clamp(26px, 4vw, 40px); }
 .layoutImageCta .sectionActies .siteBtn { margin-block-start: 0; }
-body.hoogContrast .layoutImageCta { background-color: var(--sparkyDonkerBlauw); background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/SparkyEnergies_Algemeen_Afbeelding_09.jpg"); background-size: cover; }
+body.hoogContrast .layoutImageCta { background-color: var(--sparkyDonkerBlauw); background-image: none; background-size: cover; }
+body.hoogContrast .layoutImageCta.isAchtergrondGeladen { background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/SparkyEnergies_Algemeen_Afbeelding_09.jpg"); }
 body.hoogContrast .layoutImageCta h2,
 body.hoogContrast .layoutImageCta h4,
 body.hoogContrast .layoutImageCta .sectieIntro { color: #000; text-shadow: none; }
@@ -1775,11 +1777,15 @@ body.hoogContrast .contactSectLatenWeBeginnen {
 
 body.hoogContrast .layoutImageCta {
   background-color: #000 !important;
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/SparkyEnergies_Algemeen_Afbeelding_09.jpg") !important;
+  background-image: none !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   color: var(--sparkyLichtGrijs) !important;
+}
+
+body.hoogContrast .layoutImageCta.isAchtergrondGeladen {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .62)), url("../img/SparkyEnergies_Algemeen_Afbeelding_09.jpg") !important;
 }
 
 body.hoogContrast .thuisbatterijSectVoorWoningEnBedrijf .thuisbatterijSectVoorWoningEnBedrijfMedia,

@@ -30,15 +30,15 @@
 - Google Tag ID: `GT-PL9T2DJM`
 - Stream ID: `15270728473`
 
-| Pagina | Script in `head` | Config-ID | Consent-default in `head` |
+| Pagina | Script in `head` | Config-ID | Dynamisch na volledig akkoord |
 |---|---|---|---|
-| Home | Ja | `G-B8QNYQR8CY` | Ja |
-| Thuisbatterijen | Ja | `G-B8QNYQR8CY` | Ja |
-| Zonnepanelen | Ja | `G-B8QNYQR8CY` | Ja |
-| Laadpalen | Ja | `G-B8QNYQR8CY` | Ja |
-| Elektrotechnische renovaties | Ja | `G-B8QNYQR8CY` | Ja |
-| Over ons | Ja | `G-B8QNYQR8CY` | Ja |
-| Contact | Ja | `G-B8QNYQR8CY` | Ja |
+| Home | Nee | `G-B8QNYQR8CY` | Ja |
+| Thuisbatterijen | Nee | `G-B8QNYQR8CY` | Ja |
+| Zonnepanelen | Nee | `G-B8QNYQR8CY` | Ja |
+| Laadpalen | Nee | `G-B8QNYQR8CY` | Ja |
+| Elektrotechnische renovaties | Nee | `G-B8QNYQR8CY` | Ja |
+| Over ons | Nee | `G-B8QNYQR8CY` | Ja |
+| Contact | Nee | `G-B8QNYQR8CY` | Ja |
 
 ## Primaire secties
 

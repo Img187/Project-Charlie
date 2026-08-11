@@ -2,29 +2,6 @@
 <html lang="nl">
 <head>
   <meta charset="utf-8" />
-  <!-- Google tag (gtag.js) -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    (function () {
-      var storedConsent = null;
-      try {
-        storedConsent = window.localStorage.getItem('sparky-cookie-toestemming');
-      } catch (error) {}
-      var consentState = storedConsent === 'volledig' ? 'granted' : 'denied';
-      gtag('consent', 'default', {
-        ad_storage: consentState,
-        analytics_storage: consentState,
-        ad_user_data: consentState,
-        ad_personalization: consentState,
-        wait_for_update: 500
-      });
-      window['ga-disable-G-B8QNYQR8CY'] = consentState !== 'granted';
-    })();
-    gtag('js', new Date());
-    gtag('config', 'G-B8QNYQR8CY');
-  </script>
-  <script id="googleAnalyticsTag" data-google-tag-id="GT-PL9T2DJM" async src="https://www.googletagmanager.com/gtag/js?id=G-B8QNYQR8CY"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Elektrotechnisch installateur Rotterdam | Sparky Energies</title>
   <meta name="description" content="Sparky Energies is uw elektrotechnisch installateur in Rotterdam voor zonnepanelen, thuisbatterijen, laadpalen, groepenkasten en renovaties." />
@@ -47,6 +24,11 @@
   <meta name="twitter:title" content="Elektrotechnisch installateur Rotterdam | Sparky Energies" />
   <meta name="twitter:description" content="Zonnepanelen, thuisbatterijen, laadpalen, groepenkasten en elektrotechnische renovaties vanuit Rotterdam." />
   <meta name="twitter:image" content="https://www.sparkyenergies.com/assets/img/SparkyEnergies_Algemeen_Afbeelding_09.jpg" />
+  <link rel="preload" href="assets/fonts/Futura PT Heavy.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/Open Sans Light.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" as="image" href="assets/img/SparkyEnergies_Home_Afbeelding_01.webp" type="image/webp" fetchpriority="high"
+    imagesrcset="assets/img/responsive/480/SparkyEnergies_Home_Afbeelding_01.webp 480w, assets/img/responsive/640/SparkyEnergies_Home_Afbeelding_01.webp 640w, assets/img/responsive/768/SparkyEnergies_Home_Afbeelding_01.webp 768w, assets/img/responsive/960/SparkyEnergies_Home_Afbeelding_01.webp 960w, assets/img/responsive/1024/SparkyEnergies_Home_Afbeelding_01.webp 1024w, assets/img/responsive/1280/SparkyEnergies_Home_Afbeelding_01.webp 1280w, assets/img/responsive/1600/SparkyEnergies_Home_Afbeelding_01.webp 1600w, assets/img/SparkyEnergies_Home_Afbeelding_01.webp 1672w"
+    imagesizes="(min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) max(100vw, 1351px), (min-width: 768px) clamp(960px, calc(177.7svh - 284.3px), 1351px), (min-width: 480px) calc(100vw - 48px), calc(100vw - 32px)" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" type="image/png" href="assets/img/SparkyEnergies_Algemeen_Afbeelding_01.png" />
   <link rel="apple-touch-icon" href="assets/img/SparkyEnergies_Algemeen_Afbeelding_01.png" />
@@ -189,7 +171,9 @@
       </nav>
     </div>
     <figure id="homeSectGecertificeerdeInstallateursMetVakmanschapMediaPlaceholder" class="homeHeroScrollMedia" data-scroll-expand-media aria-hidden="true">
-      <img class="homeHeroScrollMediaAfbeelding" src="./assets/img/SparkyEnergies_Home_Afbeelding_01.webp" alt="" width="1672" height="941" loading="eager" fetchpriority="high" decoding="async" />
+      <img class="homeHeroScrollMediaAfbeelding" src="assets/img/SparkyEnergies_Home_Afbeelding_01.webp"
+        srcset="assets/img/responsive/480/SparkyEnergies_Home_Afbeelding_01.webp 480w, assets/img/responsive/640/SparkyEnergies_Home_Afbeelding_01.webp 640w, assets/img/responsive/768/SparkyEnergies_Home_Afbeelding_01.webp 768w, assets/img/responsive/960/SparkyEnergies_Home_Afbeelding_01.webp 960w, assets/img/responsive/1024/SparkyEnergies_Home_Afbeelding_01.webp 1024w, assets/img/responsive/1280/SparkyEnergies_Home_Afbeelding_01.webp 1280w, assets/img/responsive/1600/SparkyEnergies_Home_Afbeelding_01.webp 1600w, assets/img/SparkyEnergies_Home_Afbeelding_01.webp 1672w"
+        sizes="(min-width: 1024px) and (min-height: 700px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) max(100vw, 1351px), (min-width: 768px) clamp(960px, calc(177.7svh - 284.3px), 1351px), (min-width: 480px) calc(100vw - 48px), calc(100vw - 32px)" alt="" width="1672" height="941" loading="eager" fetchpriority="high" decoding="async" />
     </figure>
   </div>
 </section>

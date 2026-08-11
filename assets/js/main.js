@@ -9,6 +9,107 @@ Alle selectors verwijzen naar vaste HTML-ID's of data-attributen.
   const accessPanel = document.getElementById('toegankelijkheidPaneel');
   const desktopNavigationQuery = window.matchMedia('(min-width: 1024px) and (hover: hover) and (pointer: fine)');
 
+  function initializeLazyBackgrounds() {
+    const lazyBackgrounds = Array.from(document.querySelectorAll('.layoutImageCta'));
+    if (!lazyBackgrounds.length) return;
+
+    const loadBackground = (element) => element.classList.add('isAchtergrondGeladen');
+    if (!('IntersectionObserver' in window)) {
+      lazyBackgrounds.forEach(loadBackground);
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadBackground(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '300px 0px' });
+
+    lazyBackgrounds.forEach((element) => observer.observe(element));
+  }
+
+  function initializePagePrefetch() {
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const effectiveType = connection && connection.effectiveType;
+    if (connection && (connection.saveData || effectiveType === 'slow-2g' || effectiveType === '2g')) return;
+
+    const prefetchedPages = new Set();
+    const maximumPrefetches = 4;
+    let hoverTimer = 0;
+    let hoverLink = null;
+
+    function normalizedPagePath(pathname) {
+      return pathname.endsWith('/') ? pathname + 'index.html' : pathname;
+    }
+
+    function getPrefetchableUrl(link) {
+      if (!(link instanceof HTMLAnchorElement)) return null;
+      const rawHref = link.getAttribute('href');
+      if (!rawHref || rawHref.startsWith('#')) return null;
+      if (link.hasAttribute('download') || link.target && link.target !== '_self') return null;
+      if (link.getAttribute('aria-disabled') === 'true' || link.dataset.linkStatus === 'todo' || link.dataset.noPrefetch !== undefined) return null;
+
+      let url;
+      try {
+        url = new URL(link.href, window.location.href);
+      } catch (error) {
+        return null;
+      }
+
+      if (!/^https?:$/.test(url.protocol) || url.origin !== window.location.origin) return null;
+      if (!url.pathname.endsWith('/') && !/\.html$/i.test(url.pathname)) return null;
+
+      const currentUrl = new URL(window.location.href);
+      if (normalizedPagePath(url.pathname) === normalizedPagePath(currentUrl.pathname) && url.search === currentUrl.search) return null;
+      url.hash = '';
+      return url;
+    }
+
+    function prefetchPage(link) {
+      if (prefetchedPages.size >= maximumPrefetches) return;
+      const url = getPrefetchableUrl(link);
+      if (!url || prefetchedPages.has(url.href)) return;
+
+      const prefetchLink = document.createElement('link');
+      prefetchLink.rel = 'prefetch';
+      prefetchLink.as = 'document';
+      prefetchLink.href = url.href;
+      document.head.appendChild(prefetchLink);
+      prefetchedPages.add(url.href);
+    }
+
+    document.addEventListener('pointerover', (event) => {
+      if (event.pointerType === 'touch') return;
+      const link = event.target.closest && event.target.closest('a[href]');
+      if (!link || event.relatedTarget && link.contains(event.relatedTarget)) return;
+
+      window.clearTimeout(hoverTimer);
+      hoverLink = link;
+      hoverTimer = window.setTimeout(() => {
+        prefetchPage(link);
+        hoverTimer = 0;
+        hoverLink = null;
+      }, 120);
+    }, { passive: true });
+
+    document.addEventListener('pointerout', (event) => {
+      if (!hoverLink || event.relatedTarget && hoverLink.contains(event.relatedTarget)) return;
+      window.clearTimeout(hoverTimer);
+      hoverTimer = 0;
+      hoverLink = null;
+    }, { passive: true });
+
+    document.addEventListener('focusin', (event) => {
+      const link = event.target.closest && event.target.closest('a[href]');
+      if (link) prefetchPage(link);
+    });
+  }
+
+  initializeLazyBackgrounds();
+  initializePagePrefetch();
+
   if (navButton && navList) {
     navButton.addEventListener('click', () => {
       const isOpen = navButton.getAttribute('aria-expanded') === 'true';
